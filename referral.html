@@ -3,89 +3,415 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0b0d">
-<meta name="description" content="Refer a customer to EmmyBlaQ AutoTech for vehicle tracker installation enquiries. Contact us on WhatsApp for referral terms.">
-<title>Refer a Customer | EmmyBlaQ AutoTech</title>
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Refer customers to EMMYBLAQ AUTOTECH for GSM vehicle tracker installation. Ask about our ₦10,000 referral reward.">
+<title>Earn ₦10,000 | EMMYBLAQ AUTOTECH Referral Programme</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b0b0d;color:#eee;line-height:1.7}
-header,footer{background:#070708;text-align:center;padding:20px;border-bottom:1px solid #55431f}
-footer{border-top:1px solid #55431f;border-bottom:0;margin-top:35px}
-.brand{color:#d8b45a;font-size:20px;font-weight:bold;text-decoration:none}
-.container{width:90%;max-width:800px;margin:35px auto}
-.panel{background:#19191d;border:1px solid #55431f;border-radius:12px;padding:25px;margin:20px 0}
-h1,h2,h3{color:#d8b45a;margin-bottom:14px;line-height:1.35}
-p{margin-bottom:14px}
-a{color:#f2d58a}
-.button{display:inline-block;background:#d8b45a;color:#111;padding:13px 20px;border-radius:7px;text-decoration:none;font-weight:bold;margin:8px 5px 8px 0}
-.whatsapp{background:#25D366;color:white}
-ul{padding-left:22px;margin:10px 0 18px}
-li{margin-bottom:8px}
-.small{font-size:13px;color:#bbb}
-.center{text-align:center}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #090909;
+  color: #f5f5f5;
+  line-height: 1.7;
+}
+
+header {
+  background: #111;
+  padding: 20px 12px;
+  text-align: center;
+  border-bottom: 2px solid #d8b45a;
+}
+
+.brand {
+  color: #e7c46c;
+  font-size: 21px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+nav { margin-top: 12px; }
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 9px;
+  font-size: 14px;
+}
+
+nav a:hover { color: #e7c46c; }
+
+.container {
+  width: 91%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.hero {
+  background: linear-gradient(145deg, #222018, #111);
+  border: 1px solid #6e5727;
+  border-radius: 18px;
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(216,180,90,.08);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #f3d78e;
+  border: 1px solid #8b7138;
+  border-radius: 30px;
+  padding: 5px 13px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+h1, h2, h3 {
+  color: #e7c46c;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(30px, 6vw, 46px);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 13px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p { margin-bottom: 14px; }
+
+.gold { color: #f0cf79; }
+
+.reward {
+  background: #080808;
+  border: 1px solid #b38c3d;
+  border-radius: 14px;
+  padding: 20px 12px;
+  margin: 24px auto;
+  max-width: 470px;
+}
+
+.reward-label {
+  color: #bbb;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.amount {
+  color: #f4d27b;
+  font-size: clamp(42px, 9vw, 62px);
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 5px 0;
+}
+
+.tracker-image {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  margin: 24px auto;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+}
+
+.image-note {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, #f1d487, #c69a42);
+  color: #111;
+  padding: 14px 21px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 8px 4px;
+  transition: transform .2s, opacity .2s;
+}
+
+.button:hover {
+  opacity: .9;
+  transform: translateY(-2px);
+}
+
+.whatsapp {
+  background: #25d366;
+  color: #071b0e;
+}
+
+.panel {
+  background: #151515;
+  border: 1px solid #38332a;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 22px 0;
+}
+
+.steps {
+  list-style: none;
+  margin-top: 18px;
+}
+
+.steps li {
+  position: relative;
+  padding: 0 0 18px 48px;
+  min-height: 42px;
+}
+
+.steps li:last-child { padding-bottom: 0; }
+
+.step-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #d8b45a;
+  color: #111;
+  font-weight: bold;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.feature {
+  background: #101010;
+  border: 1px solid #38332a;
+  padding: 17px;
+  border-radius: 10px;
+}
+
+.feature-icon {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.notice {
+  background: #211d13;
+  border-left: 4px solid #d8b45a;
+  padding: 14px;
+  border-radius: 5px;
+  color: #ddd;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+.center { text-align: center; }
+
+footer {
+  background: #070707;
+  border-top: 1px solid #55431f;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 35px;
+  color: #aaa;
+}
+
+footer a {
+  color: #e7c46c;
+  text-decoration: none;
+}
+
+.small { font-size: 13px; color: #aaa; }
+
+@media (max-width: 480px) {
+  .hero { padding: 25px 15px; }
+  .panel { padding: 19px; }
+  .button { padding: 13px 16px; }
+}
 </style>
 </head>
 
 <body>
+
 <header>
   <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main class="container">
-  <div class="panel center">
-    <h1>Refer a Customer. Earn a Reward.</h1>
-    <p>
-      Know someone who needs a vehicle tracker installed?
-      Refer them to EmmyBlaQ AutoTech.
-    </p>
-    <h2>₦10,000 Referral Reward</h2>
-    <p>
-      A ₦10,000 reward is planned for a successful qualifying
-      tracker-install referral, subject to confirmation of the
-      referral terms with us.
-    </p>
-    <a class="button whatsapp"
-       href="https://wa.me/2349119330397?text=Hello%20EmmyBlaQ%20AutoTech%2C%20I%20want%20to%20ask%20about%20your%20tracker%20installation%20referral%20programme."
-       target="_blank" rel="noopener noreferrer">
-      Ask About Referrals on WhatsApp
-    </a>
-  </div>
 
-  <div class="panel">
+  <section class="hero">
+    <span class="eyebrow">EMMYBLAQ AUTOTECH REFERRAL PROGRAMME</span>
+
+    <h1>Your Connection Could Earn You a Reward!</h1>
+
+    <p>
+      Know somebody who owns a car and may need a GSM vehicle tracker?
+      Connect them with us and ask how you can earn from a successful referral.
+    </p>
+
+    <img
+      class="tracker-image"
+      src="https://ng.jumia.is/unsafe/fit-in/150x150/filters%3Afill%28white%29/product/36/0794652/1.jpg?3325="
+      alt="GSM and GPS vehicle tracking device with connecting wires"
+      loading="eager"
+      onerror="this.style.display='none';"
+    >
+
+    <p class="image-note">
+      Example of a GSM/GPS vehicle tracking device.
+    </p>
+
+    <div class="reward">
+      <div class="reward-label">Referral Reward</div>
+      <div class="amount">₦10,000</div>
+      <p class="gold">For each qualifying successful tracker-install referral</p>
+    </div>
+
+    <p>
+      Know a driver, car owner, business owner or someone managing vehicles?
+      Introduce them to EMMYBLAQ AUTOTECH.
+    </p>
+
+    <a class="button whatsapp"
+       href="https://wa.me/2349119330397?text=Hello%20EMMYBLAQ%20AUTOTECH%2C%20I%20want%20to%20join%20your%20tracker%20referral%20programme."
+       target="_blank" rel="noopener noreferrer">
+      Join the Referral Programme
+    </a>
+
+    <p class="small">Message us first to confirm the programme terms.</p>
+  </section>
+
+  <section class="panel">
     <h2>How It Works</h2>
-    <ul>
-      <li>Contact us on WhatsApp before referring a customer.</li>
-      <li>Tell us you want to participate in the referral programme.</li>
-      <li>Ask us to confirm the qualifying conditions and how referrals will be recorded.</li>
-      <li>Refer a customer who is interested in vehicle tracker installation.</li>
-      <li>Once the qualifying installation and referral conditions are confirmed, contact us about your reward.</li>
-    </ul>
-    <p class="small">
-      Please confirm availability, eligibility, payment conditions
-      and any other referral rules with EmmyBlaQ AutoTech before
-      making a referral. A reward is not guaranteed until the
-      qualifying terms are agreed and met.
-    </p>
-  </div>
+    <p>Getting started is simple. Follow these steps:</p>
 
-  <div class="panel center">
-    <h2>Ready to Make a Referral?</h2>
-    <p>Message us directly to get started.</p>
+    <ol class="steps">
+      <li>
+        <span class="step-number">1</span>
+        <strong>Contact Us</strong>
+        <p>Message us on WhatsApp and tell us you want to refer a customer.</p>
+      </li>
+
+      <li>
+        <span class="step-number">2</span>
+        <strong>Get Your Referral Confirmed</strong>
+        <p>Agree with us on how your referral will be recorded before making the introduction.</p>
+      </li>
+
+      <li>
+        <span class="step-number">3</span>
+        <strong>Introduce a Potential Customer</strong>
+        <p>Connect someone who is interested in having a vehicle tracker installed.</p>
+      </li>
+
+      <li>
+        <span class="step-number">4</span>
+        <strong>Qualify for Your Reward</strong>
+        <p>Once the agreed referral conditions and successful installation requirements are met, contact us about your reward.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2>Why Refer Customers to Us?</h2>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Referral Opportunity</h3>
+        <p class="small">Turn a useful introduction into a potential reward.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🚘</div>
+        <h3>Vehicle Security</h3>
+        <p class="small">Help car owners enquire about vehicle tracking solutions.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🤝</div>
+        <h3>Easy Connection</h3>
+        <p class="small">Connect interested customers directly with our team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel center">
+    <h2>Ready to Refer Someone?</h2>
+
+    <p>
+      Don't keep the opportunity to yourself.
+      Contact EMMYBLAQ AUTOTECH and find out how to participate.
+    </p>
+
     <a class="button whatsapp"
-       href="https://wa.me/2349119330397?text=Hello%20EmmyBlaQ%20AutoTech%2C%20I%20am%20interested%20in%20referring%20a%20customer."
+       href="https://wa.me/2349119330397?text=Hello%20EMMYBLAQ%20AUTOTECH%2C%20please%20explain%20how%20I%20can%20earn%20the%20N10%2C000%20tracker%20referral%20reward."
        target="_blank" rel="noopener noreferrer">
-      Contact Us on WhatsApp
+      Chat With Us on WhatsApp
     </a>
-    <p><a href="index.html">Return to Homepage</a></p>
-    <p><a href="contact.html">Open Contact Page</a></p>
-  </div>
+
+    <p style="margin-top:18px">
+      <a href="contact.html">Contact Us</a>
+      &nbsp; | &nbsp;
+      <a href="index.html">Return to Homepage</a>
+    </p>
+
+    <div class="notice">
+      <strong>Referral terms:</strong> The ₦10,000 reward is subject to confirmation
+      of the programme's eligibility, referral-recording, successful-installation
+      and payment conditions with EMMYBLAQ AUTOTECH before the referral is made.
+      Please confirm the terms with us first.
+    </div>
+  </section>
+
 </main>
 
 <footer>
-  <p><strong style="color:#d8b45a">EMMYBLAQ AUTOTECH</strong></p>
-  <p class="small">Automotive Knowledge. Better Understanding. Smarter Maintenance.</p>
-  <p><a href="index.html">Home</a> · <a href="contact.html">Contact Us</a></p>
+  <p style="color:#e7c46c;font-weight:bold;font-size:18px">
+    EMMYBLAQ AUTOTECH
+  </p>
+  <p>Smarter Car Technology. Better Driving.</p>
+  <p class="small">
+    Automotive Electrical Diagnosis | Vehicle Trackers | Car AC Services
+  </p>
+  <p style="margin-top:12px">
+    <a href="index.html">Home</a> ·
+    <a href="contact.html">Contact Us</a>
+  </p>
+  <p class="small" style="margin-top:12px">
+    &copy; 2026 EMMYBLAQ AUTOTECH. All rights reserved.
+  </p>
 </footer>
+
 </body>
 </html>
