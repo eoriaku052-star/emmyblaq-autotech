@@ -3,54 +3,69 @@
 <head>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5760610709240232"
      crossorigin="anonymous"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>EmmyBlaQ AutoTech | Automotive Electrical & AC Services</title>
 <meta name="description" content="EmmyBlaQ AutoTech provides automotive electrical information, car AC knowledge, vehicle diagnostics and vehicle tracker services. Contact us on WhatsApp.">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#101827">
+<meta name="theme-color" content="#0b0b0d">
 
 <style>
 :root {
-  --navy:#101827;
-  --blue:#1769e0;
-  --yellow:#ffc928;
+  --black:#0b0b0d;
+  --navy:#111114;
+  --gold:#d8b45a;
+  --gold-light:#f2d58a;
   --green:#25D366;
   --white:#fff;
-  --light:#f3f6fb;
-  --text:#293548;
-  --muted:#637083;
-  --border:#e1e6ef;
+  --light:#121214;
+  --text:#eeeeef;
+  --muted:#b9b9c0;
+  --border:#35353a;
+  --panel:#19191d;
 }
+
 * {
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
+
 html {
   scroll-behavior:smooth;
   scroll-padding-top:25px;
 }
+
 body {
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--light);
+  background:var(--black);
   color:var(--text);
   line-height:1.75;
 }
+
 a {
-  color:var(--blue);
+  color:var(--gold-light);
   text-decoration:none;
 }
+
+a:hover {
+  color:var(--gold);
+}
+
 a:focus,button:focus {
-  outline:3px solid var(--yellow);
+  outline:3px solid var(--gold);
   outline-offset:3px;
 }
+
 header {
-  background:var(--navy);
+  background:#080809;
   color:white;
   padding:16px 5%;
+  border-bottom:1px solid #3b321e;
 }
+
 .navbar {
   max-width:1150px;
   margin:auto;
@@ -60,159 +75,209 @@ header {
   gap:15px;
   flex-wrap:wrap;
 }
+
 .brand {
   font-size:19px;
   font-weight:800;
-  color:var(--yellow);
+  color:var(--gold);
 }
+
 nav {
   display:flex;
   gap:15px;
   flex-wrap:wrap;
 }
+
 nav a {
   color:white;
   font-size:13px;
 }
+
 nav a:hover {
-  color:var(--yellow);
+  color:var(--gold);
 }
+
 .hero {
-  background:linear-gradient(135deg,#101827,#17467b);
+  background:radial-gradient(ellipse at top,#292214 0%,#111114 48%,#080809 100%);
   color:white;
   padding:80px 6%;
   text-align:center;
+  border-bottom:1px solid #302819;
 }
+
 .hero-inner {
   max-width:850px;
   margin:auto;
 }
+
 .eyebrow {
-  color:var(--yellow);
+  color:var(--gold);
   font-weight:bold;
   text-transform:uppercase;
   letter-spacing:2px;
   font-size:12px;
 }
+
 .hero h1 {
   font-size:clamp(32px,6vw,52px);
   line-height:1.2;
   margin:16px 0;
 }
+
 .hero p {
   max-width:720px;
   margin:0 auto 25px;
-  color:#e0e8f5;
+  color:#dedee2;
   font-size:17px;
 }
+
 .button {
   display:inline-block;
   padding:12px 20px;
   margin:5px;
   border-radius:6px;
-  background:var(--yellow);
-  color:var(--navy);
+  background:var(--gold);
+  color:#111114;
   font-weight:bold;
+  border:1px solid var(--gold);
 }
+
+.button:hover {
+  background:var(--gold-light);
+  color:#080809;
+}
+
 .button.outline {
   background:transparent;
-  color:white;
-  border:1px solid white;
+  color:var(--gold);
+  border:1px solid var(--gold);
 }
+
+.button.outline:hover {
+  background:var(--gold);
+  color:#111114;
+}
+
 .container {
   max-width:1100px;
   width:90%;
   margin:auto;
 }
+
 section {
   padding:55px 0;
 }
+
 .section-title {
-  color:var(--navy);
+  color:var(--gold);
   font-size:clamp(25px,4vw,34px);
   text-align:center;
   line-height:1.3;
   margin-bottom:12px;
 }
+
 .section-intro {
   max-width:760px;
   text-align:center;
   margin:0 auto 32px;
   color:var(--muted);
 }
+
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:20px;
 }
+
 .card,.article,.panel {
-  background:white;
+  background:var(--panel);
   padding:24px;
   border-radius:10px;
   border:1px solid var(--border);
-  box-shadow:0 4px 14px #15213a08;
+  box-shadow:0 4px 18px #0005;
 }
+
+.card:hover,.article:hover {
+  border-color:#8d7135;
+}
+
 .card h3,.article h3,.panel h3 {
-  color:var(--navy);
+  color:var(--gold-light);
   line-height:1.4;
   margin-bottom:12px;
 }
+
 .card p,.article p,.panel p {
   margin-bottom:12px;
 }
+
 .icon {
   font-size:28px;
   margin-bottom:10px;
 }
+
 .soft {
-  background:#e8eef7;
+  background:#111113;
+  border-top:1px solid #222226;
+  border-bottom:1px solid #222226;
 }
+
 .article-list {
   display:grid;
   gap:22px;
   max-width:900px;
   margin:auto;
 }
+
 .article h2 {
-  color:var(--navy);
+  color:var(--gold);
   font-size:23px;
   line-height:1.4;
   margin-bottom:12px;
 }
+
 .article h3,.panel h3 {
   margin-top:18px;
 }
+
 .article ul,.article ol,.panel ul {
   padding-left:22px;
   margin:10px 0 16px;
 }
+
 .article li,.panel li {
   margin-bottom:8px;
 }
+
 .tag {
   display:inline-block;
   font-size:12px;
   font-weight:bold;
-  background:#eaf1ff;
-  color:#174d9e;
+  background:#302817;
+  color:var(--gold-light);
   padding:4px 9px;
   border-radius:20px;
   margin-bottom:12px;
 }
+
 .notice {
   padding:16px;
-  background:#fff6d9;
-  border-left:4px solid #e7b400;
+  background:#292214;
+  color:#f3e6c2;
+  border-left:4px solid var(--gold);
   border-radius:5px;
   margin-top:18px;
 }
+
 .contact-box {
   max-width:800px;
   margin:auto;
 }
+
 .contact-box a:not(.whatsapp-button) {
   overflow-wrap:anywhere;
 }
+
 .whatsapp-button {
   display:inline-block;
   background:var(--green);
@@ -222,10 +287,12 @@ section {
   font-weight:bold;
   margin:12px 0;
 }
+
 .whatsapp-button:hover {
   background:#128C7E;
   color:white;
 }
+
 .whatsapp-float {
   position:fixed;
   right:16px;
@@ -236,57 +303,109 @@ section {
   padding:13px 18px;
   border-radius:50px;
   font-weight:bold;
-  box-shadow:0 4px 12px #0004;
+  box-shadow:0 4px 12px #0008;
 }
+
 .whatsapp-float:hover {
   background:#128C7E;
   color:white;
 }
+
 .small {
   font-size:13px;
   color:var(--muted);
 }
+
 footer {
-  background:var(--navy);
-  color:#e1e8f4;
+  background:#070708;
+  color:#dedee2;
   text-align:center;
   padding:35px 5%;
+  border-top:1px solid #3b321e;
 }
+
 footer p {
   margin:8px 0;
 }
+
 footer a {
-  color:var(--yellow);
+  color:var(--gold);
   margin:0 7px;
 }
+
 footer .small {
-  color:#c4cede;
+  color:#b9b9c0;
 }
+
+.page-links {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin:25px auto 0;
+}
+
+.page-links a {
+  display:inline-block;
+  border:1px solid #79612e;
+  background:#171512;
+  color:var(--gold-light);
+  padding:10px 15px;
+  border-radius:6px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.page-links a:hover {
+  background:var(--gold);
+  color:#111114;
+}
+
 @media(max-width:650px) {
   header {
     padding:16px 5%;
   }
+
   .navbar {
     justify-content:center;
   }
+
   nav {
     justify-content:center;
     gap:10px 14px;
   }
+
+  nav a {
+    font-size:13px;
+  }
+
   .hero {
     padding:58px 5%;
   }
+
   .hero p {
     font-size:16px;
   }
+
   section {
     padding:42px 0;
   }
+
   .container {
     width:92%;
   }
+
   .card,.article,.panel {
     padding:20px;
+  }
+
+  .page-links {
+    gap:9px;
+  }
+
+  .page-links a {
+    padding:9px 11px;
+    font-size:13px;
   }
 }
 </style>
@@ -296,13 +415,15 @@ footer .small {
 
 <header>
   <div class="navbar">
-    <a class="brand" href="#home">EMMYBLAQ AUTOTECH</a>
+    <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
+
     <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
+      <a href="index.html">Home</a>
       <a href="#services">Services</a>
-      <a href="#guides">Auto Guides</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="guides.html">Auto Guides</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </div>
 </header>
@@ -313,27 +434,51 @@ footer .small {
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="eyebrow">Automotive Knowledge & Technology</div>
+
     <h1>Understand Your Vehicle. Make Better Decisions.</h1>
+
     <p>
       Welcome to EmmyBlaQ AutoTech. Explore automotive electrical
       systems, car air conditioning, vehicle diagnostics and vehicle
       technology. Contact us to enquire about our services.
     </p>
-    <a class="button" href="#guides">Read Auto Guides</a>
-    <a class="button outline" href="#contact">Contact Us</a>
+
+    <a class="button" href="guides.html">Explore Auto Guides</a>
+    <a class="button outline" href="contact.html">Contact Us</a>
+  </div>
+</section>
+
+<!-- QUICK LINKS TO SEPARATE PAGES -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Explore EmmyBlaQ AutoTech</h2>
+
+    <p class="section-intro">
+      Discover our automotive guides, work gallery, business information
+      and contact details using the separate pages below.
+    </p>
+
+    <div class="page-links">
+      <a href="guides.html">Automotive Guides</a>
+      <a href="gallery.html">Our Gallery</a>
+      <a href="about.html">About EmmyBlaQ</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="soft">
   <div class="container">
     <h2 class="section-title">Our Services & Areas of Expertise</h2>
+
     <p class="section-intro">
       We focus on automotive electrical systems, vehicle AC,
       diagnostics and tracking technology.
     </p>
 
     <div class="grid">
+
       <article class="card">
         <div class="icon">⚡</div>
         <h3>Automotive Electrical</h3>
@@ -341,7 +486,7 @@ footer .small {
           Vehicle electrical fault investigation, wiring concerns,
           battery and charging-system problems.
         </p>
-        <a href="#contact">Make an enquiry →</a>
+        <a href="contact.html">Make an enquiry →</a>
       </article>
 
       <article class="card">
@@ -351,7 +496,7 @@ footer .small {
           Automotive AC problem assessment, cooling-system concerns
           and information about proper diagnosis.
         </p>
-        <a href="#contact">Make an enquiry →</a>
+        <a href="contact.html">Make an enquiry →</a>
       </article>
 
       <article class="card">
@@ -361,7 +506,7 @@ footer .small {
           Learn about diagnostic scanners, fault codes, electrical
           testing and evidence-based troubleshooting.
         </p>
-        <a href="#contact">Make an enquiry →</a>
+        <a href="contact.html">Make an enquiry →</a>
       </article>
 
       <article class="card">
@@ -371,8 +516,9 @@ footer .small {
           Enquire about vehicle tracker installation and learn
           important things to consider when choosing a device.
         </p>
-        <a href="#contact">Make an enquiry →</a>
+        <a href="contact.html">Make an enquiry →</a>
       </article>
+
     </div>
 
     <p class="small" style="text-align:center;margin-top:18px;">
@@ -382,238 +528,68 @@ footer .small {
   </div>
 </section>
 
-<!-- GUIDES -->
-<section class="soft" id="guides">
+<!-- GUIDES PREVIEW -->
+<section id="guides">
   <div class="container">
     <h2 class="section-title">Automotive Learning Centre</h2>
+
     <p class="section-intro">
       Practical educational articles about common vehicle problems
       and responsible maintenance.
     </p>
 
-    <div class="article-list">
+    <div class="grid">
 
-      <article class="article">
-        <span class="tag">Electrical Systems</span>
-        <h2>1. Why Does a Car Battery Keep Going Flat?</h2>
+      <article class="card">
+        <div class="icon">🔋</div>
+        <h3>Car Battery Problems</h3>
         <p>
-          A car battery supplies the energy needed to start the engine
-          and support electrical systems. If it repeatedly goes flat,
-          installing another battery may not solve the real problem.
+          Learn about common reasons a car battery keeps going flat
+          and why proper testing matters.
         </p>
-        <h3>Common possible causes</h3>
-        <ul>
-          <li><strong>Weak battery:</strong> Age and wear can reduce its ability to hold a charge.</li>
-          <li><strong>Charging-system fault:</strong> An alternator, belt, wiring or connection may not work correctly.</li>
-          <li><strong>Electrical drain:</strong> A component may continue using power while the vehicle is parked.</li>
-          <li><strong>Poor connections:</strong> Loose or corroded terminals can interfere with charging and starting.</li>
-          <li><strong>Short journeys:</strong> Repeated short trips may not fully replace the energy used during starting.</li>
-        </ul>
-        <h3>What should you do?</h3>
-        <p>
-          Have the battery condition, charging system and possible
-          unwanted current draw tested. The proper method depends on
-          the vehicle and its electrical system.
-        </p>
-        <p>
-          Testing before replacing parts can help prevent unnecessary
-          expenses and identify the actual cause.
-        </p>
+        <a href="guides.html">Read our automotive guides →</a>
       </article>
 
-      <article class="article">
-        <span class="tag">Electrical Systems</span>
-        <h2>2. Why Have Your Car's Electrical Accessories Stopped Working?</h2>
+      <article class="card">
+        <div class="icon">🔧</div>
+        <h3>Vehicle Diagnostics</h3>
         <p>
-          When a radio, interior light or power window stops working,
-          the cause may be the component itself or its electrical supply.
+          Understand diagnostic scanners, fault codes and the
+          importance of evidence-based troubleshooting.
         </p>
-        <h3>Possible areas to inspect</h3>
-        <ul>
-          <li>The relevant fuse and its specified rating.</li>
-          <li>Relays, switches and electrical connectors.</li>
-          <li>Power supply and earth connections.</li>
-          <li>Damaged wiring or loose connections.</li>
-          <li>Electronic control systems where fitted.</li>
-        </ul>
-        <p>
-          A fuse protects a circuit from excessive current. Never
-          bypass a fuse or replace it with one of a higher rating.
-          If the correct fuse blows again, the circuit needs diagnosis.
-        </p>
+        <a href="guides.html">Explore the guides →</a>
       </article>
 
-      <article class="article">
-        <span class="tag">Starting Problems</span>
-        <h2>3. Why Might a Car Refuse to Start?</h2>
+      <article class="card">
+        <div class="icon">❄️</div>
+        <h3>Car AC Knowledge</h3>
         <p>
-          A vehicle may refuse to start because of a battery problem,
-          poor connections, a starter-circuit fault, a security-system
-          issue or a fault in an engine system.
+          Discover common reasons for poor cooling and learn why
+          safe, proper diagnosis is important.
         </p>
-        <h3>Pay attention to the symptoms</h3>
-        <ul>
-          <li><strong>No response:</strong> The battery supply, connections or starter control circuit may need checking.</li>
-          <li><strong>Clicking sound:</strong> A weak battery, poor connection or starter fault may be involved.</li>
-          <li><strong>Engine turns but does not start:</strong> Fuel, ignition or engine-management systems may need investigation.</li>
-        </ul>
-        <p>
-          These symptoms do not prove which component has failed.
-          Record what happens and arrange suitable testing rather
-          than replacing parts based on guesses.
-        </p>
-        <p>
-          If you notice smoke, a burning smell or damaged wiring,
-          stop using the affected system and seek professional help.
-        </p>
-      </article>
-
-      <article class="article">
-        <span class="tag">Vehicle Diagnostics</span>
-        <h2>4. What Does a Car Diagnostic Scanner Do?</h2>
-        <p>
-          A diagnostic scanner communicates with supported electronic
-          systems in a vehicle. Depending on compatibility, it may
-          retrieve trouble codes and display selected system data.
-        </p>
-        <h3>Does a fault code identify the failed part?</h3>
-        <p>
-          Not necessarily. A code related to a sensor circuit may be
-          caused by the sensor, damaged wiring, a poor connector or
-          another problem affecting that circuit.
-        </p>
-        <h3>Why is further testing important?</h3>
-        <p>
-          A sound diagnostic process combines the driver's complaint,
-          visual inspection, service information, scanner results and
-          appropriate tests. The scanner is one part of diagnosis,
-          not a guarantee that every fault will be identified.
-        </p>
-        <p>
-          Always check that diagnostic equipment supports the vehicle
-          and systems you intend to test.
-        </p>
-      </article>
-
-      <article class="article">
-        <span class="tag">Car Air Conditioning</span>
-        <h2>5. Why Is Your Car AC Not Cooling Properly?</h2>
-        <p>
-          Weak air conditioning may be caused by an incorrect
-          refrigerant charge, restricted airflow, a cooling-fan fault,
-          a compressor problem or an electrical issue.
-        </p>
-        <h3>Information that can help diagnosis</h3>
-        <p>
-          Notice whether cooling is weak all the time or changes
-          when the vehicle is stationary or moving. Unusual noises
-          and changes in airflow may also be useful observations.
-        </p>
-        <p>
-          A technician can use suitable equipment and vehicle-specific
-          information to determine which tests are needed.
-        </p>
-        <div class="notice">
-          Vehicle AC systems may contain pressurised refrigerant.
-          Do not release refrigerant into the atmosphere or open a
-          pressurised system without suitable equipment and training.
-          Use a qualified AC technician.
-        </div>
-      </article>
-
-      <article class="article">
-        <span class="tag">Vehicle Technology</span>
-        <h2>6. What Should You Know Before Installing a Vehicle Tracker?</h2>
-        <p>
-          A vehicle tracker may use positioning technology and mobile
-          communications to provide location information through a
-          compatible service. Features vary by device and provider.
-        </p>
-        <h3>Consider these factors</h3>
-        <ul>
-          <li><strong>Compatibility:</strong> Confirm that the device suits the vehicle.</li>
-          <li><strong>Network coverage:</strong> Check service availability in areas where the vehicle operates.</li>
-          <li><strong>Running costs:</strong> Find out whether a subscription or SIM service is required.</li>
-          <li><strong>Installation quality:</strong> Wiring should follow the manufacturer's instructions.</li>
-          <li><strong>Customer support:</strong> Understand how to operate the device and get assistance.</li>
-        </ul>
-        <p>
-          Poor installation can cause electrical problems. Tracking
-          technology should be used lawfully and with proper respect
-          for privacy.
-        </p>
-      </article>
-
-      <article class="article">
-        <span class="tag">Maintenance</span>
-        <h2>7. Simple Habits That Can Help Maintain Your Vehicle</h2>
-        <p>
-          Following a suitable maintenance schedule helps owners
-          monitor vehicle condition and notice developing problems.
-        </p>
-        <ul>
-          <li>Follow the manufacturer's service schedule.</li>
-          <li>Pay attention to warning lights and dashboard messages.</li>
-          <li>Check tyre condition and pressure as recommended.</li>
-          <li>Investigate unusual noises, smells or changes in performance.</li>
-          <li>Use suitable parts and specified fluids.</li>
-          <li>Keep records of maintenance and repairs.</li>
-        </ul>
-        <p>
-          Some faults can affect safety even when a vehicle still
-          appears to operate normally. Seek professional assistance
-          when a warning or symptom requires it.
-        </p>
-      </article>
-
-      <article class="article">
-        <span class="tag">Professional Diagnosis</span>
-        <h2>8. Why Proper Vehicle Diagnosis Matters</h2>
-        <p>
-          Modern vehicles contain interconnected electrical,
-          mechanical and electronic systems. A single symptom may
-          have several possible causes.
-        </p>
-        <p>
-          Replacing parts without testing can waste money if the
-          underlying fault is elsewhere.
-        </p>
-        <h3>A sensible diagnostic process</h3>
-        <ol>
-          <li>Understand the driver's complaint and when the problem occurs.</li>
-          <li>Inspect the vehicle for visible damage or obvious issues.</li>
-          <li>Consult relevant vehicle-specific information.</li>
-          <li>Perform suitable electrical or mechanical tests.</li>
-          <li>Interpret the results before choosing a repair.</li>
-          <li>Verify that the repair has addressed the original complaint.</li>
-        </ol>
-        <p>
-          Reliable diagnosis depends on appropriate knowledge,
-          equipment and evidence rather than guesswork.
-        </p>
+        <a href="guides.html">Learn more →</a>
       </article>
 
     </div>
 
-    <div class="notice">
-      <strong>Safety notice:</strong> These articles provide general
-      educational information. They do not replace professional
-      diagnosis or vehicle-specific service instructions. Never
-      attempt work beyond your training, tools or safety equipment.
+    <div style="text-align:center;margin-top:28px;">
+      <a class="button" href="guides.html">Visit the Full Guides Page</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- ABOUT PREVIEW -->
+<section class="soft" id="about">
   <div class="container">
     <h2 class="section-title">About EmmyBlaQ AutoTech</h2>
+
     <p class="section-intro">
       Automotive knowledge, explained in clear and practical language.
     </p>
 
     <div class="panel">
       <h3>Who We Are</h3>
+
       <p>
         EmmyBlaQ AutoTech is an automotive information and services
         brand focused on vehicle electrical systems, car air
@@ -621,6 +597,7 @@ footer .small {
       </p>
 
       <h3>Our Mission</h3>
+
       <p>
         Our goal is to help readers understand common automotive
         topics, recognise warning signs and make informed decisions
@@ -628,20 +605,26 @@ footer .small {
       </p>
 
       <h3>Our Approach</h3>
+
       <p>
         We aim to explain technical concepts in straightforward
         language and encourage proper testing instead of guesswork.
         Vehicle designs and repair procedures differ, so always
         consult suitable vehicle-specific information.
       </p>
+
+      <p style="margin-top:20px;">
+        <a class="button" href="about.html">Learn More About Us</a>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="soft" id="contact">
+<!-- CONTACT PREVIEW -->
+<section id="contact">
   <div class="container">
     <h2 class="section-title">Contact EmmyBlaQ AutoTech</h2>
+
     <p class="section-intro">
       Need to enquire about automotive electrical work, car AC,
       vehicle diagnostics or tracker installation? Contact us.
@@ -681,12 +664,16 @@ footer .small {
         Please enquire about service availability, price and location
         before making arrangements.
       </p>
+
+      <p style="margin-top:20px;">
+        <a class="button" href="contact.html">Open Contact Page</a>
+      </p>
     </div>
   </div>
 </section>
 
 <!-- PRIVACY POLICY -->
-<section id="privacy">
+<section id="privacy" class="soft">
   <div class="container">
     <h2 class="section-title">Privacy Policy</h2>
 
@@ -724,11 +711,12 @@ footer .small {
         services may handle technical information under their own
         policies.
       </p>
+
       <p>
-        If advertising services such as Google AdSense are added,
-        those providers may use cookies or similar technologies for
-        advertising, measurement and fraud prevention, subject to
-        their policies, visitor choices and applicable law.
+        Advertising services such as Google AdSense may use cookies
+        or similar technologies for advertising, measurement and fraud
+        prevention, subject to their policies, visitor choices and
+        applicable law.
       </p>
 
       <h3>5. External Websites</h3>
@@ -760,7 +748,7 @@ footer .small {
 </section>
 
 <!-- TERMS -->
-<section class="soft" id="terms">
+<section id="terms">
   <div class="container">
     <h2 class="section-title">Terms and Conditions</h2>
 
@@ -827,16 +815,24 @@ footer .small {
 </main>
 
 <footer>
-  <p><strong>EMMYBLAQ AUTOTECH</strong></p>
+  <p style="color:var(--gold);font-size:18px;">
+    <strong>EMMYBLAQ AUTOTECH</strong>
+  </p>
+
   <p>Automotive Knowledge. Better Understanding. Smarter Maintenance.</p>
 
   <p>
-    <a href="#home">Home</a>
+    <a href="index.html">Home</a>
     <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="guides.html">Auto Guides</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </p>
+
+  <p>
     <a href="#privacy">Privacy Policy</a>
-    <a href="#terms">Terms</a>
+    <a href="#terms">Terms & Conditions</a>
   </p>
 
   <p class="small">
