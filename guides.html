@@ -1,115 +1,644 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about car electrical systems, air conditioning, vehicle diagnostics and automotive maintenance with EmmyBlaQ AutoTech.">
-  <title>Automotive Guides | EmmyBlaQ AutoTech</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta name="description" content="Advanced automotive electrical diagnosis, OBD-II scanner interpretation, wiring diagrams, voltage-drop testing and car air-conditioning troubleshooting by EmmyBlaQ AutoTech.">
+  <meta name="robots" content="index, follow">
+  <title>Advanced Auto Diagnostic Guides | EmmyBlaQ AutoTech</title>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5760610709240232" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --gold: #e7b638;
+      --black: #101010;
+      --panel: #191919;
+      --muted: #bcbcbc;
+      --line: #333;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a { color: var(--gold); }
+
+    header {
+      background: #080808;
+      border-bottom: 1px solid #393021;
+      padding: 18px 5%;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-size: 21px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      padding: 65px 5% 55px;
+      text-align: center;
+      background: linear-gradient(130deg, #191919, #080808);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0 auto 15px;
+      color: var(--gold);
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 20px;
+      color: #ddd;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #80631f;
+      color: var(--gold);
+      border-radius: 30px;
+      padding: 5px 13px;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 35px auto;
+    }
+
+    .notice {
+      padding: 17px 20px;
+      border-left: 4px solid var(--gold);
+      background: #1c1a14;
+      border-radius: 5px;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    .section-heading {
+      color: var(--gold);
+      font-size: 27px;
+      margin: 42px 0 12px;
+      line-height: 1.3;
+    }
+
+    .intro { color: var(--muted); }
+
+    .guide {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 25px 0;
+    }
+
+    .guide img {
+      display: block;
+      width: 100%;
+      max-height: 430px;
+      object-fit: cover;
+      background: #242424;
+    }
+
+    .guide-content { padding: 24px; }
+
+    .guide h2 {
+      color: var(--gold);
+      font-size: 25px;
+      line-height: 1.35;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #f0cc69;
+      font-size: 19px;
+      margin-top: 25px;
+    }
+
+    p { margin: 12px 0; }
+
+    .steps {
+      padding-left: 22px;
+    }
+
+    .steps li { margin: 9px 0; }
+
+    .technical-box {
+      padding: 15px 18px;
+      background: #101010;
+      border: 1px solid #444;
+      border-radius: 7px;
+      margin: 18px 0;
+    }
+
+    .technical-box strong { color: var(--gold); }
+
+    .table-wrap { overflow-x: auto; margin: 18px 0; }
+
+    table {
+      width: 100%;
+      min-width: 460px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #302716;
+      color: var(--gold);
+    }
+
+    tr:nth-child(even) { background: #202020; }
+
+    .small-caption {
+      color: #aaa;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .related {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .related a {
+      display: block;
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .related a:hover { border-color: var(--gold); }
+
+    footer {
+      margin-top: 55px;
+      padding: 30px 5%;
+      background: #080808;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    footer a { margin: 0 8px; }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: #168b48;
+      color: white;
+      padding: 12px 17px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 3px 14px #0009;
+      z-index: 5;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 15px 4%; }
+      .nav { align-items: flex-start; }
+      nav { gap: 11px; }
+      nav a { font-size: 12px; }
+      .hero { padding: 45px 5%; }
+      .container { width: 92%; }
+      .guide-content { padding: 17px; }
+      .guide h2 { font-size: 22px; }
+      .section-heading { font-size: 24px; }
+    }
+  </style>
+</head>
+
+<body>
 <header>
-  <div class="navbar">
-    <a class="brand" href="index.html">EmmyBlaQ AutoTech</a>
-    <nav>
+  <div class="nav">
+    <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="guides.html">Guides</a>
-      <a href="gallery.html">Our Work</a>
+      <a href="guides.html">Auto Guides</a>
+      <a href="gallery.html">Gallery</a>
       <a href="about.html">About</a>
-      <a href="referral.html">Referral</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<div class="page-heading">
-  <h1>Automotive Learning Centre</h1>
-  <p>Simple guides to help you understand your vehicle better.</p>
-</div>
+<section class="hero">
+  <span class="tag">TECHNICAL KNOWLEDGE • DIAGNOSTIC METHODS</span>
+  <h1>Advanced Automotive Diagnostic Guides</h1>
+  <p>
+    Practical technical information on automotive electrical systems,
+    fault-code interpretation, circuit testing and vehicle air-conditioning.
+    Built for technicians, apprentices and serious vehicle owners.
+  </p>
+</section>
 
 <main class="container">
-  <section>
-    <div class="grid">
+  <div class="notice">
+    <strong>How to use these guides:</strong>
+    Confirm the customer's complaint, inspect the system, test the relevant
+    circuit and compare your findings with manufacturer specifications.
+    A fault code is a starting point for diagnosis—not automatic proof that
+    a particular component has failed.
+  </div>
 
-      <article class="card">
-        <div class="icon">🔋</div>
-        <h2>1. Signs of a Weak Car Battery</h2>
-        <p>Slow engine cranking, dim lights and repeated starting problems can indicate a weak battery or a fault in the charging system.</p>
-        <p><strong>Tip:</strong> Have the battery and alternator tested before replacing parts.</p>
-      </article>
+  <h2 class="section-heading">1. Advanced electrical fault diagnosis</h2>
+  <p class="intro">
+    Start with measurements and circuit logic. Replacing parts without
+    confirming the cause can waste time and money.
+  </p>
 
-      <article class="card">
-        <div class="icon">💡</div>
-        <h2>2. Common Electrical Problems</h2>
-        <p>Blown fuses, damaged wiring, loose connections and faulty switches can cause electrical components to stop working.</p>
-        <p><strong>Tip:</strong> Find the cause of a blown fuse instead of repeatedly replacing it.</p>
-      </article>
+  <article class="guide">
+    <img
+      src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1400&q=85"
+      alt="Vehicle undergoing automotive workshop inspection"
+      loading="lazy">
+    <div class="guide-content">
+      <h2>Voltage-drop testing: finding resistance hidden in a circuit</h2>
+      <p>
+        A cable can look clean and still have excessive resistance inside a
+        crimp, connector, fuse holder or ground joint. Continuity testing
+        alone may not reveal the problem because a multimeter uses very little
+        current during that test.
+      </p>
 
-      <article class="card">
-        <div class="icon">❄️</div>
-        <h2>3. Why Your Car AC May Not Cool</h2>
-        <p>Possible causes include refrigerant leaks, a faulty compressor, blocked airflow or electrical problems.</p>
-        <p><strong>Tip:</strong> Ask a qualified AC technician to inspect the system.</p>
-      </article>
+      <h3>When is voltage-drop testing useful?</h3>
+      <ul>
+        <li>A starter clicks but cranks slowly.</li>
+        <li>A headlamp becomes dim under load.</li>
+        <li>A cooling fan runs intermittently.</li>
+        <li>A connector or cable becomes unusually warm.</li>
+        <li>A component works during a bench test but fails in the vehicle.</li>
+      </ul>
 
-      <article class="card">
-        <div class="icon">🖥️</div>
-        <h2>4. Understanding Dashboard Warning Lights</h2>
-        <p>Warning lights alert you to possible problems with systems such as the engine, brakes, battery or oil pressure.</p>
-        <p><strong>Tip:</strong> Check your vehicle manual. Stop safely when a warning indicates a serious problem.</p>
-      </article>
+      <h3>Diagnostic procedure</h3>
+      <ol class="steps">
+        <li>Identify the correct circuit using the vehicle's wiring diagram.</li>
+        <li>Inspect the battery, terminals, connectors, fuses and ground points.</li>
+        <li>Set the multimeter to DC volts and select a suitable range.</li>
+        <li>With the circuit operating under its normal load, measure across the section being tested.</li>
+        <li>Compare the reading with the manufacturer's allowable voltage drop.</li>
+        <li>If the drop is excessive, divide the circuit into smaller sections and retest to isolate the resistance.</li>
+      </ol>
 
-      <article class="card">
-        <div class="icon">🔍</div>
-        <h2>5. What Is Vehicle Diagnostics?</h2>
-        <p>Diagnostic equipment reads information from a vehicle's computer to help identify possible faults.</p>
-        <p><strong>Tip:</strong> A fault code helps with diagnosis but does not always identify the exact faulty part.</p>
-      </article>
+      <div class="technical-box">
+        <strong>Example:</strong> If a cable section shows a voltage drop that
+        exceeds the vehicle manufacturer's specification while carrying its
+        normal load, investigate the cable, crimps and connections in that
+        section. Do not condemn the component until the complete circuit has
+        been checked.
+      </div>
 
-      <article class="card">
-        <div class="icon">⚡</div>
-        <h2>6. Understanding the Alternator</h2>
-        <p>The alternator helps supply electrical power while the engine runs and recharges the battery.</p>
-        <p><strong>Tip:</strong> Charging problems should be checked with suitable testing equipment.</p>
-      </article>
+      <h3>Positive-side and ground-side checks</h3>
+      <p>
+        On a suitable powered circuit, measure the positive supply path
+        separately from the ground return path. An excessive drop on the
+        positive side points towards resistance in the supply path; an
+        excessive ground-side drop points towards the return path. Follow the
+        correct test procedure for the circuit being diagnosed.
+      </p>
 
-      <article class="card">
-        <div class="icon">🌡️</div>
-        <h2>7. Preventing Engine Overheating</h2>
-        <p>Low coolant, leaks, cooling fan faults and thermostat problems can contribute to engine overheating.</p>
-        <p><strong>Tip:</strong> If the engine overheats, stop somewhere safe and let it cool. Never open a hot radiator cap.</p>
-      </article>
-
-      <article class="card">
-        <div class="icon">📍</div>
-        <h2>8. What Is a Vehicle Tracker?</h2>
-        <p>A vehicle tracker can help an owner monitor a vehicle's location, depending on the device and its features.</p>
-        <p><strong>Tip:</strong> Choose a suitable device and ensure installation and tracking comply with applicable privacy laws.</p>
-      </article>
-
+      <p>
+        <strong>Common mistake:</strong> Measuring resistance on an energised
+        circuit. Isolate power and follow the service procedure before using
+        resistance or continuity mode.
+      </p>
     </div>
+  </article>
 
-    <div class="notice">
-      <strong>Important:</strong> These guides provide general information, not a substitute for professional inspection. Vehicle systems differ by make and model.
-    </div>
+  <h2 class="section-heading">2. OBD-II scanner interpretation</h2>
 
-    <div class="center" style="margin-top:25px;">
-      <a class="button" href="services.html">Explore Our Services</a>
-      <a class="whatsapp-button" href="https://wa.me/2349119330397" target="_blank" rel="noopener noreferrer">Ask Us on WhatsApp</a>
+  <article class="guide">
+    <img
+      src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400&q=85"
+      alt="Technical diagnostic work using electronic equipment"
+      loading="lazy">
+    <div class="guide-content">
+      <h2>How to diagnose a fault code without guessing</h2>
+      <p>
+        An OBD-II diagnostic trouble code (DTC) records information about a
+        detected system fault. It does not always identify the failed part.
+        A sensor-related code, for example, can result from wiring damage,
+        poor power supply, a bad ground, a connector problem or a genuine
+        sensor failure.
+      </p>
+
+      <h3>A professional scan workflow</h3>
+      <ol class="steps">
+        <li>Confirm the vehicle year, make, model, engine and system.</li>
+        <li>Ask when the symptom occurs and whether any recent repairs were made.</li>
+        <li>Scan the relevant modules and record all codes before clearing anything.</li>
+        <li>Check code status, freeze-frame information and related codes when available.</li>
+        <li>Compare live data with manufacturer specifications and the actual operating conditions.</li>
+        <li>Use wiring diagrams and electrical tests to confirm the suspected cause.</li>
+        <li>Repair the verified fault, clear codes where appropriate, and retest the vehicle.</li>
+      </ol>
+
+      <h3>Useful scanner information</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Scanner data</th>
+              <th>What it helps you investigate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stored DTCs</td>
+              <td>Faults recorded by a control module.</td>
+            </tr>
+            <tr>
+              <td>Pending DTCs</td>
+              <td>Problems detected but not necessarily confirmed as a mature fault.</td>
+            </tr>
+            <tr>
+              <td>Freeze-frame data</td>
+              <td>Operating conditions captured when a qualifying fault was recorded, if supported.</td>
+            </tr>
+            <tr>
+              <td>Live data</td>
+              <td>Sensor and calculated values that can be compared with expected behaviour.</td>
+            </tr>
+            <tr>
+              <td>Readiness monitors</td>
+              <td>Whether supported emissions-monitor tests have completed.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Example: a mass-airflow sensor code</h3>
+      <p>
+        A code relating to the mass-airflow (MAF) signal does not automatically
+        mean the MAF sensor is defective. Inspect the air intake for leaks,
+        check the connector and wiring, verify the sensor's power and ground
+        where applicable, and compare its signal with the correct service
+        information. Consider other engine conditions that may influence the
+        reading.
+      </p>
+
+      <div class="technical-box">
+        <strong>Technician's rule:</strong> Save the original scan report.
+        Clearing codes before recording them can remove useful diagnostic
+        evidence. Never replace a part based only on the code description.
+      </div>
     </div>
-  </section>
+  </article>
+
+  <h2 class="section-heading">3. Wiring diagrams and circuit tracing</h2>
+
+  <article class="guide">
+    <img
+      src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400&q=85"
+      alt="Technical engineering work and electronic equipment"
+      loading="lazy">
+    <div class="guide-content">
+      <h2>How to trace an automotive circuit from the diagram</h2>
+      <p>
+        A wiring diagram helps you understand how a component receives power,
+        how its ground or control path works, and which connectors and
+        protection devices lie between the source and the load.
+      </p>
+
+      <h3>What to identify before testing</h3>
+      <ul>
+        <li>Battery or ignition-switched power source.</li>
+        <li>Fuse and relay locations, ratings and circuit function.</li>
+        <li>Connector identification and terminal numbers.</li>
+        <li>Wire colours, splices and ground points.</li>
+        <li>Whether a control module switches the positive side or ground side.</li>
+        <li>Any shared supply or ground used by other components.</li>
+      </ul>
+
+      <h3>Example: an electrical cooling fan that will not run</h3>
+      <ol class="steps">
+        <li>Confirm the reported fault and check the relevant fuse.</li>
+        <li>Use the correct wiring diagram to identify the fan's power, ground and control arrangements.</li>
+        <li>Determine whether the system is designed to activate under the current engine temperature or AC operating conditions.</li>
+        <li>Inspect connectors and wiring, then test the supply and ground using the specified procedure.</li>
+        <li>If a relay is fitted, verify its control signal and switched output instead of assuming the relay is bad.</li>
+        <li>Use a suitable scan tool to check commanded fan operation if the vehicle supports it.</li>
+        <li>Confirm the repair by retesting the system under the correct operating conditions.</li>
+      </ol>
+
+      <div class="technical-box">
+        <strong>Important:</strong> Some fans can start unexpectedly, even
+        after the engine has been switched off. Keep hands and tools clear
+        and follow the manufacturer's isolation procedure.
+      </div>
+    </div>
+  </article>
+
+  <h2 class="section-heading">4. Automotive air-conditioning diagnosis</h2>
+
+  <article class="guide">
+    <img
+      src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=85"
+      alt="Vehicle maintenance in an automotive workshop"
+      loading="lazy">
+    <div class="guide-content">
+      <h2>Car AC is not cooling: a systematic diagnostic approach</h2>
+      <p>
+        Poor cooling can result from airflow restrictions, condenser fan
+        faults, incorrect refrigerant charge, compressor-control problems,
+        blend-door faults or other issues. Pressure readings must be
+        interpreted with the ambient temperature, humidity, engine speed and
+        manufacturer test conditions in mind.
+      </p>
+
+      <h3>Begin with basic observations</h3>
+      <ol class="steps">
+        <li>Confirm the complaint and note whether cooling is poor at idle, while driving, or in both conditions.</li>
+        <li>Check the cabin blower, air filter and airflow from the vents.</li>
+        <li>Check whether the condenser fan operates when commanded, using the correct test conditions.</li>
+        <li>Inspect the compressor drive or electrical control system, depending on compressor design.</li>
+        <li>Read relevant AC and engine control-module codes where supported.</li>
+        <li>Measure system pressures with approved equipment and compare them with the vehicle manufacturer's specifications.</li>
+        <li>After testing, repair the confirmed cause and verify vent performance under repeatable conditions.</li>
+      </ol>
+
+      <h3>Understanding common symptoms</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Observed symptom</th>
+              <th>Possible areas to investigate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cooling improves while driving but weakens at idle</td>
+              <td>Condenser airflow, fan operation and system performance under the specified test conditions.</td>
+            </tr>
+            <tr>
+              <td>Blower runs but air is warm</td>
+              <td>Compressor command, refrigerant circuit, blend-door operation and system controls.</td>
+            </tr>
+            <tr>
+              <td>Compressor does not engage</td>
+              <td>Control request, fuse, relay if fitted, wiring, pressure inputs and compressor-control strategy.</td>
+            </tr>
+            <tr>
+              <td>Cooling changes unpredictably</td>
+              <td>Intermittent electrical connections, sensor inputs, fan control and system operating conditions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        These are diagnostic starting points, not definitive fault matches.
+        Several different faults can produce the same symptom.
+      </p>
+
+      <div class="technical-box">
+        <strong>Refrigerant safety:</strong> Do not vent refrigerant to the
+        atmosphere or open a pressurised AC circuit casually. Use suitable
+        recovery equipment, correct protective equipment and the refrigerant
+        specified for the vehicle. Never mix refrigerants.
+      </div>
+    </div>
+  </article>
+
+  <h2 class="section-heading">5. Real workshop case studies</h2>
+
+  <article class="guide">
+    <div class="guide-content">
+      <h2>Case-study method: document the evidence, not just the repair</h2>
+      <p>
+        A useful workshop case study records the complaint, the checks
+        performed, the measurements obtained, the confirmed cause and the
+        result after repair. This helps another technician understand why
+        the repair was justified.
+      </p>
+
+      <h3>Recommended case-study format</h3>
+      <ol class="steps">
+        <li><strong>Vehicle:</strong> Record the make, model, year and engine where known.</li>
+        <li><strong>Complaint:</strong> Describe exactly what the driver noticed.</li>
+        <li><strong>Initial inspection:</strong> Record visible damage, warning lights and scan results.</li>
+        <li><strong>Tests:</strong> Explain which circuit or system was tested and why.</li>
+        <li><strong>Evidence:</strong> Record actual measurements and compare them with the relevant specifications.</li>
+        <li><strong>Confirmed cause:</strong> State the fault only after the evidence supports it.</li>
+        <li><strong>Repair and verification:</strong> Explain what was repaired and how normal operation was confirmed.</li>
+      </ol>
+
+      <p>
+        <strong>Example:</strong> If an intermittent electrical fault is traced
+        to a loose ground connection, document the symptoms, the measured
+        voltage drop before repair, the connection repair and the repeat-test
+        result. Do not publish invented readings or present an unverified
+        diagnosis as a real customer repair.
+      </p>
+    </div>
+  </article>
+
+  <h2 class="section-heading">6. Technical accuracy and safe working</h2>
+
+  <div class="guide">
+    <div class="guide-content">
+      <h2>Before carrying out any diagnostic test</h2>
+      <ul>
+        <li>Use wiring diagrams and service information for the exact vehicle.</li>
+        <li>Check the meter leads, probe ratings and measurement mode before testing.</li>
+        <li>Never measure resistance on a powered circuit.</li>
+        <li>Avoid probing airbag and other safety-critical circuits unless trained and following the approved procedure.</li>
+        <li>Use a suitable fused test lead when required; never short a power circuit to ground to “see what happens.”</li>
+        <li>Follow approved procedures for hybrid and electric vehicles. High-voltage systems require appropriate training and isolation.</li>
+        <li>Record findings so another technician can understand the diagnostic process.</li>
+      </ul>
+
+      <p>
+        Specifications and diagnostic strategies differ between manufacturers
+        and models. These guides provide general educational information and
+        are not a substitute for vehicle-specific service documentation or
+        qualified training.
+      </p>
+    </div>
+  </div>
+
+  <h2 class="section-heading">Explore EmmyBlaQ AutoTech</h2>
+  <div class="related">
+    <a href="services.html"><strong>Automotive Services</strong><br>Electrical diagnosis, car AC and related services.</a>
+    <a href="gallery.html"><strong>Workshop Gallery</strong><br>Explore available workshop media and projects.</a>
+    <a href="about.html"><strong>About Us</strong><br>Learn about EmmyBlaQ AutoTech.</a>
+    <a href="contact.html"><strong>Contact Us</strong><br>Ask about a vehicle problem or service.</a>
+  </div>
+
+  <p class="small-caption">
+    Image note: The photographs on this page are illustrative and may not
+    depict the exact vehicle, component or procedure discussed.
+  </p>
 </main>
 
 <footer>
-  <p><strong>EmmyBlaQ AutoTech</strong></p>
-  <p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="contact.html">Contact</a></p>
-  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
-  <p class="small">&copy; 2026 EmmyBlaQ AutoTech. All rights reserved.</p>
+  <p><strong>EMMYBLAQ AUTOTECH</strong></p>
+  <p>Automotive Electrical Diagnosis • Car AC • Technical Guides</p>
+  <p>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="contact.html">Contact</a>
+  </p>
+  <p>&copy; <span id="year"></span> EmmyBlaQ AutoTech. All rights reserved.</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/2349119330397" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/2349119330397" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
