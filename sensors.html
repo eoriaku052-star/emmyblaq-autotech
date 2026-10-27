@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automotive sensor library by EmmyBlaQ AutoTech. Learn how vehicle sensors work, common symptoms, locations and diagnostic methods.">
+  <meta name="theme-color" content="#101010">
+  <title>Automotive Sensor Library | EmmyBlaQ AutoTech</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --gold: #e8b923;
+      --dark: #101010;
+      --panel: #191919;
+      --muted: #bcbcbc;
+      --line: #333;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--dark);
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--gold); }
+
+    .sensor-header {
+      background: #080808;
+      border-bottom: 1px solid #333;
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .sensor-header nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .sensor-header nav a {
+      color: #eee;
+      text-decoration: none;
+      font-size: .9rem;
+    }
+
+    .sensor-header nav a:hover { color: var(--gold); }
+
+    .hero {
+      padding: 65px 6% 50px;
+      text-align: center;
+      background:
+        linear-gradient(120deg, rgba(0,0,0,.96), rgba(0,0,0,.78)),
+        url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: .8rem;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 12px auto;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 18px auto;
+      color: #ddd;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid var(--gold);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn-outline {
+      color: var(--gold);
+      background: transparent;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .notice {
+      margin: 28px auto;
+      padding: 16px 18px;
+      background: #201c10;
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+      color: #eee;
+    }
+
+    .section-heading {
+      margin: 45px 0 20px;
+    }
+
+    .section-heading h2 {
+      color: var(--gold);
+      margin-bottom: 5px;
+      font-size: 1.7rem;
+    }
+
+    .section-heading p {
+      margin-top: 0;
+      color: var(--muted);
+    }
+
+    .search-panel {
+      background: var(--panel);
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    #sensorSearch {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #555;
+      border-radius: 6px;
+      background: #090909;
+      color: white;
+      font-size: 1rem;
+      outline-color: var(--gold);
+    }
+
+    .filters {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .filter-btn {
+      padding: 9px 13px;
+      border: 1px solid #555;
+      border-radius: 25px;
+      background: #111;
+      color: #eee;
+      cursor: pointer;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--gold);
+      color: #111;
+      border-color: var(--gold);
+    }
+
+    #resultCount {
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: 12px;
+    }
+
+    .category {
+      margin: 42px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .category-title {
+      color: var(--gold);
+      padding-bottom: 10px;
+      border-bottom: 1px solid #454545;
+      font-size: 1.45rem;
+    }
+
+    .sensor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .sensor-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .sensor-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      transition: .2s ease;
+    }
+
+    .sensor-photo {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      background: #252525;
+      display: block;
+    }
+
+    .photo-caption {
+      display: block;
+      padding: 5px 12px;
+      background: #111;
+      color: #aaa;
+      font-size: .72rem;
+    }
+
+    .sensor-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .sensor-content h3 {
+      margin: 0 0 10px;
+      color: #f3cd51;
+      font-size: 1.16rem;
+    }
+
+    .sensor-content p {
+      color: #ddd;
+      margin: 7px 0;
+      font-size: .93rem;
+    }
+
+    .sensor-content strong { color: white; }
+
+    .sensor-code {
+      display: inline-block;
+      color: #111;
+      background: var(--gold);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: .72rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    .tip {
+      margin-top: auto;
+      padding-top: 12px;
+      color: #f2d778;
+      font-size: .88rem;
+    }
+
+    .diagnostic-box {
+      background: #191919;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 22px;
+      margin: 25px 0;
+    }
+
+    .diagnostic-box h3 { color: var(--gold); }
+
+    .diagnostic-box li { margin-bottom: 9px; }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+      background: var(--panel);
+    }
+
+    th, td {
+      border: 1px solid #444;
+      text-align: left;
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    th {
+      background: #26210f;
+      color: var(--gold);
+    }
+
+    .footer {
+      margin-top: 55px;
+      padding: 30px 5%;
+      text-align: center;
+      background: #070707;
+      border-top: 2px solid var(--gold);
+      color: #aaa;
+    }
+
+    .footer a {
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    .empty-state {
+      display: none;
+      color: #ddd;
+      padding: 25px;
+      text-align: center;
+      border: 1px dashed #555;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 45px 5% 35px; }
+      .sensor-header { justify-content: center; }
+      .sensor-header nav { justify-content: center; }
+      .sensor-photo { height: 190px; }
+    }
+  </style>
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5760610709240232"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="sensor-header">
+    <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="guides.html">Guides</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">Automotive Technical Library</span>
+    <h1>Understand Every Vehicle Sensor</h1>
+    <p>
+      A practical reference for auto electricians, technicians and learners.
+      Learn what vehicle sensors do, where they are commonly found, the symptoms
+      of faults, and the right approach to diagnosis.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="#library">Explore Sensor Library</a>
+      <a class="btn btn-outline" href="guides.html">Read Diagnostic Guides</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="notice">
+      <strong>Important:</strong> Sensor locations, wiring, signal types and
+      specifications vary by make, model, engine and year. Use the correct
+      vehicle wiring diagram and service information before testing.
+      The photos on this page are illustrative references and may not depict
+      the exact sensor described.
+    </div>
+
+    <section class="section-heading" id="library">
+      <h2>Vehicle Sensor Directory</h2>
+      <p>Search by sensor name, abbreviation, function or common symptom.</p>
+    </section>
+
+    <div class="search-panel">
+      <input
+        id="sensorSearch"
+        type="search"
+        placeholder="Example: crankshaft, rough idle, ABS, refrigerant..."
+        aria-label="Search vehicle sensors">
+
+      <div class="filters" aria-label="Filter by sensor category">
+        <button class="filter-btn active" data-filter="all">All Sensors</button>
+        <button class="filter-btn" data-filter="engine">Engine</button>
+        <button class="filter-btn" data-filter="fuel">Fuel & Exhaust</button>
+        <button class="filter-btn" data-filter="chassis">Transmission & Chassis</button>
+        <button class="filter-btn" data-filter="ac">AC & Body</button>
+        <button class="filter-btn" data-filter="safety">Safety & ADAS</button>
+        <button class="filter-btn" data-filter="ev">Hybrid & EV</button>
+      </div>
+
+      <div id="resultCount" aria-live="polite">Loading sensor directory...</div>
+    </div>
+
+    <!-- ENGINE MANAGEMENT -->
+    <section class="category" data-category="engine">
+      <h2 class="category-title">1. Engine Management Sensors</h2>
+      <div class="sensor-grid">
+
+        <article class="sensor-card" data-tags="engine crankshaft position CKP no start stall rpm">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine bay and mechanical components">
+          <span class="photo-caption">Illustrative engine-bay reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">CKP</span>
+            <h3>Crankshaft Position Sensor</h3>
+            <p><strong>Function:</strong> Reports crankshaft position and speed to help the ECU control ignition and injection timing.</p>
+            <p><strong>Location:</strong> Commonly near the crankshaft, crank pulley or flywheel housing.</p>
+            <p><strong>Fault signs:</strong> Cranking without starting, sudden stalling, intermittent no-start or missing RPM signal.</p>
+            <p><strong>Testing:</strong> Check scan-tool RPM while cranking, wiring and connector condition. Test the signal using the correct procedure for the sensor type.</p>
+            <p class="tip">Tip: A zero RPM reading is a clue, not proof that the sensor itself is faulty.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine camshaft position CMP timing misfire no start">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine components">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">CMP</span>
+            <h3>Camshaft Position Sensor</h3>
+            <p><strong>Function:</strong> Helps the ECU identify camshaft position and synchronise engine operation.</p>
+            <p><strong>Location:</strong> Usually on or near the cylinder head or camshaft housing.</p>
+            <p><strong>Fault signs:</strong> Long cranking, rough running, misfires, reduced performance or a cam/crank correlation code.</p>
+            <p><strong>Testing:</strong> Inspect supply, ground and signal as specified. Compare cam and crank signals when the equipment supports it.</p>
+            <p class="tip">Tip: Check timing-chain or belt alignment when correlation faults remain.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine MAF mass air flow airflow rough idle fuel consumption">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine air intake area">
+          <span class="photo-caption">Illustrative engine and intake reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">MAF</span>
+            <h3>Mass Air Flow Sensor</h3>
+            <p><strong>Function:</strong> Measures the mass of air entering the engine so the ECU can calculate fuel delivery.</p>
+            <p><strong>Location:</strong> Commonly fitted in the intake duct between the air filter and throttle body.</p>
+            <p><strong>Fault signs:</strong> Poor acceleration, rough idle, excessive fuel use or air-flow-related trouble codes.</p>
+            <p><strong>Testing:</strong> Check live data, intake leaks, wiring and the air filter. Compare readings with vehicle-specific specifications.</p>
+            <p class="tip">Tip: Do not touch the delicate sensing element or spray it with an unapproved cleaner.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine MAP manifold absolute pressure boost turbo vacuum">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Engine intake and mechanical components">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">MAP</span>
+            <h3>Manifold Absolute Pressure Sensor</h3>
+            <p><strong>Function:</strong> Measures absolute pressure in the intake manifold; some systems use it to calculate engine load and boost.</p>
+            <p><strong>Location:</strong> On or connected to the intake manifold, depending on design.</p>
+            <p><strong>Fault signs:</strong> Poor power, unstable idle, incorrect fuelling or pressure-related fault codes.</p>
+            <p><strong>Testing:</strong> Compare key-on engine-off pressure with local barometric pressure, then observe changes while running.</p>
+            <p class="tip">Tip: Check blocked ports, vacuum leaks and wiring before replacing the sensor.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine TPS throttle position sensor acceleration hesitation">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine components">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">TPS</span>
+            <h3>Throttle Position Sensor</h3>
+            <p><strong>Function:</strong> Reports throttle-plate position to the engine control system.</p>
+            <p><strong>Location:</strong> On the throttle body or incorporated into the electronic throttle assembly.</p>
+            <p><strong>Fault signs:</strong> Hesitation, uneven throttle response, limp mode or throttle-position codes.</p>
+            <p><strong>Testing:</strong> Watch live throttle data through the full operating range. Check for smooth signal changes and wiring faults.</p>
+            <p class="tip">Tip: Electronic throttle systems may use two related position signals for safety.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine APP accelerator pedal position sensor pedal limp mode">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle interior and driving controls">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">APP</span>
+            <h3>Accelerator Pedal Position Sensor</h3>
+            <p><strong>Function:</strong> Tells the ECU how far the driver presses the accelerator pedal.</p>
+            <p><strong>Location:</strong> Usually integrated into the accelerator pedal assembly.</p>
+            <p><strong>Fault signs:</strong> Weak or limited acceleration, limp mode and pedal-position codes.</p>
+            <p><strong>Testing:</strong> Compare the pedal's redundant live-data tracks and check for smooth, correlated changes.</p>
+            <p class="tip">Tip: Never assume a pedal fault from low power alone; check throttle and engine data too.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine ECT coolant temperature overheating fan cold start">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine compartment">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">ECT</span>
+            <h3>Engine Coolant Temperature Sensor</h3>
+            <p><strong>Function:</strong> Measures engine coolant temperature for fuelling, fan control and other ECU strategies.</p>
+            <p><strong>Location:</strong> Commonly in a coolant passage, cylinder head, thermostat housing or coolant outlet.</p>
+            <p><strong>Fault signs:</strong> Incorrect temperature readings, unusual fan operation, poor cold starting or temperature-related codes.</p>
+            <p><strong>Testing:</strong> Compare cold live data with ambient temperature and check the reading as the engine warms.</p>
+            <p class="tip">Tip: Allow the engine to cool before opening any pressurised cooling-system component.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine IAT intake air temperature sensor air fuel">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive intake system">
+          <span class="photo-caption">Illustrative intake reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">IAT</span>
+            <h3>Intake Air Temperature Sensor</h3>
+            <p><strong>Function:</strong> Measures the temperature of incoming air so the ECU can adjust engine calculations.</p>
+            <p><strong>Location:</strong> In the intake duct, air-flow sensor or intake manifold, depending on design.</p>
+            <p><strong>Fault signs:</strong> Implausible intake temperature readings, poor drivability or an IAT-related code.</p>
+            <p><strong>Testing:</strong> Compare cold readings with ambient temperature and inspect the sensor circuit against specifications.</p>
+            <p class="tip">Tip: Some vehicles combine the IAT and MAP sensors in one housing.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine knock sensor detonation pinging ignition timing">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine block reference">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">KS</span>
+            <h3>Knock Sensor</h3>
+            <p><strong>Function:</strong> Detects engine vibration patterns associated with combustion knock, allowing ignition adjustment.</p>
+            <p><strong>Location:</strong> Commonly mounted on the engine block or cylinder head.</p>
+            <p><strong>Fault signs:</strong> Knock-sensor codes, reduced performance or the ECU using conservative ignition timing.</p>
+            <p><strong>Testing:</strong> Check mounting, wiring and scan data; follow the manufacturer's signal test procedure.</p>
+            <p class="tip">Tip: A knock code can also result from wiring, connector or mechanical problems.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine oxygen sensor O2 lambda exhaust fuel trim catalytic converter">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine and exhaust system reference">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">O2 / Lambda</span>
+            <h3>Oxygen Sensor</h3>
+            <p><strong>Function:</strong> Measures oxygen in exhaust gas to support mixture control and emissions monitoring.</p>
+            <p><strong>Location:</strong> In the exhaust, often before and after the catalytic converter.</p>
+            <p><strong>Fault signs:</strong> Oxygen-sensor or heater codes, abnormal fuel trims and possible increased fuel consumption.</p>
+            <p><strong>Testing:</strong> Check heater circuit, wiring, live data and exhaust leaks. Use the correct test for narrowband or wideband type.</p>
+            <p class="tip">Tip: A sensor code does not automatically mean the sensor is bad; mixture or exhaust faults can trigger it.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine oil pressure sensor warning light low pressure gauge">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine components">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Oil Pressure</span>
+            <h3>Engine Oil Pressure Sensor or Switch</h3>
+            <p><strong>Function:</strong> Reports or switches according to engine oil pressure, depending on system design.</p>
+            <p><strong>Location:</strong> Usually installed in an oil gallery or engine block.</p>
+            <p><strong>Fault signs:</strong> Oil-pressure warning or implausible pressure data.</p>
+            <p><strong>Testing:</strong> Verify actual pressure using the specified mechanical gauge procedure before condemning the electrical component.</p>
+            <p class="tip">Tip: If the oil-pressure warning stays on while the engine runs, stop the engine safely and investigate promptly.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="engine barometric pressure BARO atmospheric pressure altitude">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Engine management reference">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">BARO</span>
+            <h3>Barometric Pressure Sensor</h3>
+            <p><strong>Function:</strong> Measures atmospheric pressure to help the ECU compensate for altitude and air-density changes.</p>
+            <p><strong>Location:</strong> May be inside the ECU, integrated with another sensor or separately mounted.</p>
+            <p><strong>Fault signs:</strong> Implausible pressure data or related engine-management codes.</p>
+            <p><strong>Testing:</strong> Compare readings with local atmospheric pressure and the manufacturer's expected values.</p>
+            <p class="tip">Tip: Do not confuse barometric pressure with intake-manifold pressure under load.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUEL AND EXHAUST -->
+    <section class="category" data-category="fuel">
+      <h2 class="category-title">2. Fuel, Turbocharger and Exhaust Sensors</h2>
+      <div class="sensor-grid">
+
+        <article class="sensor-card" data-tags="fuel pressure sensor rail diesel petrol injector">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine fuel-system reference">
+          <span class="photo-caption">Illustrative fuel-system reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Fuel Pressure</span>
+            <h3>Fuel Pressure Sensor</h3>
+            <p><strong>Function:</strong> Reports fuel pressure in systems designed with electronic pressure monitoring.</p>
+            <p><strong>Location:</strong> May be fitted to the fuel rail, high-pressure pump or fuel delivery system.</p>
+            <p><strong>Fault signs:</strong> Starting problems, power loss, pressure codes or disagreement between commanded and actual pressure.</p>
+            <p><strong>Testing:</strong> Compare requested and actual pressure using scan data and the manufacturer's safe pressure-testing procedure.</p>
+            <p class="tip">Tip: High-pressure direct-injection and diesel systems can be dangerous. Never loosen a pressurised fuel line casually.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="fuel tank pressure EVAP leak check engine">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle mechanical reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">FTP</span>
+            <h3>Fuel Tank Pressure Sensor</h3>
+            <p><strong>Function:</strong> Monitors pressure or vacuum in the fuel tank for evaporative-emissions diagnostics.</p>
+            <p><strong>Location:</strong> Often part of the tank or evaporative-emissions system.</p>
+            <p><strong>Fault signs:</strong> EVAP-related codes or failed leak-monitor tests.</p>
+            <p><strong>Testing:</strong> Inspect hoses, cap and wiring; interpret scan data using the correct EVAP test procedure.</p>
+            <p class="tip">Tip: A loose fuel cap or leaking hose can mimic a sensor problem.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="fuel ethanol flex fuel composition sensor">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive fuel-system reference">
+          <span class="photo-caption">Illustrative fuel-system reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Fuel Composition</span>
+            <h3>Fuel Composition Sensor</h3>
+            <p><strong>Function:</strong> On supported flex-fuel systems, estimates fuel alcohol content and may report fuel temperature.</p>
+            <p><strong>Location:</strong> Usually installed in a fuel line on vehicles designed for this system.</p>
+            <p><strong>Fault signs:</strong> Incorrect composition data or related control-system codes.</p>
+            <p><strong>Testing:</strong> Verify scan data, wiring and the correct signal specification for that vehicle.</p>
+            <p class="tip">Tip: Not all petrol vehicles use a separate fuel-composition sensor.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="exhaust EGT exhaust gas temperature turbo DPF">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive engine and exhaust reference">
+          <span class="photo-caption">Illustrative exhaust-system reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">EGT</span>
+            <h3>Exhaust Gas Temperature Sensor</h3>
+            <p><strong>Function:</strong> Measures exhaust temperature to protect components and support emissions strategies.</p>
+            <p><strong>Location:</strong> May be before or after a turbocharger, catalyst or DPF.</p>
+            <p><strong>Fault signs:</strong> Temperature-sensor codes, restricted regeneration or power limitations on supported vehicles.</p>
+            <p><strong>Testing:</strong> Compare cold readings and operating changes; inspect the heat-exposed wiring and connector.</p>
+            <p class="tip">Tip: Exhaust parts remain extremely hot after shutdown.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="DPF differential pressure sensor diesel particulate filter blockage">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive exhaust system reference">
+          <span class="photo-caption">Illustrative exhaust-system reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">DPF Pressure</span>
+            <h3>DPF Differential Pressure Sensor</h3>
+            <p><strong>Function:</strong> Measures pressure difference across a diesel particulate filter to help estimate restriction.</p>
+            <p><strong>Location:</strong> Usually connected to pressure pipes or hoses before and after the filter.</p>
+            <p><strong>Fault signs:</strong> DPF pressure codes, failed regeneration or reduced engine power.</p>
+            <p><strong>Testing:</strong> Check hoses for splits, blockage or heat damage; compare pressure readings under specified conditions.</p>
+            <p class="tip">Tip: A restricted filter, damaged hoses or exhaust leaks can all affect readings.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="NOx sensor diesel SCR AdBlue emissions">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive exhaust reference">
+          <span class="photo-caption">Illustrative exhaust-system reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">NOx</span>
+            <h3>Nitrogen Oxide Sensor</h3>
+            <p><strong>Function:</strong> Measures NOx levels in supported emissions systems, often around SCR after-treatment.</p>
+            <p><strong>Location:</strong> Fitted into the exhaust system at specified positions.</p>
+            <p><strong>Fault signs:</strong> NOx or SCR codes, emissions warnings or restricted operation on some vehicles.</p>
+            <p><strong>Testing:</strong> Check module communication, supply, wiring and live data using vehicle-specific diagnostic instructions.</p>
+            <p class="tip">Tip: Some NOx sensors have integrated electronic control modules.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="turbo boost pressure sensor MAP boost control">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Engine and turbocharger reference">
+          <span class="photo-caption">Illustrative engine reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Boost</span>
+            <h3>Turbo Boost Pressure Sensor</h3>
+            <p><strong>Function:</strong> Measures intake charge pressure on turbocharged engines.</p>
+            <p><strong>Location:</strong> Often in the intake pipe, intercooler outlet or manifold; some systems use a MAP sensor for this role.</p>
+            <p><strong>Fault signs:</strong> Underboost or overboost codes, reduced power or limp mode.</p>
+            <p><strong>Testing:</strong> Compare commanded and actual boost and inspect hoses, intercooler, control actuator and wiring.</p>
+            <p class="tip">Tip: Underboost does not automatically mean the sensor is faulty.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRANSMISSION AND CHASSIS -->
+    <section class="category" data-category="chassis">
+      <h2 class="category-title">3. Transmission, ABS and Chassis Sensors</h2>
+      <div class="sensor-grid">
+
+        <article class="sensor-card" data-tags="ABS wheel speed sensor brakes traction control">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive wheel and mechanical reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">ABS / WSS</span>
+            <h3>Wheel Speed Sensor</h3>
+            <p><strong>Function:</strong> Reports individual wheel speed to ABS, stability control and related systems.</p>
+            <p><strong>Location:</strong> Near each wheel hub, bearing or tone ring.</p>
+            <p><strong>Fault signs:</strong> ABS warning, traction-control warning or inconsistent wheel-speed data.</p>
+            <p><strong>Testing:</strong> Compare all wheel speeds on the scan tool and inspect sensor wiring, air gap and encoder/tone ring.</p>
+            <p class="tip">Tip: Some magnetic encoder rings are built into the wheel bearing.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="VSS vehicle speed sensor speedometer transmission">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">VSS</span>
+            <h3>Vehicle Speed Sensor</h3>
+            <p><strong>Function:</strong> Supplies vehicle-speed information to the modules that need it.</p>
+            <p><strong>Location:</strong> Depends on design; it may use transmission output speed or wheel-speed data.</p>
+            <p><strong>Fault signs:</strong> Incorrect speed display or speed-related codes and shifting issues on some vehicles.</p>
+            <p><strong>Testing:</strong> Compare speedometer and scan-tool data; verify the vehicle's actual sensor arrangement.</p>
+            <p class="tip">Tip: Many modern vehicles calculate vehicle speed from ABS wheel-speed signals.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="transmission input output speed sensor gear shifting">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive drivetrain reference">
+          <span class="photo-caption">Illustrative drivetrain reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">ISS / OSS</span>
+            <h3>Transmission Input and Output Speed Sensors</h3>
+            <p><strong>Function:</strong> Measure rotational speed at specified points to help the transmission controller manage shifts and ratios.</p>
+            <p><strong>Location:</strong> On or within the transmission, depending on the design.</p>
+            <p><strong>Fault signs:</strong> Harsh shifting, incorrect gear-ratio codes, limp mode or speed-signal faults.</p>
+            <p><strong>Testing:</strong> Compare input/output speed data and inspect the circuits using the transmission-specific procedure.</p>
+            <p class="tip">Tip: Check fluid condition and mechanical faults alongside electrical diagnosis.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="transmission range selector neutral safety PRNDL">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle control reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">TRS</span>
+            <h3>Transmission Range Sensor</h3>
+            <p><strong>Function:</strong> Reports the selected transmission range, such as Park, Reverse, Neutral or Drive.</p>
+            <p><strong>Location:</strong> Often at the transmission selector shaft or integrated into the range assembly.</p>
+            <p><strong>Fault signs:</strong> Incorrect gear indication, no-start in Park/Neutral or range-related codes.</p>
+            <p><strong>Testing:</strong> Compare selector position with scan data and inspect adjustment, linkage and wiring.</p>
+            <p class="tip">Tip: Follow the correct adjustment procedure before replacing the assembly.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="steering angle sensor ESP stability control">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle steering reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">SAS</span>
+            <h3>Steering Angle Sensor</h3>
+            <p><strong>Function:</strong> Measures steering-wheel angle for stability control and other driver-assistance functions.</p>
+            <p><strong>Location:</strong> Often in or near the steering column or clock-spring assembly.</p>
+            <p><strong>Fault signs:</strong> Stability-control warnings or implausible steering-angle data.</p>
+            <p><strong>Testing:</strong> Compare live angle with actual steering position and check calibration requirements.</p>
+            <p class="tip">Tip: Wheel alignment or steering work may require calibration on some vehicles.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="yaw rate lateral acceleration stability control">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle dynamics reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Yaw / G</span>
+            <h3>Yaw Rate and Lateral Acceleration Sensors</h3>
+            <p><strong>Function:</strong> Measure vehicle rotation and sideways acceleration for stability-control calculations.</p>
+            <p><strong>Location:</strong> Often mounted near the vehicle centre, sometimes within a combined sensor unit.</p>
+            <p><strong>Fault signs:</strong> Stability-system warnings or implausible dynamic data.</p>
+            <p><strong>Testing:</strong> Check live readings at rest, wiring, mounting and any required zero-point calibration.</p>
+            <p class="tip">Tip: Use the manufacturer's calibration procedure after relevant repairs.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AC AND BODY -->
+    <section class="category" data-category="ac">
+      <h2 class="category-title">4. Air Conditioning and Body Sensors</h2>
+      <div class="sensor-grid">
+
+        <article class="sensor-card" data-tags="AC air conditioning refrigerant pressure sensor compressor">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive mechanical reference">
+          <span class="photo-caption">Illustrative automotive reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">A/C Pressure</span>
+            <h3>Refrigerant Pressure Sensor</h3>
+            <p><strong>Function:</strong> Reports refrigerant-system pressure so the control system can manage compressor operation and protection.</p>
+            <p><strong>Location:</strong> Commonly installed on a refrigerant line or pressure connection.</p>
+            <p><strong>Fault signs:</strong> AC compressor may not engage, pressure data may be implausible or an AC fault may be stored.</p>
+            <p><strong>Testing:</strong> Compare scan data with proper manifold-gauge readings and inspect wiring and connector condition.</p>
+            <p class="tip">Tip: Incorrect refrigerant charge, leaks or cooling-fan problems can also cause AC faults.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="AC evaporator temperature sensor freezing cooling">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive air-conditioning reference">
+          <span class="photo-caption">Illustrative AC-system reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Evaporator Temp</span>
+            <h3>Evaporator Temperature Sensor</h3>
+            <p><strong>Function:</strong> Monitors evaporator temperature to help control cooling and prevent excessive icing.</p>
+            <p><strong>Location:</strong> Usually fitted in or near the evaporator assembly inside the HVAC housing.</p>
+            <p><strong>Fault signs:</strong> Intermittent cooling, evaporator icing or implausible temperature data.</p>
+            <p><strong>Testing:</strong> Compare sensor readings with actual temperature and check resistance or signal using the correct specification.</p>
+            <p class="tip">Tip: Restricted airflow and refrigerant faults can produce similar symptoms.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="AC cabin temperature interior thermistor climate control">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle interior reference">
+          <span class="photo-caption">Illustrative vehicle interior</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Cabin Temp</span>
+            <h3>Cabin Temperature Sensor</h3>
+            <p><strong>Function:</strong> Measures cabin air temperature for automatic climate-control systems.</p>
+            <p><strong>Location:</strong> Often on the dashboard or HVAC panel, sometimes with a small aspirator fan.</p>
+            <p><strong>Fault signs:</strong> Automatic AC temperature control may feel inaccurate or respond poorly.</p>
+            <p><strong>Testing:</strong> Compare scan data with a reliable cabin thermometer and inspect any sensor fan or air passage.</p>
+            <p class="tip">Tip: Dust or a blocked aspirator can affect readings.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="ambient outside air temperature sensor display AC">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle exterior reference">
+          <span class="photo-caption">Illustrative vehicle exterior</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Ambient Temp</span>
+            <h3>Outside Air Temperature Sensor</h3>
+            <p><strong>Function:</strong> Measures outside temperature for the dashboard display and, where fitted, climate-control strategies.</p>
+            <p><strong>Location:</strong> Often behind the front grille or near the front bumper.</p>
+            <p><strong>Fault signs:</strong> Incorrect outside temperature display or related climate-control symptoms.</p>
+            <p><strong>Testing:</strong> Compare the reading after the vehicle has settled to ambient conditions and inspect the exposed wiring.</p>
+            <p class="tip">Tip: Heat from the engine or road surface can temporarily affect readings.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="sunload solar sensor automatic climate AC sunlight">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle dashboard reference">
+          <span class="photo-caption">Illustrative vehicle interior</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Sunload</span>
+            <h3>Sunload Sensor</h3>
+            <p><strong>Function:</strong> Detects sunlight intensity to help automatic climate control adjust cooling.</p>
+            <p><strong>Location:</strong> Commonly on top of the dashboard near the windscreen.</p>
+            <p><strong>Fault signs:</strong> Automatic climate control may not compensate properly for direct sunlight.</p>
+            <p><strong>Testing:</strong> Monitor live data and follow the manufacturer's method for checking sensor response.</p>
+            <p class="tip">Tip: Do not cover the sensor during climate-control testing.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="rain sensor automatic wiper windscreen">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle windscreen reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Rain</span>
+            <h3>Rain Sensor</h3>
+            <p><strong>Function:</strong> Detects water on the windscreen to control automatic wipers on supported vehicles.</p>
+            <p><strong>Location:</strong> Usually attached to the inside of the windscreen near the rear-view mirror.</p>
+            <p><strong>Fault signs:</strong> Automatic wipers may not respond correctly or may operate unexpectedly.</p>
+            <p><strong>Testing:</strong> Check the sensor mounting, optical coupling pad, wiring and diagnostic data.</p>
+            <p class="tip">Tip: Windscreen replacement can affect sensor operation if installation is incorrect.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="fuel level sender gauge tank">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive mechanical reference">
+          <span class="photo-caption">Illustrative automotive reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Fuel Level</span>
+            <h3>Fuel Level Sender</h3>
+            <p><strong>Function:</strong> Measures fuel quantity in the tank for the dashboard gauge and range calculations.</p>
+            <p><strong>Location:</strong> Commonly part of the in-tank fuel-pump or sender assembly.</p>
+            <p><strong>Fault signs:</strong> Gauge stuck, inaccurate fuel indication or a reading that changes unexpectedly.</p>
+            <p><strong>Testing:</strong> Follow the service procedure to test sender resistance or signal and inspect the instrument circuit.</p>
+            <p class="tip">Tip: Some tanks use more than one level sender.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SAFETY AND ADAS -->
+    <section class="category" data-category="safety">
+      <h2 class="category-title">5. Safety and Driver-Assistance Sensors</h2>
+      <div class="sensor-grid">
+
+        <article class="sensor-card" data-tags="TPMS tyre tire pressure warning">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+            alt="Automotive wheel reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">TPMS</span>
+            <h3>Tyre Pressure Monitoring Sensor</h3>
+            <p><strong>Function:</strong> Monitors tyre pressure directly or uses wheel-speed information in indirect systems.</p>
+            <p><strong>Location:</strong> Direct sensors are often attached to the wheel valve or inside the wheel; indirect systems use ABS data.</p>
+            <p><strong>Fault signs:</strong> Tyre-pressure warning, missing sensor data or a system malfunction warning.</p>
+            <p><strong>Testing:</strong> Identify whether the vehicle uses direct or indirect TPMS; check pressures, sensor IDs and relearn requirements.</p>
+            <p class="tip">Tip: A TPMS warning can mean low tyre pressure, not necessarily a failed sensor.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="parking sensor ultrasonic reverse bumper">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle exterior reference">
+          <span class="photo-caption">Illustrative vehicle exterior</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Ultrasonic</span>
+            <h3>Parking Distance Sensor</h3>
+            <p><strong>Function:</strong> Uses ultrasonic signals to estimate the distance to nearby objects.</p>
+            <p><strong>Location:</strong> Commonly mounted in the front or rear bumper.</p>
+            <p><strong>Fault signs:</strong> Continuous warning tone, a sensor-system message or one parking sensor not responding.</p>
+            <p><strong>Testing:</strong> Inspect for dirt, paint damage, poor fitment and wiring faults; use system diagnostics where available.</p>
+            <p class="tip">Tip: Confirm the faulty sensor before removing the bumper.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="blind spot radar BSM side detection ADAS">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle exterior reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">BSM</span>
+            <h3>Blind-Spot Monitoring Radar</h3>
+            <p><strong>Function:</strong> Detects vehicles in adjacent areas to support blind-spot warnings.</p>
+            <p><strong>Location:</strong> Often behind the rear bumper corners or side body panels.</p>
+            <p><strong>Fault signs:</strong> Blind-spot warnings unavailable or system malfunction messages.</p>
+            <p><strong>Testing:</strong> Check module communication, mounting, obstruction and calibration requirements.</p>
+            <p class="tip">Tip: Bumper repairs can affect radar alignment; follow approved calibration procedures.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="forward collision radar adaptive cruise control">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle front-end reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Forward Radar</span>
+            <h3>Forward-Collision Radar</h3>
+            <p><strong>Function:</strong> Detects objects ahead for supported adaptive cruise-control and collision-warning systems.</p>
+            <p><strong>Location:</strong> Often behind the grille or front emblem.</p>
+            <p><strong>Fault signs:</strong> Driver-assistance warnings or features temporarily unavailable.</p>
+            <p><strong>Testing:</strong> Check obstruction, mounting, fault codes and calibration requirements.</p>
+            <p class="tip">Tip: Do not adjust radar mounting by guesswork.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="ADAS camera lane departure windscreen camera">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle windscreen reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">ADAS Camera</span>
+            <h3>Forward-Facing Driver-Assistance Camera</h3>
+            <p><strong>Function:</strong> Interprets road markings, vehicles and other visual information for supported assistance features.</p>
+            <p><strong>Location:</strong> Commonly near the top of the windscreen.</p>
+            <p><strong>Fault signs:</strong> Lane-assistance or collision-warning features may become unavailable.</p>
+            <p><strong>Testing:</strong> Inspect the windscreen area, module data and camera calibration status.</p>
+            <p class="tip">Tip: Windscreen replacement may require camera calibration.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="airbag impact crash sensor SRS safety">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Vehicle body reference">
+          <span class="photo-caption">Illustrative vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">SRS</span>
+            <h3>Airbag Impact Sensor</h3>
+            <p><strong>Function:</strong> Provides crash-deceleration information to the supplemental restraint system.</p>
+            <p><strong>Location:</strong> Depending on design, sensors may be at the front, sides or within restraint-system modules.</p>
+            <p><strong>Fault signs:</strong> Airbag/SRS warning light or stored restraint-system fault codes.</p>
+            <p><strong>Testing:</strong> Use the approved SRS diagnostic procedure and inspect only as directed by the service manual.</p>
+            <p class="tip">Tip: Airbag circuits are safety-critical. Do not probe deployment circuits with an ordinary test lamp or ohmmeter.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HYBRID / EV -->
+    <section class="category" data-category="ev">
+      <h2 class="category-title">6. Hybrid and Electric Vehicle Sensors</h2>
+      <div class="sensor-grid">
+
+        <article class="sensor-card" data-tags="EV hybrid high voltage battery temperature sensor">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+            alt="Electric vehicle charging reference">
+          <span class="photo-caption">Illustrative electric-vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Battery Temp</span>
+            <h3>High-Voltage Battery Temperature Sensor</h3>
+            <p><strong>Function:</strong> Monitors battery temperature so the control system can manage charging, power and thermal protection.</p>
+            <p><strong>Location:</strong> Integrated into or placed around the high-voltage battery pack.</p>
+            <p><strong>Fault signs:</strong> Battery temperature codes, reduced charging or power limitations.</p>
+            <p><strong>Testing:</strong> Review battery-management live data and follow the manufacturer's high-voltage safety procedure.</p>
+            <p class="tip">Tip: High-voltage battery work requires suitable training, equipment and isolation procedures.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="EV hybrid battery current sensor current measurement">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+            alt="Electric vehicle reference">
+          <span class="photo-caption">Illustrative electric-vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Battery Current</span>
+            <h3>High-Voltage Battery Current Sensor</h3>
+            <p><strong>Function:</strong> Measures current flowing into or out of the battery to support battery-management calculations.</p>
+            <p><strong>Location:</strong> Often integrated into the battery pack or high-voltage power electronics.</p>
+            <p><strong>Fault signs:</strong> Current measurement codes or inconsistent battery-management data.</p>
+            <p><strong>Testing:</strong> Compare live data with the manufacturer's diagnostic checks and approved equipment.</p>
+            <p class="tip">Tip: Never access exposed high-voltage components without the required training and isolation procedure.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="EV hybrid battery voltage cell monitoring">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+            alt="Electric vehicle charging reference">
+          <span class="photo-caption">Illustrative electric-vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Cell Voltage</span>
+            <h3>Battery Cell Voltage Monitoring</h3>
+            <p><strong>Function:</strong> Measures individual cell groups or modules to help monitor battery balance and operating limits.</p>
+            <p><strong>Location:</strong> Inside the battery pack, connected to battery-monitoring electronics.</p>
+            <p><strong>Fault signs:</strong> Cell-voltage imbalance codes, battery warnings or reduced available power.</p>
+            <p><strong>Testing:</strong> Review manufacturer diagnostic data; battery-pack access is for appropriately trained technicians.</p>
+            <p class="tip">Tip: A cell imbalance can have several causes and needs proper battery-level diagnosis.</p>
+          </div>
+        </article>
+
+        <article class="sensor-card" data-tags="EV hybrid insulation isolation resistance high voltage safety">
+          <img class="sensor-photo" loading="lazy"
+            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+            alt="Electric vehicle reference">
+          <span class="photo-caption">Illustrative electric-vehicle reference</span>
+          <div class="sensor-content">
+            <span class="sensor-code">Isolation Monitor</span>
+            <h3>High-Voltage Isolation Monitoring</h3>
+            <p><strong>Function:</strong> Monitors electrical isolation between high-voltage circuits and the vehicle chassis.</p>
+            <p><strong>Location:</strong> Commonly part of the battery or high-voltage control system.</p>
+            <p><strong>Fault signs:</strong> Isolation warnings, high-voltage system shutdown or related diagnostic codes.</p>
+            <p><strong>Testing:</strong> Follow the exact manufacturer's isolation-fault procedure using approved equipment.</p>
+            <p class="tip">Tip: Treat an isolation warning as a serious safety issue. Do not bypass it.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <h2>How to Diagnose a Sensor Fault Properly</h2>
+      <p>A fault code is the starting point of diagnosis, not the final answer.</p>
+    </section>
+
+    <div class="diagnostic-box">
+      <h3>Recommended Diagnostic Workflow</h3>
+      <ol>
+        <li><strong>Confirm the complaint:</strong> Ask when the fault happens and whether it is constant or intermittent.</li>
+        <li><strong>Scan all relevant modules:</strong> Record diagnostic trouble codes and freeze-frame data before clearing anything.</li>
+        <li><strong>Check the basics:</strong> Inspect connectors, damaged wires, corrosion, fuses, grounds and power supply.</li>
+        <li><strong>Read live data:</strong> Check whether the sensor reading makes sense under the current conditions.</li>
+        <li><strong>Test the circuit:</strong> Use the correct wiring diagram, meter settings and test procedure for that sensor.</li>
+        <li><strong>Check related components:</strong> Leaks, mechanical timing, blocked passages and damaged reluctor rings can mimic sensor faults.</li>
+        <li><strong>Repair and verify:</strong> Recheck live data, clear codes only when appropriate and confirm the original complaint has been resolved.</li>
+      </ol>
+    </div>
+
+    <section class="section-heading">
+      <h2>Common Sensor Symptoms: Quick Reference</h2>
+      <p>These symptoms have multiple possible causes. Always confirm with testing.</p>
+    </section>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Symptom</th>
+            <th>Sensors or systems to investigate</th>
+            <th>Other checks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Engine cranks but will not start</td>
+            <td>Crankshaft, camshaft, fuel pressure</td>
+            <td>Battery voltage, timing, spark, injector command and fuel supply</td>
+          </tr>
+          <tr>
+            <td>Rough idle</td>
+            <td>MAF, MAP, ECT, TPS</td>
+            <td>Vacuum leaks, ignition faults, compression and fuel trims</td>
+          </tr>
+          <tr>
+            <td>Weak acceleration</td>
+            <td>MAF, MAP/boost, APP, fuel pressure</td>
+            <td>Air leaks, exhaust restriction, fuel delivery and limp mode</td>
+          </tr>
+          <tr>
+            <td>ABS warning light</td>
+            <td>Wheel-speed sensors</td>
+            <td>Wiring, wheel bearing encoder, tone ring and ABS module</td>
+          </tr>
+          <tr>
+            <td>AC compressor will not engage</td>
+            <td>Refrigerant pressure, evaporator temperature where fitted</td>
+            <td>Refrigerant charge, compressor control, fuses, fan and climate-control requests</td>
+          </tr>
+          <tr>
+            <td>Incorrect fuel gauge</td>
+            <td>Fuel-level sender</td>
+            <td>Sender wiring, instrument cluster and fuel-pump assembly</td>
+          </tr>
+          <tr>
+            <td>Transmission shifts incorrectly</td>
+            <td>Input/output speed, range sensor</td>
+            <td>Transmission fluid, mechanical condition, wiring and control-module data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notice">
+      <strong>Safety reminder:</strong> Do not disconnect or test airbag circuits,
+      high-pressure fuel systems, or high-voltage hybrid/EV components without
+      the proper training and manufacturer-approved safety procedure.
+    </div>
+
+    <section class="section-heading">
+      <h2>Keep Learning with EmmyBlaQ AutoTech</h2>
+      <p>Build your diagnostic knowledge with practical guides and service information.</p>
+    </section>
+
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="guides.html">Diagnostic Guides</a>
+      <a class="btn btn-outline" href="services.html">Our Services</a>
+      <a class="btn btn-outline" href="contact.html">Contact Us</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong style="color:#e8b923">EMMYBLAQ AUTOTECH</strong></p>
+    <p>Automotive Electrical Diagnosis • Car AC • Vehicle Diagnostics</p>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="guides.html">Guides</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </p>
+    <p>&copy; <span id="year"></span> EmmyBlaQ AutoTech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("sensorSearch");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".sensor-card");
+    const categories = document.querySelectorAll(".category");
+    const resultCount = document.getElementById("resultCount");
+
+    let activeFilter = "all";
+
+    function filterSensors() {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.closest(".category").dataset.category;
+        const text = (
+          card.innerText + " " +
+          card.dataset.tags + " " +
+          card.querySelector("img").alt
+        ).toLowerCase();
+
+        const matchesCategory =
+          activeFilter === "all" || category === activeFilter;
+
+        const matchesSearch = !query || text.includes(query);
+        const show = matchesCategory && matchesSearch;
+
+        card.style.display = show ? "flex" : "none";
+
+        if (show) visibleCount++;
+      });
+
+      categories.forEach(section => {
+        const visibleCards = section.querySelectorAll(
+          '.sensor-card[style*="display: flex"], .sensor-card:not([style*="display: none"])'
+        );
+
+        const hasVisibleCard = Array.from(section.querySelectorAll(".sensor-card"))
+          .some(card => card.style.display !== "none");
+
+        section.style.display = hasVisibleCard ? "block" : "none";
+      });
+
+      resultCount.textContent =
+        visibleCount + (visibleCount === 1 ? " sensor found" : " sensors found");
+    }
+
+    searchInput.addEventListener("input", filterSensors);
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+
+        filterButtons.forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+
+        filterSensors();
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    filterSensors();
+  </script>
+</body>
+</html>
