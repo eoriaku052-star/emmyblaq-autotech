@@ -1,40 +1,34 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/services.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/guides.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/gallery.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/about.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/referral.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/contact.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/privacy.html</loc>
   </url>
-
   <url>
     <loc>https://emmyblaqautotech.name.ng/terms.html</loc>
   </url>
-
+  <url>
+    <loc>https://emmyblaqautotech.name.ng/fuse-relay.html</loc>
+  </url>
 </urlset>
