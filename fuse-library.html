@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fuse Box &amp; Relay Library | EmmyBlaQ AutoTech</title>
-<meta name="description" content="Browse vehicle-specific fuse box and relay guides from EmmyBlaQ AutoTech.">
+<meta name="description" content="Browse Honda, Toyota and other vehicle-specific fuse box and relay guides from EmmyBlaQ AutoTech.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://emmyblaqautotech.name.ng/fuse-library.html">
 <meta name="theme-color" content="#102238">
@@ -126,6 +125,11 @@ h2 { line-height:1.25; }
   background:var(--navy);
   color:#fff;
 }
+.make-title {
+  margin:32px 0 12px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--line);
+}
 .cards {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -175,6 +179,7 @@ footer a { color:#fff; margin-right:12px; }
 </head>
 
 <body>
+
 <header>
   <div class="wrap">
     <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
@@ -182,26 +187,26 @@ footer a { color:#fff; margin-right:12px; }
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="guides.html">Auto Guides</a>
-      <a href="sensors.html">Sensors</a>
-      <a href="fuse-relay.html">2008 Honda Pilot Guide</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="fuse-library.html">Fuse &amp; Relay Library</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
+
   <section class="hero">
     <span class="tag">VEHICLE REFERENCE LIBRARY</span>
     <h1>Fuse Box &amp; Relay Library</h1>
     <p>
-      Find vehicle-specific fuse-box and relay information.
-      Search by make, model or year, then open a guide to review
-      its diagrams, fuse numbers and protected circuits.
+      Browse our vehicle-specific fuse box and relay guides.
+      Select a vehicle make and model to find the available reference.
     </p>
 
     <div class="notice">
-      <strong>Before you use a diagram:</strong>
-      Match the vehicle year, market, engine and trim where applicable.
+      <strong>Important safety note:</strong>
+      Always confirm the exact vehicle year, market, engine and trim.
       Fuse layouts can differ between versions. Never replace a fuse
       with a higher amp rating. If a fuse blows repeatedly, have the
       underlying fault diagnosed.
@@ -210,7 +215,7 @@ footer a { color:#fff; margin-right:12px; }
 
   <section class="panel" aria-labelledby="search-title">
     <h2 id="search-title">Find a vehicle guide</h2>
-    <p class="muted">Search by make, model, year or guide status.</p>
+    <p class="muted">Search by vehicle make, model, year or guide status.</p>
 
     <div class="searchrow">
       <input
@@ -224,59 +229,95 @@ footer a { color:#fff; margin-right:12px; }
     <div class="filters" aria-label="Filter guide status">
       <button class="active" data-filter="all" type="button">All guides</button>
       <button data-filter="available" type="button">Available</button>
-      <button data-filter="pending" type="button">Being verified</button>
+      <button data-filter="pending" type="button">Coming soon</button>
     </div>
   </section>
 
-  <div id="cards" class="cards">
+  <h2 class="make-title">Honda</h2>
+
+  <div class="cards">
+
     <article
       class="card"
       data-status="available"
-      data-search="honda pilot 2008 fuse box relay diagram under hood interior">
+      data-search="honda pilot 2008 fuse box relay diagram">
 
       <span class="status">Guide available</span>
       <h2>2008 Honda Pilot</h2>
       <p>
-        Fuse-box locations and searchable fuse tables for the guide
-        currently published on this site.
+        Find the available fuse-box and relay reference for the
+        2008 Honda Pilot.
       </p>
-      <p class="muted">
-        Open the guide and confirm that its information matches your vehicle.
+      <a class="btn" href="fuse-relay.html">Open Honda Pilot Guide</a>
+    </article>
+
+  </div>
+
+  <h2 class="make-title">Toyota</h2>
+
+  <div class="cards">
+
+    <article
+      class="card"
+      data-status="available"
+      data-search="toyota corolla fuse box relay 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026">
+
+      <span class="status">Guide available</span>
+      <h2>Toyota Corolla — Multiple Generations</h2>
+      <p>
+        Browse the Corolla fuse-box directory by model year
+        and generation.
       </p>
-      <a class="btn" href="fuse-relay.html">Open Honda Pilot guide</a>
+      <a class="btn" href="corolla-fuse-guide.html">Open Corolla Guide</a>
+    </article>
+
+  </div>
+
+  <h2 class="make-title">More Vehicle Makes</h2>
+
+  <div class="cards">
+
+    <article
+      class="card"
+      data-status="pending"
+      data-search="mercedes benz c class glk 350 fuse relay">
+
+      <span class="status pending">Coming soon</span>
+      <h2>Mercedes-Benz</h2>
+      <p>
+        Vehicle-specific fuse and relay guides will be added
+        as they are researched and verified.
+      </p>
     </article>
 
     <article
       class="card"
       data-status="pending"
-      data-search="toyota corolla 2000 onward fuse box relay">
+      data-search="other vehicle makes models fuse relay">
 
-      <span class="status pending">Being verified</span>
-      <h2>Toyota Corolla (2000 onward)</h2>
+      <span class="status pending">Coming soon</span>
+      <h2>Other Vehicle Makes</h2>
       <p>
-        This model range covers different generations and market versions.
-        A guide will be added after the exact year and vehicle version
-        are confirmed.
+        More vehicle makes and models will be added to this library.
       </p>
-      <p class="muted">
-        No fuse numbers or relay positions are published here until verified.
-      </p>
-      <a href="contact.html">Suggest a Corolla year</a>
     </article>
+
   </div>
 
   <p id="empty" class="empty">
-    No matching guides. Try a different search or choose “All guides”.
+    No matching guides. Try another search or choose “All guides”.
   </p>
 
   <section class="panel">
-    <h2>Help improve the library</h2>
+    <h2>Request a vehicle guide</h2>
     <p>
-      Looking for a particular vehicle? Send the make, model, year and,
-      if known, engine or market version so the correct guide can be researched.
+      Can't find your vehicle? Send us the make, model, year and,
+      if known, engine or market version. We can use those details
+      to identify the correct reference to research.
     </p>
-    <a class="btn" href="contact.html">Request a vehicle guide</a>
+    <a class="btn" href="contact.html">Request a Vehicle Guide</a>
   </section>
+
 </main>
 
 <footer>
@@ -309,15 +350,16 @@ function applyFilter() {
   const q = search.value.trim().toLowerCase();
 
   cards.forEach(card => {
-    const matchText =
-      (card.dataset.search + ' ' + card.innerText)
-      .toLowerCase()
-      .includes(q);
+    const text = (
+      card.dataset.search + ' ' + card.innerText
+    ).toLowerCase();
 
+    const matchText = text.includes(q);
     const matchStatus =
       active === 'all' || card.dataset.status === active;
 
     card.hidden = !(matchText && matchStatus);
+
     if (!card.hidden) shown++;
   });
 
@@ -331,7 +373,10 @@ document.getElementById('clear').addEventListener('click', () => {
   active = 'all';
 
   filters.forEach(button => {
-    button.classList.toggle('active', button.dataset.filter === 'all');
+    button.classList.toggle(
+      'active',
+      button.dataset.filter === 'all'
+    );
   });
 
   applyFilter();
@@ -350,5 +395,6 @@ filters.forEach(button => {
   });
 });
 </script>
+
 </body>
 </html>
