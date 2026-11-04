@@ -4,218 +4,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fuse Box &amp; Relay Library | EmmyBlaQ AutoTech</title>
-<meta name="description" content="Find fuse box and relay diagrams by vehicle make, model and year. Browse Honda, Toyota, Lexus, Mercedes-Benz, Nissan, Hyundai, Kia and more.">
-<meta name="robots" content="index,follow">
+<title>Fuse Box & Relay Library | EmmyBlaQ AutoTech</title>
+<meta name="description" content="Find vehicle fuse-box and relay information by make, model and verified year.">
 <link rel="canonical" href="https://emmyblaqautotech.name.ng/fuse-library.html">
-<meta name="theme-color" content="#102238">
-
+<meta name="robots" content="index,follow">
 <style>
-:root {
-  --navy:#102238;
-  --blue:#1261a0;
-  --gold:#ffbf3c;
-  --bg:#f3f6f9;
-  --ink:#17212b;
-  --muted:#5b6875;
-  --line:#dce3e9;
-}
-* { box-sizing:border-box; }
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.6;
-}
-a { color:var(--blue); }
-header,footer {
-  background:var(--navy);
-  color:#fff;
-  padding:22px 16px;
-}
-.wrap {
-  width:min(1100px,92%);
-  margin:auto;
-}
-.brand {
-  font-weight:800;
-  color:#fff;
-  text-decoration:none;
-  font-size:1.1rem;
-}
-nav {
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  margin-top:12px;
-}
-nav a {
-  color:#fff;
-  text-decoration:none;
-  font-size:.94rem;
-}
-.hero { padding:36px 0 24px; }
-.tag {
-  display:inline-block;
-  background:var(--gold);
-  padding:5px 10px;
-  border-radius:5px;
-  font-size:.8rem;
-  font-weight:800;
-}
-h1 {
-  font-size:clamp(2rem,5vw,3.2rem);
-  line-height:1.12;
-  margin:14px 0;
-}
-h2 { line-height:1.25; }
-.hero p {
-  max-width:760px;
-  color:var(--muted);
-}
-.notice {
-  background:#fff8e5;
-  border:1px solid #f2d58a;
-  border-left:5px solid #e7a900;
-  padding:14px 16px;
-  border-radius:8px;
-  margin:18px 0;
-}
-.panel {
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:20px;
-  margin:18px 0;
-  box-shadow:0 3px 12px #1022380a;
-}
-.controls {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:12px;
-}
-.controls input,.controls select {
-  width:100%;
-  padding:13px;
-  border:1px solid #aebbc7;
-  border-radius:8px;
-  font-size:1rem;
-  background:white;
-}
-.summary {
-  color:var(--muted);
-  font-size:.92rem;
-  margin:12px 0;
-}
-.cards {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:14px;
-  margin:18px 0 28px;
-}
-.card {
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:17px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  box-shadow:0 3px 12px #10223808;
-}
-.card h2 {
-  font-size:1.15rem;
-  margin:0;
-}
-.card p {
-  margin:0;
-  color:var(--muted);
-  font-size:.93rem;
-}
-.make {
-  font-size:.76rem;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  font-weight:800;
-  color:#147d4a;
-}
-.btn {
-  background:var(--blue);
-  color:#fff;
-  border-radius:8px;
-  padding:11px 14px;
-  font-weight:700;
-  text-decoration:none;
-  display:inline-block;
-  align-self:flex-start;
-  margin-top:5px;
-}
-.btn.secondary {
-  background:#e7edf3;
-  color:#24384a;
-}
-.empty {
-  display:none;
-  padding:15px;
-  background:#fff3f1;
-  color:#7a2116;
-  border-radius:8px;
-}
-footer {
-  margin-top:36px;
-  color:#dbe5ef;
-}
-footer a {
-  color:#fff;
-  margin-right:12px;
-}
-.muted {
-  color:var(--muted);
-  font-size:.9rem;
-}
-@media(max-width:600px) {
-  .panel { padding:15px; }
-  .hero { padding-top:26px; }
-}
+:root{--navy:#102238;--blue:#1261a0;--gold:#ffbf3c;--bg:#f3f6f9;--ink:#17212b;--muted:#5b6875;--line:#dce3e9}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header,footer{background:var(--navy);color:#fff;padding:22px 16px}
+.wrap{width:min(1100px,92%);margin:auto}
+.brand{font-weight:800;color:#fff;text-decoration:none;font-size:1.1rem}
+nav{display:flex;flex-wrap:wrap;gap:15px;margin-top:12px}
+nav a,footer a{color:#fff;text-decoration:none}
+.hero{padding:32px 0 20px}
+.tag{display:inline-block;background:var(--gold);padding:5px 10px;border-radius:5px;font-size:.8rem;font-weight:800}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;margin:14px 0}
+h2{line-height:1.25}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin:18px 0;box-shadow:0 3px 12px #1022380a}
+.notice{background:#fff8e5;border:1px solid #f2d58a;border-left:5px solid #e7a900;padding:14px 16px;border-radius:8px;margin:18px 0}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+label{display:block;margin-bottom:5px}
+.controls select,.controls input{width:100%;padding:13px;border:1px solid #aebbc7;border-radius:8px;font-size:1rem;background:white}
+.btn{background:var(--blue);color:#fff;border:0;border-radius:8px;padding:12px 16px;font-weight:700;text-decoration:none;display:inline-block;cursor:pointer;margin:8px 8px 0 0}
+.btn.secondary{background:#e7edf3;color:#24384a}
+.muted,.summary{color:var(--muted);font-size:.92rem}
+#status{margin-top:14px;padding:12px;background:#f3f6f9;border-radius:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:18px 0 28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;display:flex;flex-direction:column;gap:7px}
+.card h2{font-size:1.12rem;margin:0}
+.make{font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;font-weight:800;color:#147d4a}
+footer{margin-top:36px;color:#dbe5ef}
+footer a{margin-right:12px}
+.small{font-size:.85rem}
+@media(max-width:600px){.panel{padding:15px}}
 </style>
 </head>
 
 <body>
-
 <header>
 <div class="wrap">
 <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
-
 <nav aria-label="Main navigation">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="guides.html">Auto Guides</a>
 <a href="gallery.html">Gallery</a>
-<a href="fuse-library.html">Fuse &amp; Relay Library</a>
+<a href="fuse-library.html">Fuse & Relay Library</a>
 <a href="contact.html">Contact</a>
 </nav>
 </div>
 </header>
 
 <main class="wrap">
-
 <section class="hero">
 <span class="tag">VEHICLE REFERENCE LIBRARY</span>
-
-<h1>Fuse Box &amp; Relay Library</h1>
-
-<p>
-Choose a vehicle make, search for a model, then open its
-StartMyCar fuse-box directory to select the exact model year.
-</p>
+<h1>Fuse Box & Relay Library</h1>
+<p>Choose a make and model. For models with verified year lists, choose the exact year to open its year-specific fuse-box page directly. For other models, open the model directory and choose from the years listed there.</p>
 
 <div class="notice">
 <strong>Important:</strong>
-Fuse layouts can differ by year, market, engine and trim.
-Confirm the exact vehicle before using a diagram.
-Never replace a fuse with a higher amp rating.
-If a fuse keeps blowing, diagnose the underlying fault.
+Fuse layouts can differ by model year, market, engine and trim. Confirm the exact vehicle before using a diagram. Never replace a fuse with a higher amp rating. If a fuse keeps blowing, diagnose the underlying fault.
 </div>
 </section>
 
@@ -223,53 +72,59 @@ If a fuse keeps blowing, diagnose the underlying fault.
 <h2>Find your vehicle</h2>
 
 <div class="controls">
-
 <div>
-<label for="make"><strong>Vehicle make</strong></label>
+<label for="make"><strong>1. Vehicle make</strong></label>
 <select id="make">
-<option value="">All makes</option>
+<option value="">Choose make</option>
 </select>
 </div>
 
 <div>
-<label for="search"><strong>Model or year search</strong></label>
-<input
-id="search"
-type="search"
-placeholder="Example: Lexus RX, Honda Pilot 2008">
+<label for="model"><strong>2. Model / variant</strong></label>
+<select id="model" disabled>
+<option value="">Choose model</option>
+</select>
 </div>
 
+<div>
+<label for="year"><strong>3. Available year</strong></label>
+<select id="year" disabled>
+<option value="">Choose year</option>
+</select>
 </div>
 
-<p class="summary" id="summary"></p>
+<div>
+<label for="search"><strong>Search models</strong></label>
+<input id="search" type="search" placeholder="e.g. Lexus ES 350, Honda Pilot">
+</div>
+</div>
+
+<div id="status" aria-live="polite">Choose a make to begin.</div>
+
+<div>
+<a id="openLink" class="btn" href="https://www.startmycar.com/" target="_blank" rel="noopener noreferrer">Open StartMyCar directory</a>
+<a id="localLink" class="btn secondary" href="#" hidden>Open our local guide</a>
+</div>
+
+<p class="muted small">Year options are included only for selected models with checked year listings. For other models, use the StartMyCar directory to see its available years and variants.</p>
 </section>
 
+<section>
+<h2>Browse models</h2>
 <div id="results" class="cards"></div>
-
-<p id="empty" class="empty">
-No matching models. Try another make or search.
-</p>
+</section>
 
 <section class="panel">
-<h2>Need a model added?</h2>
-
-<p>
-Send us the make, model, year and market version, if known,
-so we can identify the correct reference.
-</p>
-
+<h2>Need another model?</h2>
+<p>Send us the make, model, year and market version, if known, so we can identify the correct reference.</p>
 <a class="btn" href="contact.html">Request a Vehicle Guide</a>
 </section>
-
 </main>
 
 <footer>
 <div class="wrap">
-
 <strong>EMMYBLAQ AUTOTECH</strong>
-
 <p>Automotive knowledge. Better understanding. Smarter maintenance.</p>
-
 <p>
 <a href="index.html">Home</a>
 <a href="guides.html">Auto Guides</a>
@@ -277,212 +132,261 @@ so we can identify the correct reference.
 <a href="terms.html">Terms</a>
 <a href="contact.html">Contact</a>
 </p>
-
-<p class="muted">
-Educational information only. Verify vehicle-specific details before carrying out repairs.
-</p>
-
+<p class="muted">Educational information only. Verify vehicle-specific details before carrying out repairs.</p>
 </div>
 </footer>
 
 <script>
 const vehicles = [
-["Honda","Accord","honda","accord"],
-["Honda","Civic","honda","civic"],
-["Honda","CR-V","honda","cr-v"],
-["Honda","Fit","honda","fit"],
-["Honda","Jazz","honda","jazz"],
-["Honda","Odyssey","honda","odyssey"],
-["Honda","Pilot","honda","pilot"],
+{make:"Honda",model:"Accord",slug:"honda",path:"accord"},
+{make:"Honda",model:"Civic",slug:"honda",path:"civic"},
+{make:"Honda",model:"CR-V",slug:"honda",path:"cr-v"},
+{make:"Honda",model:"Fit",slug:"honda",path:"fit"},
+{make:"Honda",model:"Jazz",slug:"honda",path:"jazz"},
+{make:"Honda",model:"Odyssey",slug:"honda",path:"odyssey"},
+{make:"Honda",model:"Pilot",slug:"us/honda",path:"pilot",years:[2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],local:"fuse-relay.html"},
 
-["Toyota","Camry","toyota","camry"],
-["Toyota","Corolla","toyota","corolla"],
-["Toyota","RAV4","toyota","rav4"],
-["Toyota","Highlander","toyota","highlander"],
-["Toyota","Prius","toyota","prius"],
-["Toyota","Yaris","toyota","yaris"],
-["Toyota","Avalon","toyota","avalon"],
-["Toyota","4Runner","toyota","4runner"],
-["Toyota","Land Cruiser","toyota","land-cruiser"],
-["Toyota","Tacoma","toyota","tacoma"],
-["Toyota","Tundra","toyota","tundra"],
+{make:"Toyota",model:"Camry",slug:"toyota",path:"camry"},
+{make:"Toyota",model:"Corolla",slug:"toyota",path:"corolla",years:Array.from({length:48},(_,i)=>2026-i),local:"corolla-fuse-guide.html"},
+{make:"Toyota",model:"RAV4",slug:"toyota",path:"rav4"},
+{make:"Toyota",model:"Highlander",slug:"toyota",path:"highlander"},
+{make:"Toyota",model:"Prius",slug:"toyota",path:"prius"},
+{make:"Toyota",model:"Yaris",slug:"toyota",path:"yaris"},
+{make:"Toyota",model:"Avalon",slug:"toyota",path:"avalon"},
+{make:"Toyota",model:"4Runner",slug:"toyota",path:"4runner"},
+{make:"Toyota",model:"Land Cruiser",slug:"toyota",path:"land-cruiser"},
+{make:"Toyota",model:"Tacoma",slug:"toyota",path:"tacoma"},
+{make:"Toyota",model:"Tundra",slug:"toyota",path:"tundra"},
 
-["Lexus","RX","lexus","rx"],
-["Lexus","ES","lexus","es"],
-["Lexus","IS","lexus","is"],
-["Lexus","GS","lexus","gs"],
-["Lexus","LS","lexus","ls"],
-["Lexus","NX","lexus","nx"],
-["Lexus","GX","lexus","gx"],
-["Lexus","LX","lexus","lx"],
-["Lexus","UX","lexus","ux"],
-["Lexus","CT","lexus","ct"],
-["Lexus","SC","lexus","sc"],
-["Lexus","HS","lexus","hs"],
+{make:"Lexus",model:"RX",slug:"lexus",path:"rx"},
+{make:"Lexus",model:"RX 300",slug:"lexus",path:"rx-300",years:[1997,1998,1999,2000,2001,2002,2003]},
+{make:"Lexus",model:"ES",slug:"lexus",path:"es",years:[1991,1992,1993,1994,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]},
+{make:"Lexus",model:"IS",slug:"lexus",path:"is"},
+{make:"Lexus",model:"IS 250",slug:"lexus",path:"is-250",years:[2005,2006,2007,2008,2009,2010,2011,2012,2013,2015]},
+{make:"Lexus",model:"IS 350",slug:"lexus",path:"is-350",years:[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]},
+{make:"Lexus",model:"GS",slug:"lexus",path:"gs"},
+{make:"Lexus",model:"LS",slug:"lexus",path:"ls"},
+{make:"Lexus",model:"NX",slug:"lexus",path:"nx"},
+{make:"Lexus",model:"NX 300",slug:"lexus",path:"nx-300",years:[2018,2019,2020,2021]},
+{make:"Lexus",model:"GX",slug:"lexus",path:"gx",years:[2004,2005,2006,2007,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]},
+{make:"Lexus",model:"LX",slug:"lexus",path:"lx"},
+{make:"Lexus",model:"UX 200",slug:"lexus",path:"ux-200",years:[2022,2023]},
+{make:"Lexus",model:"UX 250h",slug:"lexus",path:"ux-250h",years:[2019,2020,2021,2022,2023,2024]},
+{make:"Lexus",model:"CT",slug:"lexus",path:"ct"},
+{make:"Lexus",model:"SC",slug:"lexus",path:"sc"},
+{make:"Lexus",model:"HS",slug:"lexus",path:"hs"},
 
-["Mercedes-Benz","C-Class","mercedes-benz","c-class"],
-["Mercedes-Benz","E-Class","mercedes-benz","e-class"],
-["Mercedes-Benz","S-Class","mercedes-benz","s-class"],
-["Mercedes-Benz","GLK-Class","mercedes-benz","glk-class"],
-["Mercedes-Benz","GLC","mercedes-benz","glc"],
-["Mercedes-Benz","GLE","mercedes-benz","gle"],
-["Mercedes-Benz","GLS","mercedes-benz","gls"],
-["Mercedes-Benz","A-Class","mercedes-benz","a-class"],
-["Mercedes-Benz","CLA","mercedes-benz","cla"],
-["Mercedes-Benz","ML-Class","mercedes-benz","ml-class"],
-["Mercedes-Benz","Sprinter","mercedes-benz","sprinter"],
+{make:"Mercedes-Benz",model:"C-Class",slug:"us/mercedes-benz",path:"c-class"},
+{make:"Mercedes-Benz",model:"E-Class",slug:"mercedes-benz",path:"e-class"},
+{make:"Mercedes-Benz",model:"S-Class",slug:"mercedes-benz",path:"s-class"},
+{make:"Mercedes-Benz",model:"GLK-Class",slug:"mercedes-benz",path:"glk-class"},
+{make:"Mercedes-Benz",model:"GLC",slug:"mercedes-benz",path:"glc"},
+{make:"Mercedes-Benz",model:"GLE",slug:"mercedes-benz",path:"gle"},
+{make:"Mercedes-Benz",model:"GLS",slug:"mercedes-benz",path:"gls"},
+{make:"Mercedes-Benz",model:"A-Class",slug:"mercedes-benz",path:"a-class"},
+{make:"Mercedes-Benz",model:"CLA",slug:"mercedes-benz",path:"cla"},
+{make:"Mercedes-Benz",model:"ML-Class",slug:"mercedes-benz",path:"ml-class"},
+{make:"Mercedes-Benz",model:"Sprinter",slug:"mercedes-benz",path:"sprinter"},
 
-["Nissan","Altima","nissan","altima"],
-["Nissan","Sentra","nissan","sentra"],
-["Nissan","Rogue","nissan","rogue"],
-["Nissan","Pathfinder","nissan","pathfinder"],
-["Nissan","Maxima","nissan","maxima"],
-["Nissan","Murano","nissan","murano"],
-["Nissan","Versa","nissan","versa"],
-["Nissan","Frontier","nissan","frontier"],
-["Nissan","Xterra","nissan","xterra"],
-["Nissan","Armada","nissan","armada"],
+{make:"Nissan",model:"Altima",slug:"gb/nissan",path:"altima"},
+{make:"Nissan",model:"Sentra",slug:"nissan",path:"sentra"},
+{make:"Nissan",model:"Rogue",slug:"nissan",path:"rogue"},
+{make:"Nissan",model:"Pathfinder",slug:"nissan",path:"pathfinder"},
+{make:"Nissan",model:"Maxima",slug:"nissan",path:"maxima"},
+{make:"Nissan",model:"Murano",slug:"nissan",path:"murano"},
+{make:"Nissan",model:"Versa",slug:"nissan",path:"versa"},
+{make:"Nissan",model:"Frontier",slug:"nissan",path:"frontier"},
+{make:"Nissan",model:"Xterra",slug:"nissan",path:"xterra"},
+{make:"Nissan",model:"Armada",slug:"nissan",path:"armada"},
 
-["Hyundai","Elantra","hyundai","elantra"],
-["Hyundai","Sonata","hyundai","sonata"],
-["Hyundai","Santa Fe","hyundai","santa-fe"],
-["Hyundai","Tucson","hyundai","tucson"],
-["Hyundai","Accent","hyundai","accent"],
-["Hyundai","Kona","hyundai","kona"],
-["Hyundai","Palisade","hyundai","palisade"],
+{make:"Hyundai",model:"Elantra",slug:"hyundai",path:"elantra"},
+{make:"Hyundai",model:"Sonata",slug:"hyundai",path:"sonata"},
+{make:"Hyundai",model:"Santa Fe",slug:"hyundai",path:"santa-fe"},
+{make:"Hyundai",model:"Tucson",slug:"hyundai",path:"tucson"},
+{make:"Hyundai",model:"Accent",slug:"hyundai",path:"accent"},
+{make:"Hyundai",model:"Kona",slug:"hyundai",path:"kona"},
+{make:"Hyundai",model:"Palisade",slug:"hyundai",path:"palisade"},
 
-["Kia","Rio","kia","rio"],
-["Kia","Sorento","kia","sorento"],
-["Kia","Sportage","kia","sportage"],
-["Kia","Optima","kia","optima"],
-["Kia","Forte","kia","forte"],
-["Kia","Soul","kia","soul"],
-["Kia","Telluride","kia","telluride"],
-["Kia","Seltos","kia","seltos"],
+{make:"Kia",model:"Rio",slug:"kia",path:"rio"},
+{make:"Kia",model:"Sorento",slug:"kia",path:"sorento"},
+{make:"Kia",model:"Sportage",slug:"kia",path:"sportage"},
+{make:"Kia",model:"Optima",slug:"kia",path:"optima"},
+{make:"Kia",model:"Forte",slug:"kia",path:"forte"},
+{make:"Kia",model:"Soul",slug:"kia",path:"soul"},
+{make:"Kia",model:"Telluride",slug:"kia",path:"telluride"},
+{make:"Kia",model:"Seltos",slug:"kia",path:"seltos"},
 
-["Ford","F-150","ford","f-150"],
-["Ford","Escape","ford","escape"],
-["Ford","Explorer","ford","explorer"],
-["Ford","Focus","ford","focus"],
-["Ford","Fusion","ford","fusion"],
-["Ford","Mustang","ford","mustang"],
-["Ford","Ranger","ford","ranger"],
+{make:"Ford",model:"F-150",slug:"ford",path:"f-150"},
+{make:"Ford",model:"Escape",slug:"ford",path:"escape"},
+{make:"Ford",model:"Explorer",slug:"ford",path:"explorer"},
+{make:"Ford",model:"Focus",slug:"ford",path:"focus"},
+{make:"Ford",model:"Fusion",slug:"ford",path:"fusion"},
+{make:"Ford",model:"Mustang",slug:"ford",path:"mustang"},
+{make:"Ford",model:"Ranger",slug:"ford",path:"ranger"},
 
-["Chevrolet","Silverado 1500","chevrolet","silverado-1500"],
-["Chevrolet","Equinox","chevrolet","equinox"],
-["Chevrolet","Malibu","chevrolet","malibu"],
-["Chevrolet","Tahoe","chevrolet","tahoe"],
-["Chevrolet","Cruze","chevrolet","cruze"],
+{make:"Chevrolet",model:"Silverado 1500",slug:"chevrolet",path:"silverado-1500"},
+{make:"Chevrolet",model:"Equinox",slug:"chevrolet",path:"equinox"},
+{make:"Chevrolet",model:"Malibu",slug:"chevrolet",path:"malibu"},
+{make:"Chevrolet",model:"Tahoe",slug:"chevrolet",path:"tahoe"},
+{make:"Chevrolet",model:"Cruze",slug:"chevrolet",path:"cruze"},
 
-["BMW","3 Series","bmw","3-series"],
-["BMW","5 Series","bmw","5-series"],
-["BMW","X3","bmw","x3"],
-["BMW","X5","bmw","x5"],
+{make:"BMW",model:"3 Series",slug:"bmw",path:"3-series"},
+{make:"BMW",model:"5 Series",slug:"bmw",path:"5-series"},
+{make:"BMW",model:"X3",slug:"bmw",path:"x3"},
+{make:"BMW",model:"X5",slug:"bmw",path:"x5"},
 
-["Volkswagen","Golf","volkswagen","golf"],
-["Volkswagen","Jetta","volkswagen","jetta"],
-["Volkswagen","Passat","volkswagen","passat"],
-["Volkswagen","Tiguan","volkswagen","tiguan"],
+{make:"Volkswagen",model:"Golf",slug:"volkswagen",path:"golf"},
+{make:"Volkswagen",model:"Jetta",slug:"volkswagen",path:"jetta"},
+{make:"Volkswagen",model:"Passat",slug:"volkswagen",path:"passat"},
+{make:"Volkswagen",model:"Tiguan",slug:"volkswagen",path:"tiguan"},
 
-["Mazda","Mazda3","mazda","mazda3"],
-["Mazda","Mazda6","mazda","mazda6"],
-["Mazda","CX-5","mazda","cx-5"],
-["Mazda","CX-9","mazda","cx-9"],
+{make:"Mazda",model:"Mazda3",slug:"mazda",path:"mazda3"},
+{make:"Mazda",model:"Mazda6",slug:"mazda",path:"mazda6"},
+{make:"Mazda",model:"CX-5",slug:"mazda",path:"cx-5"},
+{make:"Mazda",model:"CX-9",slug:"mazda",path:"cx-9"},
 
-["Subaru","Forester","subaru","forester"],
-["Subaru","Outback","subaru","outback"],
-["Subaru","Impreza","subaru","impreza"],
-["Subaru","Legacy","subaru","legacy"]
+{make:"Subaru",model:"Forester",slug:"subaru",path:"forester"},
+{make:"Subaru",model:"Outback",slug:"subaru",path:"outback"},
+{make:"Subaru",model:"Impreza",slug:"subaru",path:"impreza"},
+{make:"Subaru",model:"Legacy",slug:"subaru",path:"legacy"}
 ];
 
-const makeSelect = document.getElementById('make');
-const search = document.getElementById('search');
-const results = document.getElementById('results');
-const summary = document.getElementById('summary');
-const empty = document.getElementById('empty');
+const makeEl=document.getElementById("make");
+const modelEl=document.getElementById("model");
+const yearEl=document.getElementById("year");
+const searchEl=document.getElementById("search");
+const statusEl=document.getElementById("status");
+const openLink=document.getElementById("openLink");
+const localLink=document.getElementById("localLink");
+const resultsEl=document.getElementById("results");
 
-[...new Set(vehicles.map(v => v[0]))]
-.sort()
-.forEach(make => {
-  const option = document.createElement('option');
-  option.value = make;
-  option.textContent = make;
-  makeSelect.appendChild(option);
+const uniqueMakes=[...new Set(vehicles.map(v=>v.make))].sort();
+
+uniqueMakes.forEach(m=>{
+const o=document.createElement("option");
+o.value=m;
+o.textContent=m;
+makeEl.appendChild(o);
 });
 
-function render() {
-
-  const q = search.value.trim().toLowerCase();
-  const chosen = makeSelect.value;
-
-  const filtered = vehicles.filter(v =>
-    (!chosen || v[0] === chosen) &&
-    (!q || v.join(' ').toLowerCase().includes(q))
-  );
-
-  results.innerHTML = '';
-
-  filtered.forEach(v => {
-
-    const [make, model, slug, modelSlug] = v;
-
-    const card = document.createElement('article');
-    card.className = 'card';
-
-    const brand = document.createElement('span');
-    brand.className = 'make';
-    brand.textContent = make;
-
-    const title = document.createElement('h2');
-    title.textContent = model;
-
-    const desc = document.createElement('p');
-    desc.textContent =
-      'Open the model directory to choose an available year and view its fuse-box and relay information.';
-
-    const link = document.createElement('a');
-    link.className = 'btn';
-    link.href =
-      'https://www.startmycar.com/' +
-      slug + '/' + modelSlug + '/info/fusebox';
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.textContent = 'Choose year & view guide';
-
-    card.append(brand, title, desc, link);
-
-    if (make === 'Honda' && model === 'Pilot') {
-      const local = document.createElement('a');
-      local.className = 'btn secondary';
-      local.href = 'fuse-relay.html';
-      local.textContent = 'Our 2008 Pilot guide';
-      card.append(local);
-    }
-
-    if (make === 'Toyota' && model === 'Corolla') {
-      const local = document.createElement('a');
-      local.className = 'btn secondary';
-      local.href = 'corolla-fuse-guide.html';
-      local.textContent = 'Our Corolla guide';
-      card.append(local);
-    }
-
-    results.appendChild(card);
-  });
-
-  summary.textContent =
-    filtered.length + ' model' +
-    (filtered.length === 1 ? '' : 's') +
-    ' listed. Select a model, then choose the exact year on StartMyCar.';
-
-  empty.style.display = filtered.length ? 'none' : 'block';
+function baseUrl(v){
+return "https://www.startmycar.com/"+v.slug+"/"+v.path+"/info/fusebox";
 }
 
-makeSelect.addEventListener('change', render);
-search.addEventListener('input', render);
+function currentVehicle(){
+return vehicles.find(v=>v.make===makeEl.value&&v.model===modelEl.value);
+}
 
-render();
+function fillModels(){
+const make=makeEl.value;
+modelEl.innerHTML='<option value="">Choose model</option>';
+modelEl.disabled=!make;
+
+vehicles.filter(v=>v.make===make).forEach(v=>{
+const o=document.createElement("option");
+o.value=v.model;
+o.textContent=v.model;
+modelEl.appendChild(o);
+});
+
+yearEl.innerHTML='<option value="">Choose year</option>';
+yearEl.disabled=true;
+updateSelected();
+}
+
+function updateSelected(){
+const v=currentVehicle();
+localLink.hidden=true;
+
+if(!v){
+openLink.href="https://www.startmycar.com/";
+openLink.textContent="Open StartMyCar directory";
+statusEl.textContent=makeEl.value?"Choose a model.":"Choose a make to begin.";
+return;
+}
+
+openLink.href=baseUrl(v);
+openLink.textContent=v.years?"Open model directory":"Open available years on StartMyCar";
+
+if(v.local){
+localLink.href=v.local;
+localLink.hidden=false;
+localLink.textContent=v.make==="Honda"?"Open our 2008 Pilot guide":"Open our Corolla guide";
+}
+
+yearEl.innerHTML='<option value="">Choose year</option>';
+
+if(v.years&&v.years.length){
+yearEl.disabled=false;
+
+[...v.years].sort((a,b)=>b-a).forEach(y=>{
+const o=document.createElement("option");
+o.value=y;
+o.textContent=y;
+yearEl.appendChild(o);
+});
+
+statusEl.textContent="Year options are available for "+v.make+" "+v.model+". Choose the exact year to open its fuse-box page.";
+}else{
+yearEl.disabled=true;
+statusEl.textContent="Open the model directory. Its own page lists the available years and variants. This page does not guess years for this model.";
+}
+}
+
+function renderCards(){
+const q=searchEl.value.trim().toLowerCase();
+resultsEl.innerHTML="";
+
+vehicles.filter(v=>!q||(v.make+" "+v.model).toLowerCase().includes(q)).forEach(v=>{
+const card=document.createElement("article");
+card.className="card";
+
+const brand=document.createElement("span");
+brand.className="make";
+brand.textContent=v.make;
+
+const h=document.createElement("h2");
+h.textContent=v.model;
+
+const p=document.createElement("p");
+p.textContent=v.years?"Year selector available.":"Open the model directory to view its available years and variants.";
+
+const a=document.createElement("a");
+a.className="btn";
+a.href=baseUrl(v);
+a.target="_blank";
+a.rel="noopener noreferrer";
+a.textContent="Open model directory";
+
+a.addEventListener("click",()=>{
+makeEl.value=v.make;
+fillModels();
+modelEl.value=v.model;
+updateSelected();
+});
+
+card.append(brand,h,p,a);
+resultsEl.appendChild(card);
+});
+}
+
+makeEl.addEventListener("change",fillModels);
+modelEl.addEventListener("change",updateSelected);
+
+yearEl.addEventListener("change",()=>{
+const v=currentVehicle();
+
+if(!v||!yearEl.value)return;
+
+openLink.href=baseUrl(v)+"/"+yearEl.value;
+openLink.textContent="Open "+yearEl.value+" fuse-box guide";
+
+statusEl.textContent="Selected "+v.make+" "+v.model+" ("+yearEl.value+"). Tap the blue button to open the year-specific page.";
+});
+
+searchEl.addEventListener("input",renderCards);
+
+renderCards();
 </script>
-
 </body>
 </html>
