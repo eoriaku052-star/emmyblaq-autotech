@@ -4,58 +4,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fuse & Relay Library | EmmyBlaQ AutoTech</title>
-<meta name="description" content="Search vehicle fuse box and relay diagram references by vehicle make and model.">
+<title>Vehicle Fuse Box & Relay Library | EmmyBlaQ AutoTech</title>
+<meta name="description" content="Browse vehicle fuse box and relay diagram references by make, model, year and generation. Toyota, Honda, Lexus, Nissan, Hyundai, Kia, Mercedes-Benz and more.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://emmyblaqautotech.name.ng/fuse-library.html">
+
 <style>
-:root {
-  --navy:#071b32;
-  --blue:#0878c9;
-  --gold:#ffc247;
-  --bg:#f3f6fa;
-  --ink:#172638;
-  --muted:#607086;
-  --line:#dce4ed;
+:root{
+--navy:#071b32;
+--blue:#0878c9;
+--gold:#ffc247;
+--bg:#f3f6fa;
+--ink:#172638;
+--muted:#607086;
+--line:#dce4ed;
+--white:#fff;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Arial,sans-serif}
-.wrap{width:min(1120px,92%);margin:auto}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font:16px/1.6 Arial,sans-serif
+}
+.wrap{width:min(1150px,92%);margin:auto}
 header,footer{background:var(--navy);color:white;padding:20px 0}
-.brand{color:white;text-decoration:none;font-weight:900;font-size:1.1rem}
+.brand{
+color:white;
+text-decoration:none;
+font-weight:900;
+font-size:1.15rem
+}
 .brand span{color:var(--gold)}
-nav{display:flex;flex-wrap:wrap;gap:15px;margin-top:12px}
-nav a,footer a{color:#e7f1fb;text-decoration:none}
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:12px
+}
+nav a,footer a{
+color:#e7f1fb;
+text-decoration:none
+}
 nav a:hover,footer a:hover{color:var(--gold)}
-.hero{padding:55px 0;background:linear-gradient(130deg,#071b32,#075c9d);color:white}
-.hero h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1;margin:12px 0}
-.hero p{max-width:760px;color:#dcecff}
+.hero{
+padding:55px 0;
+background:linear-gradient(130deg,#071b32,#075c9d);
+color:white
+}
+.hero h1{
+font-size:clamp(2rem,6vw,3.5rem);
+line-height:1.1;
+margin:12px 0
+}
+.hero p{max-width:780px;color:#dcecff}
+.hero-tag{
+color:var(--gold);
+font-weight:bold;
+letter-spacing:1px
+}
 main{padding:30px 0}
-.panel,.vehicle-card{background:white;border:1px solid var(--line);border-radius:15px;padding:21px}
+.panel,.vehicle-card{
+background:white;
+border:1px solid var(--line);
+border-radius:15px;
+padding:21px
+}
 .panel{margin-bottom:25px}
-.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-label{display:block;font-weight:bold;margin-bottom:7px}
-select,input{width:100%;padding:14px;border:1px solid #c8d5e2;border-radius:9px;background:white;font-size:1rem}
+.controls{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:20px
+}
+label{
+display:block;
+font-weight:bold;
+margin-bottom:7px
+}
+select,input{
+width:100%;
+padding:14px;
+border:1px solid #c8d5e2;
+border-radius:9px;
+background:white;
+font-size:1rem
+}
 select:disabled{background:#edf1f5}
-#status{margin-top:18px;padding:14px;background:#eaf5ff;border-left:4px solid var(--blue);border-radius:8px}
-.btn{display:inline-block;background:var(--blue);color:white;text-decoration:none;font-weight:bold;padding:12px 18px;border-radius:8px;margin-top:14px}
+#status{
+margin-top:18px;
+padding:14px;
+background:#eaf5ff;
+border-left:4px solid var(--blue);
+border-radius:8px
+}
+.btn{
+display:inline-block;
+background:var(--blue);
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:12px 18px;
+border-radius:8px;
+margin-top:14px
+}
 .btn.gold{background:var(--gold);color:#18283b}
 .small{color:var(--muted);font-size:.92rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin-top:18px}
-.vehicle-card{margin:0;transition:.2s}
-.vehicle-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin:20px 0
+}
+.stat{
+background:#fff;
+border:1px solid var(--line);
+border-radius:12px;
+padding:15px;
+text-align:center
+}
+.stat strong{
+display:block;
+font-size:1.6rem;
+color:#075c9d
+}
+.stat span{font-size:.85rem;color:var(--muted)}
+.search-area{
+display:grid;
+grid-template-columns:1fr auto;
+gap:12px;
+margin:18px 0
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(235px,1fr));
+gap:15px;
+margin-top:18px
+}
+.vehicle-card{
+margin:0;
+transition:.2s
+}
+.vehicle-card:hover{
+border-color:var(--blue);
+transform:translateY(-2px)
+}
 .vehicle-card h3{margin:5px 0}
-.vehicle-card .make{color:#14704d;font-weight:bold;font-size:.82rem;text-transform:uppercase}
-.vehicle-card p{color:var(--muted);font-size:.92rem}
-.vehicle-card a{display:inline-block;color:#075c9d;font-weight:bold;margin:5px 12px 0 0}
-.notice{background:#fff8e8;border:1px solid #f0d58f;border-left:5px solid var(--gold);padding:17px;margin:25px 0;border-radius:10px}
+.vehicle-card .make{
+color:#14704d;
+font-weight:bold;
+font-size:.8rem;
+text-transform:uppercase;
+letter-spacing:.5px
+}
+.vehicle-card p{
+color:var(--muted);
+font-size:.9rem;
+margin:8px 0
+}
+.vehicle-card a{
+display:inline-block;
+color:#075c9d;
+font-weight:bold;
+margin:5px 10px 0 0;
+font-size:.9rem
+}
+.vehicle-card[hidden]{display:none}
+.notice{
+background:#fff8e8;
+border:1px solid #f0d58f;
+border-left:5px solid var(--gold);
+padding:17px;
+margin:25px 0;
+border-radius:10px
+}
+.make-heading{
+margin:30px 0 10px;
+border-bottom:2px solid var(--line);
+padding-bottom:8px
+}
 footer p{color:#cbd8e7}
 @media(max-width:700px){
- .controls{grid-template-columns:1fr}
- .hero{padding:38px 0}
+.controls{grid-template-columns:1fr}
+.hero{padding:38px 0}
+.stats{grid-template-columns:repeat(3,1fr)}
+.stat{padding:10px 5px}
+.stat strong{font-size:1.3rem}
+.search-area{grid-template-columns:1fr}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -74,128 +214,94 @@ footer p{color:#cbd8e7}
 
 <section class="hero">
 <div class="wrap">
-<strong>VEHICLE REFERENCE CENTRE</strong>
-<h1>Find Your Vehicle's Fuse Box</h1>
-<p>Search our growing vehicle directory and find fuse-box and relay diagram references. Select the correct model year, generation and market before using any diagram.</p>
+<div class="hero-tag">EMMYBLAQ AUTOTECH REFERENCE CENTRE</div>
+<h1>Vehicle Fuse Box & Relay Library</h1>
+<p>Find fuse-box and relay diagram references for popular vehicle makes and models. Search by brand, select your model and open its available year and generation references.</p>
+<a href="#finder" class="btn gold">Find My Vehicle</a>
 </div>
 </section>
 
 <main class="wrap">
 
-<section class="panel">
+<div class="stats">
+<div class="stat">
+<strong id="modelCount">30</strong>
+<span>Vehicle models</span>
+</div>
+<div class="stat">
+<strong id="makeCount">12</strong>
+<span>Vehicle makes</span>
+</div>
+<div class="stat">
+<strong>Growing</strong>
+<span>Reference library</span>
+</div>
+</div>
+
+<section class="panel" id="finder">
 <h2>Find your vehicle</h2>
-<p class="small">Choose a brand and model. Where a direct year-specific reference is verified, it will appear in the year selector.</p>
+<p class="small">Select the vehicle make, model and available year/version.</p>
 
 <div class="controls">
 <div>
 <label for="make">1. Vehicle brand</label>
-<select id="make"><option value="">Choose brand</option></select>
+<select id="make">
+<option value="">Choose brand</option>
+</select>
 </div>
+
 <div>
 <label for="model">2. Vehicle model</label>
-<select id="model" disabled><option value="">Choose model</option></select>
+<select id="model" disabled>
+<option value="">Choose model</option>
+</select>
 </div>
+
 <div>
-<label for="year">3. Year / version</label>
-<select id="year" disabled><option value="">Choose model first</option></select>
+<label for="year">3. Year / generation</label>
+<select id="year" disabled>
+<option value="">Choose model first</option>
+</select>
 </div>
 </div>
 
-<div id="status" role="status" aria-live="polite">Choose a vehicle brand to begin.</div>
-<a id="openLink" class="btn gold" href="https://www.startmycar.com/" target="_blank" rel="noopener noreferrer">Open Fuse Box Directory</a>
+<div id="status" role="status" aria-live="polite">
+Choose a vehicle brand to begin.
+</div>
+
+<a id="openLink" class="btn gold"
+href="https://www.startmycar.com/"
+target="_blank" rel="noopener noreferrer">
+Open Fuse Box Directory
+</a>
 </section>
 
-<h2>Browse available vehicles</h2>
-<p class="small">Search the directory or select a vehicle below.</p>
-<input id="search" type="search" placeholder="Search Toyota, Honda, Corolla..." aria-label="Search vehicle make or model">
+<h2>Browse the vehicle database</h2>
+<p class="small">Use the search box to find a vehicle quickly.</p>
 
-<div class="grid" id="cards">
-
-<article class="vehicle-card" data-search="honda accord">
-<span class="make">Honda</span>
-<h3>Accord</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/honda/accord/info/fusebox" target="_blank" rel="noopener noreferrer">Open Accord directory</a>
-</article>
-
-<article class="vehicle-card" data-search="honda civic">
-<span class="make">Honda</span>
-<h3>Civic</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/honda/civic/info/fusebox" target="_blank" rel="noopener noreferrer">Open Civic directory</a>
-</article>
-
-<article class="vehicle-card" data-search="honda pilot">
-<span class="make">Honda</span>
-<h3>Pilot</h3>
-<p>2008 reference available.</p>
-<a href="https://www.startmycar.com/honda/pilot/info/fusebox" target="_blank" rel="noopener noreferrer">All Pilot years</a>
-<a href="https://www.startmycar.com/honda/pilot/info/fusebox/2008" target="_blank" rel="noopener noreferrer">2008 guide</a>
-</article>
-
-<article class="vehicle-card" data-search="toyota camry">
-<span class="make">Toyota</span>
-<h3>Camry</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/toyota/camry/info/fusebox" target="_blank" rel="noopener noreferrer">Open Camry directory</a>
-</article>
-
-<article class="vehicle-card" data-search="toyota corolla">
-<span class="make">Toyota</span>
-<h3>Corolla</h3>
-<p>2008 has different generation references. Select the matching version.</p>
-<a href="https://www.startmycar.com/toyota/corolla/info/fusebox" target="_blank" rel="noopener noreferrer">All Corolla years</a>
-<a href="https://www.startmycar.com/toyota/corolla/info/fusebox/2008/10a-gen" target="_blank" rel="noopener noreferrer">2008 10A generation</a>
-<a href="https://www.startmycar.com/toyota/corolla/info/fusebox/2008/9th-gen" target="_blank" rel="noopener noreferrer">2008 9th generation</a>
-</article>
-
-<article class="vehicle-card" data-search="lexus es">
-<span class="make">Lexus</span>
-<h3>ES</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/lexus/es/info/fusebox" target="_blank" rel="noopener noreferrer">Open ES directory</a>
-</article>
-
-<article class="vehicle-card" data-search="mercedes benz c-class">
-<span class="make">Mercedes-Benz</span>
-<h3>C-Class</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/us/mercedes-benz/c-class/info/fusebox" target="_blank" rel="noopener noreferrer">Open C-Class directory</a>
-</article>
-
-<article class="vehicle-card" data-search="bmw 3 series">
-<span class="make">BMW</span>
-<h3>3 Series</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/bmw/3-series/info/fusebox" target="_blank" rel="noopener noreferrer">Open 3 Series directory</a>
-</article>
-
-<article class="vehicle-card" data-search="chevrolet silverado 1500">
-<span class="make">Chevrolet</span>
-<h3>Silverado 1500</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/us/chevrolet/silverado-1500/info/fusebox" target="_blank" rel="noopener noreferrer">Open Silverado directory</a>
-</article>
-
-<article class="vehicle-card" data-search="ford escape">
-<span class="make">Ford</span>
-<h3>Escape</h3>
-<p>Browse available years and fuse diagrams.</p>
-<a href="https://www.startmycar.com/ford/escape/info/fusebox" target="_blank" rel="noopener noreferrer">Open Escape directory</a>
-</article>
-
+<div class="search-area">
+<input id="search" type="search"
+placeholder="Search Toyota, Honda, Corolla, Camry..."
+aria-label="Search vehicle make or model">
+<select id="makeFilter" aria-label="Filter by vehicle brand">
+<option value="">All vehicle brands</option>
+</select>
 </div>
 
-<p id="noResults" class="small" hidden>No matching vehicle found. Request this vehicle through our contact page.</p>
+<div class="grid" id="cards"></div>
+
+<p id="noResults" class="small" hidden>
+No matching vehicle found. Request this vehicle through our contact page.
+</p>
 
 <section class="notice">
 <strong>Important vehicle information</strong>
-<p>Fuse layouts can differ by year, generation, market, engine and trim. Confirm the exact vehicle before using a diagram. Never replace a fuse with a higher amp rating.</p>
+<p>Fuse layouts can differ by production year, generation, engine, trim and market. Always confirm that the reference matches your exact vehicle. Never replace a fuse with a higher amp rating.</p>
 </section>
 
 <section class="panel">
 <h2>Can't find your vehicle?</h2>
-<p>Tell us the make, model and year you need. We can add more verified vehicle references as the library grows.</p>
+<p>Send us the make, model and year. We can research and add more verified references to this central library.</p>
 <a class="btn" href="contact.html">Request a Vehicle Guide</a>
 </section>
 
@@ -215,63 +321,71 @@ footer p{color:#cbd8e7}
 
 <script>
 const vehicles = [
-{
- make:"Honda",model:"Accord",
- url:"https://www.startmycar.com/honda/accord/info/fusebox",
- years:[]
-},
-{
- make:"Honda",model:"Civic",
- url:"https://www.startmycar.com/honda/civic/info/fusebox",
- years:[]
-},
-{
- make:"Honda",model:"Pilot",
- url:"https://www.startmycar.com/honda/pilot/info/fusebox",
- years:[
-  {label:"2008 Honda Pilot",url:"https://www.startmycar.com/honda/pilot/info/fusebox/2008"}
- ]
-},
-{
- make:"Toyota",model:"Camry",
- url:"https://www.startmycar.com/toyota/camry/info/fusebox",
- years:[]
-},
-{
- make:"Toyota",model:"Corolla",
- url:"https://www.startmycar.com/toyota/corolla/info/fusebox",
- years:[
-  {label:"2008 — 10A generation (E140)",url:"https://www.startmycar.com/toyota/corolla/info/fusebox/2008/10a-gen"},
-  {label:"2008 — 9th generation (E120/E130)",url:"https://www.startmycar.com/toyota/corolla/info/fusebox/2008/9th-gen"}
- ]
-},
-{
- make:"Lexus",model:"ES",
- url:"https://www.startmycar.com/lexus/es/info/fusebox",
- years:[]
-},
-{
- make:"Mercedes-Benz",model:"C-Class",
- url:"https://www.startmycar.com/us/mercedes-benz/c-class/info/fusebox",
- years:[]
-},
-{
- make:"BMW",model:"3 Series",
- url:"https://www.startmycar.com/bmw/3-series/info/fusebox",
- years:[]
-},
-{
- make:"Chevrolet",model:"Silverado 1500",
- url:"https://www.startmycar.com/us/chevrolet/silverado-1500/info/fusebox",
- years:[]
-},
-{
- make:"Ford",model:"Escape",
- url:"https://www.startmycar.com/ford/escape/info/fusebox",
- years:[
-  {label:"2018 Ford Escape",url:"https://www.startmycar.com/ford/escape/info/fusebox/2018"}
- ]
-}
+
+/* HONDA */
+{make:"Honda",model:"Accord",url:"https://www.startmycar.com/honda/accord/info/fusebox"},
+{make:"Honda",model:"Civic",url:"https://www.startmycar.com/honda/civic/info/fusebox"},
+{make:"Honda",model:"Pilot",url:"https://www.startmycar.com/honda/pilot/info/fusebox",
+years:[
+{label:"2008 Honda Pilot",url:"https://www.startmycar.com/honda/pilot/info/fusebox/2008"}
+]},
+{make:"Honda",model:"Odyssey",url:"https://www.startmycar.com/honda/odyssey/info/fusebox"},
+
+/* TOYOTA */
+{make:"Toyota",model:"Camry",url:"https://www.startmycar.com/toyota/camry/info/fusebox"},
+{make:"Toyota",model:"Corolla",url:"https://www.startmycar.com/toyota/corolla/info/fusebox",
+years:[
+{label:"2008 — 10A generation (E140)",url:"https://www.startmycar.com/toyota/corolla/info/fusebox/2008/10a-gen"},
+{label:"2008 — 9th generation (E120/E130)",url:"https://www.startmycar.com/toyota/corolla/info/fusebox/2008/9th-gen"}
+]},
+{make:"Toyota",model:"Highlander",url:"https://www.startmycar.com/toyota/highlander/info/fusebox"},
+{make:"Toyota",model:"RAV4",url:"https://www.startmycar.com/toyota/rav4/info/fusebox"},
+
+/* LEXUS */
+{make:"Lexus",model:"ES",url:"https://www.startmycar.com/lexus/es/info/fusebox"},
+{make:"Lexus",model:"GX",url:"https://www.startmycar.com/us/lexus/gx/info/fusebox"},
+
+/* MERCEDES-BENZ */
+{make:"Mercedes-Benz",model:"C-Class",url:"https://www.startmycar.com/us/mercedes-benz/c-class/info/fusebox"},
+{make:"Mercedes-Benz",model:"E-Class",url:"https://www.startmycar.com/mercedes-benz/e-class/info/fusebox"},
+{make:"Mercedes-Benz",model:"GLK-Class",url:"https://www.startmycar.com/us/mercedes-benz/glk-class/info/fusebox"},
+{make:"Mercedes-Benz",model:"GLE",url:"https://www.startmycar.com/us/mercedes-benz/gle/info/fusebox"},
+
+/* BMW */
+{make:"BMW",model:"3 Series",url:"https://www.startmycar.com/bmw/3-series/info/fusebox"},
+
+/* CHEVROLET */
+{make:"Chevrolet",model:"Silverado 1500",url:"https://www.startmycar.com/us/chevrolet/silverado-1500/info/fusebox"},
+
+/* FORD */
+{make:"Ford",model:"Escape",url:"https://www.startmycar.com/ford/escape/info/fusebox",
+years:[
+{label:"2018 Ford Escape",url:"https://www.startmycar.com/ford/escape/info/fusebox/2018"}
+]},
+
+/* NISSAN */
+{make:"Nissan",model:"Altima",url:"https://www.startmycar.com/nissan/altima/info/fusebox"},
+{make:"Nissan",model:"Pathfinder",url:"https://www.startmycar.com/nissan/pathfinder/info/fusebox"},
+{make:"Nissan",model:"Rogue",url:"https://www.startmycar.com/nissan/rogue/info/fusebox"},
+{make:"Nissan",model:"Sentra",url:"https://www.startmycar.com/nissan/sentra/info/fusebox"},
+
+/* HYUNDAI */
+{make:"Hyundai",model:"Elantra",url:"https://www.startmycar.com/nz/hyundai/elantra/info/fusebox"},
+{make:"Hyundai",model:"Tucson",url:"https://www.startmycar.com/hyundai/tucson/info/fusebox"},
+{make:"Hyundai",model:"Sonata",url:"https://www.startmycar.com/hyundai/sonata/info/fusebox"},
+
+/* KIA */
+{make:"Kia",model:"Sportage",url:"https://www.startmycar.com/gb/kia/sportage/info/fusebox"},
+
+/* MITSUBISHI */
+{make:"Mitsubishi",model:"Pajero",url:"https://www.startmycar.com/mitsubishi/pajero/info/fusebox"},
+{make:"Mitsubishi",model:"Lancer",url:"https://www.startmycar.com/mitsubishi/lancer/info/fusebox"},
+{make:"Mitsubishi",model:"Outlander",url:"https://www.startmycar.com/mitsubishi/outlander/info/fusebox"},
+
+/* VOLKSWAGEN */
+{make:"Volkswagen",model:"Golf",url:"https://www.startmycar.com/us/volkswagen/golf/info/fusebox"},
+{make:"Volkswagen",model:"Jetta",url:"https://www.startmycar.com/volkswagen/jetta/info/fusebox"}
+
 ];
 
 const makeEl=document.getElementById("make");
@@ -279,100 +393,157 @@ const modelEl=document.getElementById("model");
 const yearEl=document.getElementById("year");
 const statusEl=document.getElementById("status");
 const openLink=document.getElementById("openLink");
+const searchEl=document.getElementById("search");
+const filterEl=document.getElementById("makeFilter");
+const cardsEl=document.getElementById("cards");
 
-[...new Set(vehicles.map(v=>v.make))]
-.sort()
-.forEach(make=>{
- const option=document.createElement("option");
- option.value=make;
- option.textContent=make;
- makeEl.appendChild(option);
+const makes=[...new Set(vehicles.map(v=>v.make))].sort();
+
+document.getElementById("modelCount").textContent=vehicles.length;
+document.getElementById("makeCount").textContent=makes.length;
+
+makes.forEach(make=>{
+const option=document.createElement("option");
+option.value=make;
+option.textContent=make;
+makeEl.appendChild(option);
+
+const filterOption=document.createElement("option");
+filterOption.value=make;
+filterOption.textContent=make;
+filterEl.appendChild(filterOption);
 });
 
-function selected(){
- return vehicles.find(v=>
-  v.make===makeEl.value &&
-  v.model===modelEl.value
- );
+/* BUILD SEARCHABLE VEHICLE CARDS */
+function renderCards(){
+cardsEl.innerHTML="";
+
+const query=searchEl.value.toLowerCase().trim();
+const selectedMake=filterEl.value;
+
+const filtered=vehicles.filter(v=>{
+const matchesSearch=(v.make+" "+v.model).toLowerCase().includes(query);
+const matchesMake=!selectedMake||v.make===selectedMake;
+return matchesSearch&&matchesMake;
+});
+
+filtered.forEach(v=>{
+const card=document.createElement("article");
+card.className="vehicle-card";
+
+const make=document.createElement("div");
+make.className="make";
+make.textContent=v.make;
+
+const title=document.createElement("h3");
+title.textContent=v.model;
+
+const description=document.createElement("p");
+description.textContent=v.years&&v.years.length
+?"Specific year references are available below."
+:"Open the model directory to select your exact year and generation.";
+
+const link=document.createElement("a");
+link.href=v.url;
+link.target="_blank";
+link.rel="noopener noreferrer";
+link.textContent="Open "+v.model+" directory";
+
+card.append(make,title,description,link);
+
+if(v.years){
+v.years.forEach(y=>{
+const yearLink=document.createElement("a");
+yearLink.href=y.url;
+yearLink.target="_blank";
+yearLink.rel="noopener noreferrer";
+yearLink.textContent=y.label;
+card.appendChild(yearLink);
+});
 }
 
+cardsEl.appendChild(card);
+});
+
+document.getElementById("noResults").hidden=filtered.length!==0;
+}
+
+searchEl.addEventListener("input",renderCards);
+filterEl.addEventListener("change",renderCards);
+renderCards();
+
+/* VEHICLE SELECTOR */
 function resetYear(){
- yearEl.innerHTML='<option value="">Choose year / version</option>';
- yearEl.disabled=true;
+yearEl.innerHTML='<option value="">Choose year / version</option>';
+yearEl.disabled=true;
+}
+
+function selectedVehicle(){
+return vehicles.find(v=>
+v.make===makeEl.value&&v.model===modelEl.value
+);
 }
 
 function updateMake(){
- modelEl.innerHTML='<option value="">Choose model</option>';
- resetYear();
- modelEl.disabled=!makeEl.value;
+modelEl.innerHTML='<option value="">Choose model</option>';
+resetYear();
+modelEl.disabled=!makeEl.value;
 
- vehicles.filter(v=>v.make===makeEl.value)
- .forEach(v=>{
-  const option=document.createElement("option");
-  option.value=v.model;
-  option.textContent=v.model;
-  modelEl.appendChild(option);
- });
+vehicles.filter(v=>v.make===makeEl.value).forEach(v=>{
+const option=document.createElement("option");
+option.value=v.model;
+option.textContent=v.model;
+modelEl.appendChild(option);
+});
 
- openLink.href="https://www.startmycar.com/";
- openLink.textContent="Open Fuse Box Directory";
+openLink.href="https://www.startmycar.com/";
+openLink.textContent="Open Fuse Box Directory";
 
- statusEl.textContent=makeEl.value
- ? "Now choose the vehicle model."
- : "Choose a vehicle brand to begin.";
+statusEl.textContent=makeEl.value
+?"Now choose your vehicle model."
+:"Choose a vehicle brand to begin.";
 }
 
 function updateModel(){
- resetYear();
- const vehicle=selected();
- if(!vehicle)return;
+resetYear();
 
- openLink.href=vehicle.url;
- openLink.textContent="Open "+vehicle.make+" "+vehicle.model+" directory";
+const vehicle=selectedVehicle();
+if(!vehicle)return;
 
- if(vehicle.years.length){
-  vehicle.years.forEach((item,index)=>{
-   const option=document.createElement("option");
-   option.value=index;
-   option.textContent=item.label;
-   yearEl.appendChild(option);
-  });
-  yearEl.disabled=false;
-  statusEl.textContent="Choose a verified year and generation reference.";
- }else{
-  statusEl.textContent="No direct year-specific link has been verified here yet. Open the model directory and select your exact year and version.";
- }
+openLink.href=vehicle.url;
+openLink.textContent="Open "+vehicle.make+" "+vehicle.model+" directory";
+
+if(vehicle.years&&vehicle.years.length){
+vehicle.years.forEach((item,index)=>{
+const option=document.createElement("option");
+option.value=String(index);
+option.textContent=item.label;
+yearEl.appendChild(option);
+});
+
+yearEl.disabled=false;
+statusEl.textContent="Select the correct year and generation.";
+}else{
+statusEl.textContent="No direct year-specific link is listed here. Open the model directory and select the exact year and generation there.";
+}
 }
 
 function updateYear(){
- const vehicle=selected();
- if(!vehicle)return;
+const vehicle=selectedVehicle();
+if(!vehicle)return;
 
- const item=vehicle.years[Number(yearEl.value)];
- if(!item)return;
+const item=vehicle.years[Number(yearEl.value)];
+if(!item)return;
 
- openLink.href=item.url;
- openLink.textContent="Open "+item.label+" fuse guide";
- statusEl.textContent=item.label+" selected. Confirm that the generation and market match your vehicle.";
+openLink.href=item.url;
+openLink.textContent="Open "+item.label+" fuse guide";
+statusEl.textContent=item.label+" selected. Confirm the generation and market before using the diagram.";
 }
 
 makeEl.addEventListener("change",updateMake);
 modelEl.addEventListener("change",updateModel);
 yearEl.addEventListener("change",updateYear);
 
-document.getElementById("search").addEventListener("input",event=>{
- const query=event.target.value.toLowerCase().trim();
- let count=0;
-
- document.querySelectorAll(".vehicle-card").forEach(card=>{
-  const show=card.dataset.search.includes(query);
-  card.hidden=!show;
-  if(show)count++;
- });
-
- document.getElementById("noResults").hidden=count!==0;
-});
 </script>
-
 </body>
 </html>
