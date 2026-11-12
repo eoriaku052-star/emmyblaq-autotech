@@ -1,117 +1,402 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | EMMYBLAQ AUTOTECH</title>
-  <meta name="description" content="Learn about EMMYBLAQ AUTOTECH and our automotive electrical diagnosis, vehicle tracker installation and car AC services.">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-      line-height: 1.7;
-    }
-    header {
-      background: #151515;
-      padding: 22px 15px;
-      text-align: center;
-      border-bottom: 2px solid #f5a623;
-    }
-    header h1 { color: #f5a623; margin: 0; }
-    nav { margin-top: 12px; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 6px 10px;
-      display: inline-block;
-    }
-    nav a:hover { color: #f5a623; }
-    main {
-      max-width: 850px;
-      margin: 35px auto;
-      padding: 25px;
-    }
-    h2 { color: #f5a623; }
-    .highlight {
-      background: #181818;
-      border-left: 4px solid #f5a623;
-      padding: 20px;
-      margin: 25px 0;
-      border-radius: 6px;
-    }
-    .button {
-      display: inline-block;
-      background: #f5a623;
-      color: #111;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 8px 8px 8px 0;
-    }
-    footer {
-      background: #151515;
-      text-align: center;
-      padding: 20px;
-      color: #bbb;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>EMMYBLAQ AUTOTECH</h1>
-    <p>Smarter Car Technology. Better Driving.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="guides.html">Guides</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <main>
-    <h2>About EMMYBLAQ AUTOTECH</h2>
+<title>About EmmyBlaQ AutoTech | Auto Electrical Services in Benin City</title>
+<meta name="description" content="Learn about EmmyBlaQ AutoTech, an automotive electrical and car AC service provider in Idokpa, Benin City, Edo State.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://emmyblaqautotech.name.ng/about.html">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.about-hero{
+  padding:65px 5%;
+  text-align:center;
+  background:linear-gradient(135deg,#080808,#30240a,#080808);
+  border-bottom:1px solid #59471b;
+}
+.about-hero .eyebrow{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+.about-hero h1{
+  color:var(--white);
+  font-size:clamp(30px,5vw,46px);
+  line-height:1.2;
+  margin:14px 0;
+}
+.about-hero h1 span{color:var(--gold)}
+.about-hero p{
+  max-width:760px;
+  margin:auto;
+  color:#ddd;
+}
+.about-section{padding:38px 0}
+.about-section h2{
+  color:var(--gold);
+  font-size:clamp(23px,4vw,30px);
+  margin-bottom:14px;
+}
+.about-section p{color:#ddd;margin-bottom:14px}
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:17px;
+  margin:22px 0;
+}
+.about-card{
+  background:#141414;
+  border:1px solid #403722;
+  border-radius:10px;
+  padding:22px;
+}
+.about-card h3{
+  color:var(--gold);
+  font-size:18px;
+  margin-bottom:9px;
+}
+.about-card p,.about-card li{
+  color:#ddd;
+  font-size:14px;
+}
+.about-card ul{padding-left:20px}
+.about-card li{margin:6px 0}
+.about-highlight{
+  background:#211a08;
+  border-left:4px solid var(--gold);
+  border-radius:7px;
+  padding:20px;
+  margin:22px 0;
+}
+.about-highlight strong{color:var(--gold)}
+.about-details{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:14px;
+  margin:22px 0;
+}
+.about-detail{
+  background:#141414;
+  border:1px solid #403722;
+  border-radius:9px;
+  padding:18px;
+}
+.about-detail strong{
+  display:block;
+  color:var(--gold);
+  margin-bottom:6px;
+}
+.about-detail span{color:#ddd;font-size:14px}
+.about-cta{
+  background:linear-gradient(135deg,#241c08,#111);
+  border:1px solid #66501b;
+  border-radius:12px;
+  padding:28px;
+  text-align:center;
+  margin:30px 0;
+}
+.about-cta h2{color:var(--gold);margin-bottom:10px}
+.about-cta p{color:#ddd;max-width:700px;margin:0 auto 17px}
+.about-cta-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+@media(max-width:600px){
+  .about-hero{padding:48px 5%}
+  .about-card,.about-cta{padding:19px}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutomotiveBusiness",
+  "name":"EmmyBlaQ AutoTech",
+  "url":"https://emmyblaqautotech.name.ng/",
+  "telephone":"+2349119330397",
+  "description":"Automotive electrical diagnosis, wiring repairs, car air-conditioning services and vehicle technology installations in Benin City, Edo State.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Idokpa, BTC Fuel Station, opposite Ascon",
+    "addressLocality":"Benin City",
+    "addressRegion":"Edo State",
+    "addressCountry":"NG"
+  },
+  "areaServed":{
+    "@type":"City",
+    "name":"Benin City"
+  },
+  "openingHours":"Mo-Sa 09:00-18:00"
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <a class="brand" href="index.html">EmmyBlaQ AutoTech</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="guides.html">Guides</a>
+      <a href="fuse-library.html">Fuse Library</a>
+      <a href="gallery.html">Our Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="about-hero">
+  <div class="eyebrow">ABOUT OUR BUSINESS</div>
+  <h1>Getting to Know <span>EmmyBlaQ AutoTech</span></h1>
+  <p>
+    Automotive electrical diagnosis, car air-conditioning services
+    and vehicle technology support in Benin City, Edo State.
+  </p>
+</section>
+
+<main class="container">
+
+  <section class="about-section">
+    <h2>Who We Are</h2>
+
     <p>
-      Welcome to EMMYBLAQ AUTOTECH, where we focus on automotive
-      electrical solutions that help drivers enjoy safer and more
-      reliable vehicles.
+      EmmyBlaQ AutoTech is an automotive service business based in
+      Idokpa, Benin City, Edo State. We focus on helping vehicle owners
+      investigate electrical problems, repair wiring faults, diagnose
+      air-conditioning issues and install selected vehicle security
+      and control systems.
     </p>
 
-    <div class="highlight">
-      <h2>What We Do</h2>
-      <p>We provide automotive electrical diagnosis and troubleshooting,
-      vehicle tracker installation, car air-conditioning services,
-      and other automotive electrical solutions.</p>
+    <p>
+      A vehicle electrical problem can sometimes affect more than one
+      component. A warning light, starting difficulty, faulty sensor
+      or an air-conditioning problem may require proper inspection
+      before the cause can be identified. Our approach is to investigate
+      the affected system rather than assume that the first suspected
+      component is the problem.
+    </p>
+
+    <div class="about-highlight">
+      <strong>Our approach:</strong>
+      Inspect the vehicle, test the affected system, explain the findings
+      and provide a quotation before carrying out any agreed repair.
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>What We Work On</h2>
+    <p>
+      Our services cover several areas of automotive electrical work
+      and vehicle air-conditioning systems.
+    </p>
+
+    <div class="about-grid">
+
+      <article class="about-card">
+        <h3>Automotive Electrical Systems</h3>
+        <p>
+          Electrical fault diagnosis, wiring repairs, battery and
+          charging system diagnosis, and investigation of electrical
+          component problems.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>Car Air Conditioning</h3>
+        <p>
+          Car AC diagnosis and repairs, leak detection, and replacement
+          of faulty compressors and other AC components where required.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>Vehicle Diagnostics</h3>
+        <p>
+          Vehicle computer scanning, injector system diagnosis, and
+          sensor diagnosis and replacement.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>Vehicle Security and Controls</h3>
+        <p>
+          Tracker installation, speed limiter installation, alarm system
+          installation and central lock installation.
+        </p>
+      </article>
+
     </div>
 
-    <h2>Our Mission</h2>
     <p>
-      Our mission is to help vehicle owners identify electrical faults,
-      improve vehicle security and keep their car electrical and AC
-      systems working properly.
+      See the complete list of available work on our
+      <a href="services.html">Services page</a>.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Vehicle Makes We Handle</h2>
+    <p>
+      We handle selected automotive electrical and AC service enquiries
+      for the following vehicle makes:
     </p>
 
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>Focused automotive electrical troubleshooting.</li>
-      <li>Vehicle tracker installation services.</li>
-      <li>Car air-conditioning diagnosis and servicing.</li>
-      <li>Practical solutions tailored to vehicle problems.</li>
-    </ul>
+    <div class="about-grid">
+      <article class="about-card">
+        <h3>Toyota</h3>
+        <p>Electrical diagnosis, wiring and car AC service enquiries.</p>
+      </article>
 
-    <h2>Contact Us</h2>
-    <p>Need help with your vehicle? Contact us to discuss the service you need.</p>
+      <article class="about-card">
+        <h3>Honda</h3>
+        <p>Electrical diagnosis, wiring and car AC service enquiries.</p>
+      </article>
 
-    <a class="button" href="index.html#contact">Contact Us</a>
-    <a class="button" href="gallery.html">View Our Gallery</a>
-  </main>
+      <article class="about-card">
+        <h3>Lexus</h3>
+        <p>Electrical diagnosis, wiring and car AC service enquiries.</p>
+      </article>
 
-  <footer>
-    <p>&copy; 2026 EMMYBLAQ AUTOTECH. All rights reserved.</p>
-  </footer>
+      <article class="about-card">
+        <h3>Nissan</h3>
+        <p>Electrical diagnosis, wiring and car AC service enquiries.</p>
+      </article>
+
+      <article class="about-card">
+        <h3>Hyundai</h3>
+        <p>Electrical diagnosis, wiring and car AC service enquiries.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>How We Handle a Vehicle Job</h2>
+
+    <div class="about-grid">
+
+      <article class="about-card">
+        <h3>01. Inspection</h3>
+        <p>
+          We discuss the reported problem and inspect the affected
+          vehicle system.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>02. Testing and Diagnosis</h3>
+        <p>
+          Appropriate checks and tests are carried out to investigate
+          the possible cause of the problem.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>03. Explanation and Quotation</h3>
+        <p>
+          We explain the findings and provide a quotation for the
+          proposed work before proceeding.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>04. Agreed Repair</h3>
+        <p>
+          Work begins after the customer approves the quotation.
+          Appropriate checks are carried out after the agreed repair.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Where to Find Us</h2>
+
+    <p>
+      Our workshop is located in Idokpa, near BTC Fuel Station,
+      opposite Ascon, Benin City, Edo State. Customers can visit
+      during our business hours. Walk-ins are welcome.
+    </p>
+
+    <p>
+      We also accept mobile service enquiries anywhere within
+      Benin City. Please contact us first so we can discuss the
+      vehicle problem and confirm the service arrangements.
+    </p>
+
+    <div class="about-details">
+      <div class="about-detail">
+        <strong>Workshop Location</strong>
+        <span>Idokpa, BTC Fuel Station, opposite Ascon, Benin City, Edo State.</span>
+      </div>
+
+      <div class="about-detail">
+        <strong>Business Hours</strong>
+        <span>Monday to Saturday, 9:00 AM – 6:00 PM.</span>
+      </div>
+
+      <div class="about-detail">
+        <strong>Walk-in Visits</strong>
+        <span>Accepted during business hours.</span>
+      </div>
+
+      <div class="about-detail">
+        <strong>Mobile Service</strong>
+        <span>Available within Benin City, subject to prior confirmation.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-cta">
+    <h2>Need Help With Your Vehicle?</h2>
+    <p>
+      Tell us what your vehicle is experiencing. You can contact us
+      to discuss the problem and the service you may need.
+    </p>
+
+    <div class="about-cta-actions">
+      <a class="button" href="https://wa.me/2349119330397">
+        Contact Us on WhatsApp
+      </a>
+      <a class="button button-outline" href="services.html">
+        Explore Our Services
+      </a>
+      <a class="button button-outline" href="gallery.html">
+        View Our Work
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>EmmyBlaQ AutoTech</strong></p>
+  <p>Smarter Car Technology. Better Driving.</p>
+  <p>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="guides.html">Guides</a>
+    <a href="fuse-library.html">Fuse Library</a>
+    <a href="gallery.html">Our Work</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </p>
+  <p>© 2026 EmmyBlaQ AutoTech. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/2349119330397">
+  WhatsApp Us
+</a>
+
 </body>
 </html>
