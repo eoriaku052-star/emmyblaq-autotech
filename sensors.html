@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn about automotive sensors, common faults, locations and diagnostic methods with EmmyBlaQ AutoTech.">
-<meta name="theme-color" content="#101010">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Automotive Sensor Library | EmmyBlaQ AutoTech</title>
+<meta name="description" content="Explore a detailed automotive sensor library. Learn sensor functions, locations, symptoms and diagnostic approaches for engine, AC, transmission, safety and hybrid vehicle systems.">
+<meta name="theme-color" content="#101010">
+<link rel="canonical" href="https://emmyblaqautotech.name.ng/sensors.html">
 <link rel="stylesheet" href="style.css">
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5760610709240232" crossorigin="anonymous"></script>
 
 <style>
@@ -16,12 +17,12 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--dark);color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;line-height:1.7}
 a{color:var(--gold)}
-.sensor-header{background:#080808;border-bottom:1px solid #333;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-.brand{color:var(--gold);font-size:1.1rem;font-weight:800;text-decoration:none;letter-spacing:1px}
-.sensor-header nav{display:flex;gap:15px;flex-wrap:wrap}
-.sensor-header nav a{color:#eee;text-decoration:none;font-size:.9rem}
-.sensor-header nav a:hover{color:var(--gold)}
-.hero{padding:60px 6% 48px;text-align:center;background:linear-gradient(120deg,rgba(0,0,0,.94),rgba(0,0,0,.75)),url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=85') center/cover;border-bottom:2px solid var(--gold)}
+header{background:#080808;border-bottom:1px solid #333;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{color:var(--gold);font-weight:800;text-decoration:none;letter-spacing:1px}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:#eee;text-decoration:none;font-size:.9rem}
+nav a:hover{color:var(--gold)}
+.hero{padding:60px 6% 48px;text-align:center;background:linear-gradient(120deg,#080808,#211b0b);border-bottom:2px solid var(--gold)}
 .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:3px;font-weight:bold;text-transform:uppercase}
 h1{max-width:850px;margin:12px auto;font-size:clamp(2rem,6vw,3.5rem);line-height:1.15}
 .hero p{max-width:760px;margin:18px auto;color:#ddd}
@@ -30,29 +31,32 @@ h1{max-width:850px;margin:12px auto;font-size:clamp(2rem,6vw,3.5rem);line-height
 .btn-gold{background:var(--gold);color:#111}
 .btn-outline{color:var(--gold);background:transparent}
 .container{width:min(1180px,92%);margin:auto}
-.notice{margin:28px auto;padding:16px 18px;background:#201c10;border-left:4px solid var(--gold);border-radius:5px;color:#eee}
+.notice{margin:25px auto;padding:16px 18px;background:#201c10;border-left:4px solid var(--gold);border-radius:5px;color:#eee}
 .section-heading{margin:42px 0 20px}
 .section-heading h2{color:var(--gold);margin-bottom:5px;font-size:1.7rem}
 .section-heading p{margin-top:0;color:var(--muted)}
 .search-panel{background:var(--panel);padding:20px;border:1px solid var(--line);border-radius:10px;margin:30px 0}
-#sensorSearch{width:100%;padding:15px;border:1px solid #555;border-radius:6px;background:#090909;color:white;font-size:1rem;outline-color:var(--gold)}
+#sensorSearch{width:100%;padding:15px;border:1px solid #555;border-radius:6px;background:#090909;color:white;font-size:1rem}
 .filters{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
 .filter-btn{padding:9px 13px;border:1px solid #555;border-radius:25px;background:#111;color:#eee;cursor:pointer}
 .filter-btn.active,.filter-btn:hover{background:var(--gold);color:#111;border-color:var(--gold)}
 #resultCount{color:var(--muted);font-size:.9rem;margin-top:12px}
 .category{margin:42px 0;scroll-margin-top:20px}
 .category-title{color:var(--gold);padding-bottom:10px;border-bottom:1px solid #454545;font-size:1.45rem}
-.sensor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;align-items:stretch}
-.sensor-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .2s,border-color .2s}
-.sensor-card:hover{border-color:var(--gold);transform:translateY(-2px)}
-.sensor-photo{width:100%;height:190px;object-fit:cover;background:#252525;display:block}
-.photo-caption{display:block;padding:5px 12px;background:#111;color:#aaa;font-size:.72rem}
+.sensor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:18px;align-items:stretch}
+.sensor-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.sensor-art{height:190px;background:radial-gradient(ellipse at center,#34302a 0%,#171717 72%);display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid #39332a;padding:14px}
+.sensor-art svg{width:100%;height:145px;max-width:260px}
+.art-label{position:absolute;bottom:8px;left:12px;color:#d9c47c;font-size:.7rem;letter-spacing:1px;text-transform:uppercase}
 .sensor-content{padding:18px;display:flex;flex-direction:column;height:100%}
 .sensor-content h3{margin:0 0 10px;color:#f3cd51;font-size:1.16rem}
 .sensor-content p{color:#ddd;margin:7px 0;font-size:.93rem}
 .sensor-content strong{color:white}
 .sensor-code{display:inline-block;color:#111;background:var(--gold);padding:3px 8px;border-radius:4px;font-size:.72rem;font-weight:bold;margin-bottom:10px;align-self:flex-start}
 .tip{margin-top:auto;padding-top:12px;color:#f2d778;font-size:.88rem}
+.ask-box{margin-top:16px;padding-top:14px;border-top:1px solid #444}
+.ask-btn{display:block;text-align:center;background:#147b42;color:white;text-decoration:none;padding:11px 12px;border-radius:6px;font-weight:bold}
+.ask-btn:hover{background:#199653}
 .diagnostic-box{background:#191919;border:1px solid #444;border-radius:10px;padding:22px;margin:25px 0}
 .diagnostic-box h3{color:var(--gold)}
 .diagnostic-box li{margin-bottom:9px}
@@ -60,21 +64,24 @@ h1{max-width:850px;margin:12px auto;font-size:clamp(2rem,6vw,3.5rem);line-height
 table{border-collapse:collapse;width:100%;min-width:600px;background:var(--panel)}
 th,td{border:1px solid #444;text-align:left;padding:12px;vertical-align:top}
 th{background:#26210f;color:var(--gold)}
-.footer{margin-top:55px;padding:30px 5%;text-align:center;background:#070707;border-top:2px solid var(--gold);color:#aaa}
-.footer a{margin:0 8px;text-decoration:none}
 .empty-state{display:none;color:#ddd;padding:25px;text-align:center;border:1px dashed #555;border-radius:8px}
-@media(max-width:600px){.hero{padding:45px 5% 35px}.sensor-header{justify-content:center}.sensor-header nav{justify-content:center}.sensor-photo{height:190px}}
+footer{margin-top:55px;padding:30px 5%;text-align:center;background:#070707;border-top:2px solid var(--gold);color:#aaa}
+footer a{margin:0 8px;text-decoration:none}
+@media(max-width:600px){.hero{padding:45px 5% 35px}header{justify-content:center}nav{justify-content:center}.sensor-art{height:175px}}
 </style>
 </head>
 
 <body>
-<header class="sensor-header">
+<header>
 <a class="brand" href="index.html">EMMYBLAQ AUTOTECH</a>
 <nav aria-label="Main navigation">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="guides.html">Guides</a>
+<a href="sensors.html">Sensors</a>
+<a href="fuse-library.html">Fuse Library</a>
 <a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
 </header>
@@ -82,7 +89,7 @@ th{background:#26210f;color:var(--gold)}
 <section class="hero">
 <span class="eyebrow">Automotive Technical Library</span>
 <h1>Understand Every Vehicle Sensor</h1>
-<p>A practical reference for auto electricians, technicians and learners. Learn how vehicle sensors work, common fault symptoms, where they are found and how to approach diagnosis.</p>
+<p>A practical reference for auto electricians, technicians and learners. Explore how vehicle sensors work, where they are commonly located, possible fault symptoms and how technicians approach diagnosis.</p>
 <div class="hero-buttons">
 <a class="btn btn-gold" href="#library">Explore Sensor Library</a>
 <a class="btn btn-outline" href="guides.html">Read Diagnostic Guides</a>
@@ -91,7 +98,7 @@ th{background:#26210f;color:var(--gold)}
 
 <main class="container">
 <div class="notice">
-<strong>Important:</strong> Sensor locations, wiring and specifications vary by vehicle. Always use the correct wiring diagram and service information. Photos are illustrative and may not show the exact sensor described.
+<strong>About the illustrations:</strong> Each card has a sensor-specific technical illustration rather than an unrelated stock photograph. These are educational representations, not exact replacement-part images. Sensor appearance, connector design, wiring and location vary by vehicle, engine and model year. Always confirm the correct part using vehicle-specific service information.
 </div>
 
 <section class="section-heading" id="library">
@@ -147,7 +154,7 @@ th{background:#26210f;color:var(--gold)}
 <tr><td>Rough idle</td><td>MAF, MAP, ECT, TPS</td><td>Vacuum leaks, ignition faults, compression and fuel trims</td></tr>
 <tr><td>Weak acceleration</td><td>MAF, MAP/boost, APP, fuel pressure</td><td>Air leaks, exhaust restriction, fuel delivery and limp mode</td></tr>
 <tr><td>ABS warning light</td><td>Wheel-speed sensors</td><td>Wiring, wheel-bearing encoder, tone ring and ABS module</td></tr>
-<tr><td>AC compressor will not engage</td><td>Refrigerant pressure and evaporator temperature where fitted</td><td>Refrigerant charge, compressor control, fuses and cooling fan</td></tr>
+<tr><td>AC compressor will not engage</td><td>Refrigerant pressure and evaporator temperature sensors where fitted</td><td>Refrigerant charge, compressor control, fuses and cooling fan</td></tr>
 <tr><td>Incorrect fuel gauge</td><td>Fuel-level sender</td><td>Sender wiring, instrument cluster and fuel-pump assembly</td></tr>
 <tr><td>Transmission shifts incorrectly</td><td>Input/output speed and range sensors</td><td>Transmission fluid, mechanical condition, wiring and module data</td></tr>
 </tbody>
@@ -165,17 +172,20 @@ th{background:#26210f;color:var(--gold)}
 
 <div class="hero-buttons">
 <a class="btn btn-gold" href="guides.html">Diagnostic Guides</a>
+<a class="btn btn-outline" href="fuse-library.html">Fuse &amp; Relay Library</a>
 <a class="btn btn-outline" href="services.html">Our Services</a>
 <a class="btn btn-outline" href="contact.html">Contact Us</a>
 </div>
 </main>
 
-<footer class="footer">
+<footer>
 <p><strong style="color:#e8b923">EMMYBLAQ AUTOTECH</strong></p>
 <p>Automotive Electrical Diagnosis • Car AC • Vehicle Diagnostics</p>
 <p>
 <a href="index.html">Home</a>
 <a href="guides.html">Guides</a>
+<a href="sensors.html">Sensors</a>
+<a href="fuse-library.html">Fuse Library</a>
 <a href="contact.html">Contact</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="terms.html">Terms</a>
@@ -184,220 +194,290 @@ th{background:#26210f;color:var(--gold)}
 </footer>
 
 <script>
-const photos = {
-engine: "photo-1486262715619-67b85e0b08d3",
-fuel: "photo-1486262715619-67b85e0b08d3",
-chassis: "photo-1492144534655-ae79c964c9d7",
-ac: "photo-1503376780353-7e6692767b70",
-safety: "photo-1492144534655-ae79c964c9d7",
-ev: "photo-1593941707882-a5bba14938c7"
-};
+const WHATSAPP = "2349119330397";
 
+/* Sensor-specific records:
+   Each record has its own illustration type and WhatsApp topic. */
 const groups = [
 {
-key:"engine",
-name:"Engine Management Sensors",
-items:[
-["CKP","Crankshaft Position Sensor","Reports crankshaft position and speed so the ECU can control ignition and injection timing.","Near the crankshaft, crank pulley or flywheel housing.","Cranking without starting, sudden stalling or missing RPM signal.","Check scan-tool RPM while cranking, wiring and connector condition. Test the signal according to sensor type.","Zero RPM is a clue, not proof that the sensor is faulty.","crankshaft position CKP no start stall RPM"],
-["CMP","Camshaft Position Sensor","Helps the ECU identify camshaft position and synchronise engine operation.","Usually on or near the cylinder head or camshaft housing.","Long cranking, rough running, misfires or cam/crank correlation codes.","Check power, ground and signal. Compare cam and crank signals where possible.","Check mechanical timing if correlation faults remain.","camshaft position CMP timing misfire"],
-["MAF","Mass Air Flow Sensor","Measures the mass of air entering the engine so the ECU can calculate fuel delivery.","Usually in the intake duct between the air filter and throttle body.","Poor acceleration, rough idle, excessive fuel use or airflow codes.","Check live data, intake leaks, wiring and air filter. Compare readings with specifications.","Never touch the delicate sensing element or use unapproved cleaner.","MAF mass air flow rough idle fuel consumption"],
-["MAP","Manifold Absolute Pressure Sensor","Measures intake-manifold pressure to help calculate engine load and sometimes boost.","On or connected to the intake manifold, depending on design.","Poor power, unstable idle or pressure-related codes.","Compare key-on engine-off pressure with barometric pressure, then observe readings while running.","Check blocked ports, vacuum leaks and wiring first.","MAP manifold pressure boost turbo vacuum"],
-["TPS","Throttle Position Sensor","Reports throttle-plate position to the engine control system.","On the throttle body or built into the electronic throttle assembly.","Hesitation, uneven throttle response, limp mode or position codes.","Watch live throttle data through its range and check for smooth signal changes.","Electronic throttle systems may use multiple position signals.","TPS throttle position hesitation acceleration"],
-["APP","Accelerator Pedal Position Sensor","Tells the ECU how far the accelerator pedal is pressed.","Usually integrated into the accelerator pedal assembly.","Weak acceleration, limp mode or pedal-position codes.","Compare redundant live-data tracks and check for smooth correlated changes.","Low power alone does not prove a pedal fault.","APP accelerator pedal limp mode"],
-["ECT","Engine Coolant Temperature Sensor","Measures coolant temperature for fuelling, fan control and other ECU strategies.","Coolant passage, cylinder head, thermostat housing or coolant outlet.","Incorrect readings, unusual fan operation or poor cold starting.","Compare cold live data with ambient temperature and watch the reading as the engine warms.","Allow the engine to cool before opening the cooling system.","ECT coolant temperature overheating fan cold start"],
-["IAT","Intake Air Temperature Sensor","Measures incoming air temperature for engine calculations.","Intake duct, airflow sensor or intake manifold.","Implausible temperature readings or related engine codes.","Compare cold readings with ambient temperature and inspect the circuit.","Some vehicles combine IAT and MAP in one housing.","IAT intake air temperature"],
-["KS","Knock Sensor","Detects vibration patterns associated with combustion knock so ignition timing can be adjusted.","Usually mounted on the engine block or cylinder head.","Knock-sensor codes or reduced performance.","Check mounting, wiring and scan data using the specified procedure.","Wiring or mechanical problems can trigger a knock code.","knock sensor detonation pinging"],
-["O2 / Lambda","Oxygen Sensor","Measures oxygen in exhaust gas for mixture control and emissions monitoring.","In the exhaust, often before and after the catalytic converter.","Oxygen-sensor or heater codes, abnormal fuel trims or higher fuel use.","Check heater circuit, wiring, live data and exhaust leaks.","A sensor code can be caused by mixture or exhaust faults.","oxygen sensor O2 lambda fuel trim exhaust"],
-["Oil Pressure","Engine Oil Pressure Sensor or Switch","Reports or switches according to engine oil pressure.","Usually installed in an oil gallery or engine block.","Oil-pressure warning or implausible pressure data.","Verify actual pressure with the specified mechanical-gauge procedure.","If the oil-pressure warning stays on while running, stop the engine safely.","oil pressure warning light gauge"],
-["BARO","Barometric Pressure Sensor","Measures atmospheric pressure to help the ECU compensate for altitude and air density.","May be inside the ECU, integrated with another sensor or separately mounted.","Implausible pressure readings or related codes.","Compare readings with local atmospheric pressure and vehicle specifications.","Do not confuse atmospheric pressure with manifold pressure under load.","BARO barometric atmospheric pressure altitude"]
+key:"engine",name:"Engine Management Sensors",items:[
+["CKP","Crankshaft Position Sensor","probe","Reports crankshaft position and speed so the ECU can control ignition and injection timing.","Near the crankshaft, crank pulley or flywheel housing.","Cranking without starting, sudden stalling or missing RPM signal.","Check scan-tool RPM while cranking, wiring and connector condition. Test the signal according to sensor type.","Zero RPM is a clue, not proof that the sensor is faulty.","crankshaft position CKP no start stall RPM"],
+["CMP","Camshaft Position Sensor","probe","Helps the ECU identify camshaft position and synchronise engine operation.","Usually on or near the cylinder head or camshaft housing.","Long cranking, rough running, misfires or cam/crank correlation codes.","Check power, ground and signal. Compare cam and crank signals where possible.","Check mechanical timing if correlation faults remain.","camshaft position CMP timing misfire"],
+["MAF","Mass Air Flow Sensor","airflow","Measures the mass of air entering the engine so the ECU can calculate fuel delivery.","Usually in the intake duct between the air filter and throttle body.","Poor acceleration, rough idle, excessive fuel use or airflow codes.","Check live data, intake leaks, wiring and air filter. Compare readings with specifications.","Never touch the delicate sensing element or use unapproved cleaner.","MAF mass air flow rough idle fuel consumption"],
+["MAP","Manifold Absolute Pressure Sensor","pressure","Measures intake-manifold pressure to help calculate engine load and sometimes boost.","On or connected to the intake manifold, depending on design.","Poor power, unstable idle or pressure-related codes.","Compare key-on engine-off pressure with barometric pressure, then observe readings while running.","Check blocked ports, vacuum leaks and wiring first.","MAP manifold pressure boost turbo vacuum"],
+["TPS","Throttle Position Sensor","throttle","Reports throttle-plate position to the engine control system.","On the throttle body or built into the electronic throttle assembly.","Hesitation, uneven throttle response, limp mode or position codes.","Watch live throttle data through its range and check for smooth signal changes.","Electronic throttle systems may use multiple position signals.","TPS throttle position hesitation acceleration"],
+["APP","Accelerator Pedal Position Sensor","pedal","Tells the ECU how far the accelerator pedal is pressed.","Usually integrated into the accelerator pedal assembly.","Weak acceleration, limp mode or pedal-position codes.","Compare redundant live-data tracks and check for smooth correlated changes.","Low power alone does not prove a pedal fault.","APP accelerator pedal limp mode"],
+["ECT","Engine Coolant Temperature Sensor","thermistor","Measures coolant temperature for fuelling, fan control and other ECU strategies.","Coolant passage, cylinder head, thermostat housing or coolant outlet.","Incorrect readings, unusual fan operation or poor cold starting.","Compare cold live data with ambient temperature and watch the reading as the engine warms.","Allow the engine to cool before opening the cooling system.","ECT coolant temperature overheating fan cold start"],
+["IAT","Intake Air Temperature Sensor","thermistor","Measures incoming air temperature for engine calculations.","Intake duct, airflow sensor or intake manifold.","Implausible temperature readings or related engine codes.","Compare cold readings with ambient temperature and inspect the circuit.","Some vehicles combine IAT and MAP in one housing.","IAT intake air temperature"],
+["KS","Knock Sensor","knock","Detects vibration patterns associated with combustion knock so ignition timing can be adjusted.","Usually mounted on the engine block or cylinder head.","Knock-sensor codes or reduced performance.","Check mounting, wiring and scan data using the specified procedure.","Wiring or mechanical problems can trigger a knock code.","knock sensor detonation pinging"],
+["O2 / Lambda","Oxygen Sensor","exhaust","Measures oxygen in exhaust gas for mixture control and emissions monitoring.","In the exhaust, often before and after the catalytic converter.","Oxygen-sensor or heater codes, abnormal fuel trims or higher fuel use.","Check heater circuit, wiring, live data and exhaust leaks.","A sensor code can be caused by mixture or exhaust faults.","oxygen sensor O2 lambda fuel trim exhaust"],
+["Oil Pressure","Engine Oil Pressure Sensor or Switch","oil","Reports or switches according to engine oil pressure.","Usually installed in an oil gallery or engine block.","Oil-pressure warning or implausible pressure data.","Verify actual pressure with the specified mechanical-gauge procedure.","If the oil-pressure warning stays on while running, stop the engine safely.","oil pressure warning light gauge"],
+["BARO","Barometric Pressure Sensor","pressure","Measures atmospheric pressure to help the ECU compensate for altitude and air density.","May be inside the ECU, integrated with another sensor or separately mounted.","Implausible pressure readings or related codes.","Compare readings with local atmospheric pressure and vehicle specifications.","Do not confuse atmospheric pressure with manifold pressure under load.","BARO barometric atmospheric pressure altitude"]
 ]},
 {
-key:"fuel",
-name:"Fuel, Turbocharger and Exhaust Sensors",
-items:[
-["Fuel Pressure","Fuel Pressure Sensor","Reports fuel pressure in systems with electronic pressure monitoring.","Fuel rail, high-pressure pump or fuel delivery system, depending on design.","Starting problems, power loss or pressure codes.","Compare requested and actual pressure using scan data and the approved procedure.","High-pressure fuel systems are dangerous; never casually loosen a pressurised line.","fuel pressure rail diesel petrol injector"],
-["FTP","Fuel Tank Pressure Sensor","Monitors tank pressure or vacuum for evaporative-emissions diagnostics.","Usually part of the tank or EVAP system.","EVAP-related codes or failed leak-monitor tests.","Inspect hoses, cap and wiring; follow the correct EVAP test procedure.","A loose cap or leaking hose can mimic a sensor problem.","fuel tank pressure EVAP leak"],
-["Fuel Composition","Fuel Composition Sensor","Estimates alcohol content on supported flex-fuel systems and may report fuel temperature.","Usually installed in a fuel line on vehicles designed for it.","Incorrect composition data or related codes.","Verify scan data, wiring and signal specifications.","Not all petrol vehicles have a separate composition sensor.","fuel ethanol flex fuel composition"],
-["EGT","Exhaust Gas Temperature Sensor","Measures exhaust temperature to protect components and support emissions strategies.","May be positioned around the turbocharger, catalyst or DPF.","Temperature codes, regeneration problems or power limitations.","Compare cold readings and operating changes; inspect heat-exposed wiring.","Exhaust parts remain hot after shutdown.","EGT exhaust gas temperature turbo DPF"],
-["DPF Pressure","DPF Differential Pressure Sensor","Measures pressure difference across a diesel particulate filter to help estimate restriction.","Connected to pressure pipes or hoses before and after the filter.","DPF codes, failed regeneration or reduced power.","Check hoses for blockage, splits or heat damage and compare readings.","A restricted filter or exhaust leak can also affect readings.","DPF differential pressure diesel filter blockage"],
-["NOx","Nitrogen Oxide Sensor","Measures NOx levels in supported emissions systems, often around SCR after-treatment.","Installed at specified positions in the exhaust system.","NOx or SCR codes and emissions warnings.","Check module communication, power, wiring and live data.","Some NOx sensors have integrated electronic modules.","NOx sensor diesel SCR AdBlue emissions"],
-["Boost","Turbo Boost Pressure Sensor","Measures intake charge pressure on turbocharged engines.","Intake pipe, intercooler outlet or manifold.","Underboost or overboost codes, reduced power or limp mode.","Compare commanded and actual boost; inspect hoses, intercooler and actuator.","Underboost does not automatically mean a faulty sensor.","turbo boost pressure sensor MAP"]
+key:"fuel",name:"Fuel, Turbocharger and Exhaust Sensors",items:[
+["Fuel Pressure","Fuel Pressure Sensor","fuelpressure","Reports fuel pressure in systems with electronic pressure monitoring.","Fuel rail, high-pressure pump or fuel delivery system, depending on design.","Starting problems, power loss or pressure codes.","Compare requested and actual pressure using scan data and the approved procedure.","High-pressure fuel systems are dangerous; never casually loosen a pressurised line.","fuel pressure rail diesel petrol injector"],
+["FTP","Fuel Tank Pressure Sensor","pressure","Monitors tank pressure or vacuum for evaporative-emissions diagnostics.","Usually part of the tank or EVAP system.","EVAP-related codes or failed leak-monitor tests.","Inspect hoses, cap and wiring; follow the correct EVAP test procedure.","A loose cap or leaking hose can mimic a sensor problem.","fuel tank pressure EVAP leak"],
+["Fuel Composition","Fuel Composition Sensor","inline","Estimates alcohol content on supported flex-fuel systems and may report fuel temperature.","Usually installed in a fuel line on vehicles designed for it.","Incorrect composition data or related codes.","Verify scan data, wiring and signal specifications.","Not all petrol vehicles have a separate composition sensor.","fuel ethanol flex fuel composition"],
+["EGT","Exhaust Gas Temperature Sensor","exhaust","Measures exhaust temperature to protect components and support emissions strategies.","May be positioned around the turbocharger, catalyst or DPF.","Temperature codes, regeneration problems or power limitations.","Compare cold readings and operating changes; inspect heat-exposed wiring.","Exhaust parts remain hot after shutdown.","EGT exhaust gas temperature turbo DPF"],
+["DPF Pressure","DPF Differential Pressure Sensor","dpf","Measures pressure difference across a diesel particulate filter to help estimate restriction.","Connected to pressure pipes or hoses before and after the filter.","DPF codes, failed regeneration or reduced power.","Check hoses for blockage, splits or heat damage and compare readings.","A restricted filter or exhaust leak can also affect readings.","DPF differential pressure diesel filter blockage"],
+["NOx","Nitrogen Oxide Sensor","nox","Measures NOx levels in supported emissions systems, often around SCR after-treatment.","Installed at specified positions in the exhaust system.","NOx or SCR codes and emissions warnings.","Check module communication, power, wiring and live data.","Some NOx sensors have integrated electronic modules.","NOx sensor diesel SCR AdBlue emissions"],
+["Boost","Turbo Boost Pressure Sensor","pressure","Measures intake charge pressure on turbocharged engines.","Intake pipe, intercooler outlet or manifold.","Underboost or overboost codes, reduced power or limp mode.","Compare commanded and actual boost; inspect hoses, intercooler and actuator.","Underboost does not automatically mean a faulty sensor.","turbo boost pressure sensor MAP"]
 ]},
 {
-key:"chassis",
-name:"Transmission, ABS and Chassis Sensors",
-items:[
-["ABS / WSS","Wheel Speed Sensor","Reports individual wheel speed to ABS, stability control and related systems.","Near each wheel hub, bearing or tone ring.","ABS or traction-control warning and inconsistent wheel-speed data.","Compare wheel speeds on the scan tool and inspect wiring, air gap and encoder ring.","Some magnetic encoder rings are built into wheel bearings.","ABS wheel speed sensor brakes traction control"],
-["VSS","Vehicle Speed Sensor","Supplies vehicle-speed information to the modules that need it.","Depends on design; may use transmission speed or wheel-speed data.","Incorrect speed display or speed-related codes.","Compare speedometer and scan-tool data and verify the vehicle's sensor arrangement.","Many modern vehicles calculate speed from ABS signals.","VSS vehicle speed sensor speedometer"],
-["ISS / OSS","Transmission Input and Output Speed Sensors","Measure rotational speed at specified points for shift and gear-ratio control.","On or within the transmission.","Harsh shifting, gear-ratio codes or limp mode.","Compare input and output speed data and inspect the circuits.","Check fluid condition and mechanical faults as well.","transmission input output speed sensor shifting"],
-["TRS","Transmission Range Sensor","Reports selected gear range, such as Park, Reverse, Neutral or Drive.","At the selector shaft or integrated into the range assembly.","Incorrect gear indication or no-start in Park/Neutral.","Compare selector position with scan data and inspect adjustment and wiring.","Follow the correct adjustment procedure.","transmission range sensor neutral safety PRNDL"],
-["SAS","Steering Angle Sensor","Measures steering-wheel angle for stability control and driver-assistance functions.","Usually in or near the steering column or clock-spring assembly.","Stability-control warnings or implausible angle data.","Compare live angle with steering position and check calibration needs.","Wheel alignment or steering work may require calibration.","steering angle sensor ESP stability control"],
-["Yaw / G","Yaw Rate and Lateral Acceleration Sensors","Measure vehicle rotation and sideways acceleration for stability-control calculations.","Often near the vehicle centre or within a combined sensor unit.","Stability-system warnings or implausible dynamic data.","Check readings at rest, wiring, mounting and zero-point calibration.","Use the manufacturer's calibration procedure after relevant repairs.","yaw rate lateral acceleration stability control"]
+key:"chassis",name:"Transmission, ABS and Chassis Sensors",items:[
+["ABS / WSS","Wheel Speed Sensor","wheel","Reports individual wheel speed to ABS, stability control and related systems.","Near each wheel hub, bearing or tone ring.","ABS or traction-control warning and inconsistent wheel-speed data.","Compare wheel speeds on the scan tool and inspect wiring, air gap and encoder ring.","Some magnetic encoder rings are built into wheel bearings.","ABS wheel speed sensor brakes traction control"],
+["VSS","Vehicle Speed Sensor","speed","Supplies vehicle-speed information to the modules that need it.","Depends on design; may use transmission speed or wheel-speed data.","Incorrect speed display or speed-related codes.","Compare speedometer and scan-tool data and verify the vehicle's sensor arrangement.","Many modern vehicles calculate speed from ABS signals.","VSS vehicle speed sensor speedometer"],
+["ISS / OSS","Transmission Input and Output Speed Sensors","gear","Measure rotational speed at specified points for shift and gear-ratio control.","On or within the transmission.","Harsh shifting, gear-ratio codes or limp mode.","Compare input and output speed data and inspect the circuits.","Check fluid condition and mechanical faults as well.","transmission input output speed sensor shifting"],
+["TRS","Transmission Range Sensor","range","Reports selected gear range, such as Park, Reverse, Neutral or Drive.","At the selector shaft or integrated into the range assembly.","Incorrect gear indication or no-start in Park/Neutral.","Compare selector position with scan data and inspect adjustment and wiring.","Follow the correct adjustment procedure.","transmission range sensor neutral safety PRNDL"],
+["SAS","Steering Angle Sensor","steering","Measures steering-wheel angle for stability control and driver-assistance functions.","Usually in or near the steering column or clock-spring assembly.","Stability-control warnings or implausible angle data.","Compare live angle with steering position and check calibration needs.","Wheel alignment or steering work may require calibration.","steering angle sensor ESP stability control"],
+["Yaw / G","Yaw Rate and Lateral Acceleration Sensors","gyro","Measure vehicle rotation and sideways acceleration for stability-control calculations.","Often near the vehicle centre or within a combined sensor unit.","Stability-system warnings or implausible dynamic data.","Check readings at rest, wiring, mounting and zero-point calibration.","Use the manufacturer's calibration procedure after relevant repairs.","yaw rate lateral acceleration stability control"]
 ]},
 {
-key:"ac",
-name:"Air Conditioning and Body Sensors",
-items:[
-["A/C Pressure","Refrigerant Pressure Sensor","Reports refrigerant pressure so the control system can manage compressor operation and protection.","Usually on a refrigerant line or pressure connection.","Compressor may not engage or pressure data may be implausible.","Compare scan data with proper manifold-gauge readings and inspect wiring.","Incorrect charge, leaks or cooling-fan faults can cause similar symptoms.","AC air conditioning refrigerant pressure compressor"],
-["Evaporator Temp","Evaporator Temperature Sensor","Monitors evaporator temperature to help control cooling and prevent icing.","In or near the evaporator inside the HVAC housing.","Intermittent cooling, icing or implausible temperature data.","Compare live reading with actual temperature and check circuit specifications.","Restricted airflow and refrigerant faults can look similar.","AC evaporator temperature freezing cooling"],
-["Cabin Temp","Cabin Temperature Sensor","Measures cabin air temperature for automatic climate control.","Dashboard or HVAC panel, sometimes with an aspirator fan.","Automatic temperature control feels inaccurate.","Compare scan data with a thermometer and inspect the sensor air passage.","Dust or a blocked aspirator can affect readings.","cabin interior temperature climate control"],
-["Ambient Temp","Outside Air Temperature Sensor","Measures outside temperature for the dashboard display and climate control.","Often behind the front grille or near the bumper.","Incorrect outside temperature display.","Compare after the vehicle settles to ambient conditions and inspect wiring.","Engine and road heat can temporarily affect readings.","ambient outside air temperature"],
-["Sunload","Sunload Sensor","Detects sunlight intensity for automatic climate-control adjustments.","Usually on top of the dashboard near the windscreen.","Climate control may not compensate properly for sunlight.","Monitor live data and follow the specified response test.","Do not cover the sensor during testing.","sunload solar sunlight AC"],
-["Rain","Rain Sensor","Detects water on the windscreen for automatic wipers.","Inside the windscreen near the rear-view mirror.","Automatic wipers do not respond correctly.","Check mounting, optical coupling pad, wiring and diagnostic data.","Windscreen replacement can affect operation.","rain sensor automatic wiper windscreen"],
-["Fuel Level","Fuel Level Sender","Measures tank fuel quantity for the gauge and range calculations.","Often part of the in-tank pump/sender assembly.","Gauge stuck or inaccurate.","Test sender resistance or signal using the service procedure.","Some tanks use more than one sender.","fuel level sender gauge tank"]
+key:"ac",name:"Air Conditioning and Body Sensors",items:[
+["A/C Pressure","Refrigerant Pressure Sensor","acpressure","Reports refrigerant pressure so the control system can manage compressor operation and protection.","Usually on a refrigerant line or pressure connection.","Compressor may not engage or pressure data may be implausible.","Compare scan data with proper manifold-gauge readings and inspect wiring.","Incorrect charge, leaks or cooling-fan faults can cause similar symptoms.","AC air conditioning refrigerant pressure compressor"],
+["Evaporator Temp","Evaporator Temperature Sensor","thermistor","Monitors evaporator temperature to help control cooling and prevent icing.","In or near the evaporator inside the HVAC housing.","Intermittent cooling, icing or implausible temperature data.","Compare live reading with actual temperature and check circuit specifications.","Restricted airflow and refrigerant faults can look similar.","AC evaporator temperature freezing cooling"],
+["Cabin Temp","Cabin Temperature Sensor","thermistor","Measures cabin air temperature for automatic climate control.","Dashboard or HVAC panel, sometimes with an aspirator fan.","Automatic temperature control feels inaccurate.","Compare scan data with a thermometer and inspect the sensor air passage.","Dust or a blocked aspirator can affect readings.","cabin interior temperature climate control"],
+["Ambient Temp","Outside Air Temperature Sensor","thermistor","Measures outside temperature for the dashboard display and climate control.","Often behind the front grille or near the bumper.","Incorrect outside temperature display.","Compare after the vehicle settles to ambient conditions and inspect wiring.","Engine and road heat can temporarily affect readings.","ambient outside air temperature"],
+["Sunload","Sunload Sensor","photo","Detects sunlight intensity for automatic climate-control adjustments.","Usually on top of the dashboard near the windscreen.","Climate control may not compensate properly for sunlight.","Monitor live data and follow the specified response test.","Do not cover the sensor during testing.","sunload solar sunlight AC"],
+["Rain","Rain Sensor","optical","Detects water on the windscreen for automatic wipers.","Inside the windscreen near the rear-view mirror.","Automatic wipers do not respond correctly.","Check mounting, optical coupling pad, wiring and diagnostic data.","Windscreen replacement can affect operation.","rain sensor automatic wiper windscreen"],
+["Fuel Level","Fuel Level Sender","float","Measures tank fuel quantity for the gauge and range calculations.","Often part of the in-tank pump/sender assembly.","Gauge stuck or inaccurate.","Test sender resistance or signal using the service procedure.","Some tanks use more than one sender.","fuel level sender gauge tank"]
 ]},
 {
-key:"safety",
-name:"Safety and Driver-Assistance Sensors",
-items:[
-["TPMS","Tyre Pressure Monitoring Sensor","Monitors tyre pressure directly or uses wheel-speed information in indirect systems.","Direct sensors are often inside wheels; indirect systems use ABS data.","Tyre-pressure warning, missing data or system malfunction.","Identify system type; check pressures, sensor IDs and relearn requirements.","A warning can mean low tyre pressure, not a failed sensor.","TPMS tyre tire pressure warning"],
-["Ultrasonic","Parking Distance Sensor","Uses ultrasonic signals to estimate distance to nearby objects.","Usually mounted in the front or rear bumper.","Continuous warning tone or one sensor not responding.","Inspect dirt, paint damage, fitment and wiring; scan the system if possible.","Confirm the faulty sensor before removing the bumper.","parking sensor ultrasonic reverse bumper"],
-["BSM","Blind-Spot Monitoring Radar","Detects vehicles in adjacent areas for blind-spot warnings.","Often behind rear bumper corners or side body panels.","Blind-spot system unavailable or malfunction message.","Check module communication, mounting, obstruction and calibration.","Bumper repairs can affect radar alignment.","blind spot radar BSM ADAS"],
-["Forward Radar","Forward-Collision Radar","Detects objects ahead for supported cruise and collision-warning systems.","Often behind the grille or front emblem.","Driver-assistance warning or features unavailable.","Check obstruction, mounting, fault codes and calibration needs.","Never adjust radar mounting by guesswork.","forward collision radar adaptive cruise"],
-["ADAS Camera","Forward-Facing Driver-Assistance Camera","Interprets road markings and traffic for supported assistance features.","Commonly near the top of the windscreen.","Lane or collision-warning features unavailable.","Inspect the windscreen area, module data and calibration status.","Windscreen replacement may require camera calibration.","ADAS camera lane departure windscreen"],
-["SRS","Airbag Impact Sensor","Provides crash-deceleration information to the restraint system.","At specified front or side locations, depending on design.","Airbag warning light or restraint-system codes.","Use approved SRS diagnostics and service-manual procedures only.","Never probe deployment circuits with an ordinary test lamp or ohmmeter.","airbag impact crash sensor SRS safety"]
+key:"safety",name:"Safety and Driver-Assistance Sensors",items:[
+["TPMS","Tyre Pressure Monitoring Sensor","tpms","Monitors tyre pressure directly or uses wheel-speed information in indirect systems.","Direct sensors are often inside wheels; indirect systems use ABS data.","Tyre-pressure warning, missing data or system malfunction.","Identify system type; check pressures, sensor IDs and relearn requirements.","A warning can mean low tyre pressure, not a failed sensor.","TPMS tyre tire pressure warning"],
+["Ultrasonic","Parking Distance Sensor","ultrasonic","Uses ultrasonic signals to estimate distance to nearby objects.","Usually mounted in the front or rear bumper.","Continuous warning tone or one sensor not responding.","Inspect dirt, paint damage, fitment and wiring; scan the system if possible.","Confirm the faulty sensor before removing the bumper.","parking sensor ultrasonic reverse bumper"],
+["BSM","Blind-Spot Monitoring Radar","radar","Detects vehicles in adjacent areas for blind-spot warnings.","Often behind rear bumper corners or side body panels.","Blind-spot system unavailable or malfunction message.","Check module communication, mounting, obstruction and calibration.","Bumper repairs can affect radar alignment.","blind spot radar BSM ADAS"],
+["Forward Radar","Forward-Collision Radar","radar","Detects objects ahead for supported cruise and collision-warning systems.","Often behind the grille or front emblem.","Driver-assistance warning or features unavailable.","Check obstruction, mounting, fault codes and calibration needs.","Never adjust radar mounting by guesswork.","forward collision radar adaptive cruise"],
+["ADAS Camera","Forward-Facing Driver-Assistance Camera","camera","Interprets road markings and traffic for supported assistance features.","Commonly near the top of the windscreen.","Lane or collision-warning features unavailable.","Inspect the windscreen area, module data and calibration status.","Windscreen replacement may require camera calibration.","ADAS camera lane departure windscreen"],
+["SRS","Airbag Impact Sensor","impact","Provides crash-deceleration information to the restraint system.","At specified front or side locations, depending on design.","Airbag warning light or restraint-system codes.","Use approved SRS diagnostics and service-manual procedures only.","Never probe deployment circuits with an ordinary test lamp or ohmmeter.","airbag impact crash sensor SRS safety"]
 ]},
 {
-key:"ev",
-name:"Hybrid and Electric Vehicle Sensors",
-items:[
-["Battery Temp","High-Voltage Battery Temperature Sensor","Monitors battery temperature for charging, power and thermal protection.","In or around the high-voltage battery pack.","Battery temperature codes, reduced charging or power limits.","Review battery-management live data and follow high-voltage safety procedures.","High-voltage work requires appropriate training and isolation.","EV hybrid battery temperature"],
-["Battery Current","High-Voltage Battery Current Sensor","Measures current into or out of the battery for battery-management calculations.","Often integrated into the battery pack or high-voltage electronics.","Current-measurement codes or inconsistent data.","Compare live data with manufacturer diagnostic checks and approved equipment.","Never access exposed high-voltage components without training and isolation.","EV hybrid battery current"],
-["Cell Voltage","Battery Cell Voltage Monitoring","Measures cell groups or modules to monitor balance and operating limits.","Inside the battery pack, connected to monitoring electronics.","Cell-voltage imbalance codes, battery warnings or reduced power.","Review manufacturer diagnostic data; pack access is for trained technicians.","Imbalance has multiple possible causes and needs proper diagnosis.","EV hybrid battery voltage cell monitoring"],
-["Isolation Monitor","High-Voltage Isolation Monitoring","Monitors isolation between high-voltage circuits and vehicle chassis.","Usually part of the battery or high-voltage control system.","Isolation warning, system shutdown or related codes.","Follow the manufacturer's procedure using approved equipment.","Treat an isolation warning as serious; do not bypass it.","EV hybrid isolation resistance high voltage safety"]
+key:"ev",name:"Hybrid and Electric Vehicle Sensors",items:[
+["Battery Temp","High-Voltage Battery Temperature Sensor","thermistor","Monitors battery temperature for charging, power and thermal protection.","In or around the high-voltage battery pack.","Battery temperature codes, reduced charging or power limits.","Review battery-management live data and follow high-voltage safety procedures.","High-voltage work requires appropriate training and isolation.","EV hybrid battery temperature"],
+["Battery Current","High-Voltage Battery Current Sensor","current","Measures current into or out of the battery for battery-management calculations.","Often integrated into the battery pack or high-voltage electronics.","Current-measurement codes or inconsistent data.","Compare live data with manufacturer diagnostic checks and approved equipment.","Never access exposed high-voltage components without training and isolation.","EV hybrid battery current"],
+["Cell Voltage","Battery Cell Voltage Monitoring","cells","Measures cell groups or modules to monitor balance and operating limits.","Inside the battery pack, connected to monitoring electronics.","Cell-voltage imbalance codes, battery warnings or reduced power.","Review manufacturer diagnostic data; pack access is for trained technicians.","Imbalance has multiple possible causes and needs proper diagnosis.","EV hybrid battery voltage cell monitoring"],
+["Isolation Monitor","High-Voltage Isolation Monitoring","isolation","Monitors isolation between high-voltage circuits and vehicle chassis.","Usually part of the battery or high-voltage control system.","Isolation warning, system shutdown or related codes.","Follow the manufacturer's procedure using approved equipment.","Treat an isolation warning as serious; do not bypass it.","EV hybrid isolation resistance high voltage safety"]
 ]}
 ];
 
-const library = document.getElementById("sensorLibrary");
-
-function makeParagraph(label, value) {
-  const p = document.createElement("p");
-  const strong = document.createElement("strong");
-  strong.textContent = label + ": ";
-  p.append(strong, document.createTextNode(value));
-  return p;
+/* Draw a dedicated schematic for each sensor type.
+   These are explanatory illustrations, not photographs or exact OEM parts. */
+function illustration(type, code, name){
+const metal='fill="#9ca3af" stroke="#e5e7eb" stroke-width="2"';
+const dark='fill="#252a30" stroke="#e8b923" stroke-width="2.5"';
+const gold='fill="#e8b923" stroke="#ffe28a" stroke-width="1.5"';
+let shape='';
+switch(type){
+case 'probe':
+shape=`<rect x="92" y="45" width="76" height="45" rx="9" ${dark}/><path d="M130 90 V128 L118 140 H142 L130 128" ${metal}/><path d="M110 45 V29 H150 V45" ${gold}/><path d="M168 59 H195 V78 H168" ${metal}/><circle cx="130" cy="68" r="10" ${gold}/>`;
+break;
+case 'airflow':
+shape=`<rect x="45" y="43" width="170" height="80" rx="13" ${dark}/><path d="M55 56 H205 M55 110 H205" stroke="#9ca3af" stroke-width="5"/><path d="M78 57 V109 M92 57 V109 M106 57 V109 M120 57 V109 M134 57 V109 M148 57 V109 M162 57 V109 M176 57 V109" stroke="#e8b923" stroke-width="2"/><rect x="113" y="20" width="42" height="28" rx="5" ${gold}/><path d="M134 20 V10" stroke="#e8b923" stroke-width="4"/>`;
+break;
+case 'pressure':
+shape=`<rect x="92" y="35" width="75" height="65" rx="9" ${dark}/><rect x="110" y="20" width="40" height="18" rx="4" ${gold}/><path d="M115 100 V130 H145 V100" ${metal}/><path d="M130 130 V148" stroke="#e8b923" stroke-width="5"/><path d="M167 54 H190 V83 H167" ${metal}/>`;
+break;
+case 'throttle':
+shape=`<rect x="50" y="48" width="160" height="75" rx="15" ${dark}/><circle cx="130" cy="85" r="31" ${metal}/><path d="M106 105 L154 65" stroke="#e8b923" stroke-width="7"/><rect x="165" y="28" width="34" height="25" rx="4" ${gold}/>`;
+break;
+case 'pedal':
+shape=`<path d="M105 25 L157 25 L168 90 L144 90 L137 54 L122 54 L115 90 L92 90 Z" ${metal}/><path d="M92 90 L75 140 H172 L157 90" ${dark}/><rect x="110" y="12" width="38" height="18" rx="4" ${gold}/>`;
+break;
+case 'thermistor':
+shape=`<rect x="105" y="30" width="50" height="48" rx="8" ${dark}/><path d="M130 78 V120" stroke="#e8b923" stroke-width="8"/><circle cx="130" cy="133" r="17" ${gold}/><path d="M114 43 H146" stroke="#e5e7eb" stroke-width="3"/>`;
+break;
+case 'knock':
+shape=`<path d="M105 35 H155 L165 55 V105 L145 125 H115 L95 105 V55 Z" ${dark}/><circle cx="130" cy="80" r="23" ${metal}/><circle cx="130" cy="80" r="9" ${gold}/><path d="M130 35 V18" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'exhaust':
+shape=`<path d="M75 25 H185 V55 H165 V120 H95 V55 H75 Z" ${dark}/><path d="M110 120 V145 M150 120 V145" stroke="#9ca3af" stroke-width="8"/><rect x="113" y="48" width="34" height="30" rx="5" ${gold}/><path d="M130 25 V9" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'oil':
+shape=`<path d="M95 38 H165 L180 65 V110 H80 V65 Z" ${dark}/><path d="M130 38 V18 H158" stroke="#e8b923" stroke-width="6" fill="none"/><path d="M130 75 C112 94 115 106 130 108 C145 106 148 94 130 75" ${gold}/>`;
+break;
+case 'fuelpressure':
+shape=`<path d="M60 55 H200 V90 H60 Z" ${metal}/><rect x="110" y="25" width="42" height="35" rx="6" ${dark}/><path d="M130 25 V10" stroke="#e8b923" stroke-width="5"/><path d="M75 90 V112 M110 90 V112 M150 90 V112 M185 90 V112" stroke="#e8b923" stroke-width="4"/>`;
+break;
+case 'inline':
+shape=`<path d="M45 70 H215" stroke="#9ca3af" stroke-width="17" stroke-linecap="round"/><rect x="105" y="38" width="55" height="65" rx="9" ${dark}/><path d="M117 38 V20 H148 V38" ${gold}/><path d="M132 103 V132" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'dpf':
+shape=`<rect x="65" y="42" width="130" height="80" rx="17" ${dark}/><path d="M80 55 V109 M93 55 V109 M106 55 V109 M119 55 V109 M132 55 V109 M145 55 V109 M158 55 V109 M171 55 V109" stroke="#e8b923" stroke-width="3"/><path d="M95 42 V22 H165 V42" ${metal}/><path d="M95 122 V143 M165 122 V143" stroke="#9ca3af" stroke-width="7"/>`;
+break;
+case 'nox':
+shape=`<rect x="105" y="45" width="55" height="70" rx="8" ${dark}/><path d="M130 45 V15" stroke="#e8b923" stroke-width="6"/><path d="M112 115 L98 145 H162 L148 115" ${metal}/><path d="M160 62 H194 V92 H160" ${gold}/>`;
+break;
+case 'wheel':
+shape=`<circle cx="130" cy="85" r="55" fill="none" stroke="#9ca3af" stroke-width="14"/><circle cx="130" cy="85" r="28" ${dark}/><circle cx="130" cy="85" r="9" ${gold}/><path d="M188 48 L174 61 L187 73 L201 60 Z" ${gold}/><path d="M198 58 H218" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'speed':
+shape=`<rect x="75" y="45" width="110" height="75" rx="12" ${dark}/><circle cx="130" cy="82" r="24" ${metal}/><path d="M130 82 L146 65" stroke="#e8b923" stroke-width="5"/><path d="M130 45 V25" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'gear':
+shape=`<rect x="75" y="40" width="110" height="85" rx="12" ${dark}/><circle cx="130" cy="82" r="27" ${metal}/><circle cx="130" cy="82" r="10" ${gold}/><path d="M130 40 V22 M130 125 V145" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'range':
+shape=`<path d="M85 35 H175 L190 65 V110 H70 V65 Z" ${dark}/><path d="M92 70 H168" stroke="#e8b923" stroke-width="5"/><circle cx="105" cy="91" r="8" ${gold}/><circle cx="130" cy="91" r="8" ${gold}/><circle cx="155" cy="91" r="8" ${gold}/>`;
+break;
+case 'steering':
+shape=`<circle cx="130" cy="80" r="52" fill="none" stroke="#e8b923" stroke-width="9"/><circle cx="130" cy="80" r="13" ${metal}/><path d="M130 93 V130 M130 100 L83 75 M130 100 L177 75" stroke="#9ca3af" stroke-width="8" stroke-linecap="round"/><rect x="117" y="18" width="26" height="15" rx="4" ${gold}/>`;
+break;
+case 'gyro':
+shape=`<rect x="77" y="42" width="106" height="78" rx="13" ${dark}/><circle cx="130" cy="81" r="28" fill="none" stroke="#e8b923" stroke-width="5"/><path d="M130 53 V109 M102 81 H158" stroke="#9ca3af" stroke-width="3"/><circle cx="130" cy="81" r="7" ${gold}/>`;
+break;
+case 'acpressure':
+shape=`<path d="M55 82 H95 M165 82 H205" stroke="#9ca3af" stroke-width="13" stroke-linecap="round"/><rect x="95" y="48" width="70" height="68" rx="10" ${dark}/><path d="M112 48 V30 H148 V48" ${gold}/><path d="M130 116 V143" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'photo':
+shape=`<rect x="85" y="55" width="90" height="55" rx="9" ${dark}/><circle cx="130" cy="82" r="20" ${gold}/><path d="M130 15 V40 M95 25 L108 47 M165 25 L152 47" stroke="#e8b923" stroke-width="5"/><path d="M130 110 V135" stroke="#9ca3af" stroke-width="5"/>`;
+break;
+case 'optical':
+shape=`<rect x="75" y="45" width="110" height="75" rx="10" ${dark}/><circle cx="130" cy="82" r="23" fill="#111" stroke="#e8b923" stroke-width="5"/><circle cx="130" cy="82" r="9" ${gold}/><path d="M130 45 V22" stroke="#9ca3af" stroke-width="5"/>`;
+break;
+case 'float':
+shape=`<path d="M130 25 V90" stroke="#e8b923" stroke-width="6"/><path d="M130 90 L175 112" stroke="#9ca3af" stroke-width="7"/><circle cx="180" cy="115" r="19" ${gold}/><rect x="110" y="15" width="40" height="25" rx="5" ${dark}/>`;
+break;
+case 'tpms':
+shape=`<circle cx="130" cy="83" r="53" fill="none" stroke="#9ca3af" stroke-width="12"/><rect x="166" y="54" width="24" height="37" rx="5" ${dark}/><path d="M177 54 V40" stroke="#e8b923" stroke-width="5"/><circle cx="178" cy="72" r="5" ${gold}/>`;
+break;
+case 'ultrasonic':
+shape=`<path d="M95 45 H165 L178 65 V110 H82 V65 Z" ${dark}/><circle cx="130" cy="80" r="26" ${metal}/><circle cx="130" cy="80" r="13" ${gold}/><path d="M80 30 Q130 0 180 30 M65 18 Q130 -20 195 18" fill="none" stroke="#e8b923" stroke-width="3"/>`;
+break;
+case 'radar':
+shape=`<path d="M130 120 L75 50 Q130 10 185 50 Z" ${dark}/><path d="M130 110 L95 58 M130 110 L165 58" stroke="#e8b923" stroke-width="4"/><path d="M55 35 Q130 -10 205 35 M40 20 Q130 -35 220 20" fill="none" stroke="#9ca3af" stroke-width="3"/><circle cx="130" cy="110" r="10" ${gold}/>`;
+break;
+case 'camera':
+shape=`<rect x="70" y="48" width="120" height="72" rx="12" ${dark}/><circle cx="130" cy="84" r="25" ${metal}/><circle cx="130" cy="84" r="12" ${gold}/><path d="M95 48 L108 30 H152 L165 48" ${metal}/>`;
+break;
+case 'impact':
+shape=`<path d="M130 25 L180 50 V90 Q160 125 130 140 Q100 125 80 90 V50 Z" ${dark}/><path d="M130 50 V105 M105 77 H155" stroke="#e8b923" stroke-width="7"/><circle cx="130" cy="78" r="27" fill="none" stroke="#9ca3af" stroke-width="3"/>`;
+break;
+case 'current':
+shape=`<rect x="80" y="38" width="100" height="90" rx="12" ${dark}/><path d="M130 20 V48 M130 118 V145" stroke="#e8b923" stroke-width="6"/><path d="M105 84 H155 M130 59 V109" stroke="#9ca3af" stroke-width="5"/><circle cx="130" cy="84" r="24" fill="none" stroke="#e8b923" stroke-width="3"/>`;
+break;
+case 'cells':
+shape=`<rect x="52" y="48" width="156" height="80" rx="8" ${dark}/>${[0,1,2,3].map(i=>`<rect x="${65+i*36}" y="62" width="27" height="52" rx="4" ${i===2?gold:metal}/>`).join('')}<path d="M75 38 V48 M185 38 V48" stroke="#e8b923" stroke-width="5"/>`;
+break;
+case 'isolation':
+shape=`<rect x="75" y="42" width="110" height="80" rx="12" ${dark}/><path d="M95 82 H115 L125 62 L140 102 L150 82 H165" fill="none" stroke="#e8b923" stroke-width="5"/><path d="M130 42 V22 M130 122 V145" stroke="#9ca3af" stroke-width="5"/>`;
+break;
+default:
+shape=`<rect x="85" y="40" width="90" height="85" rx="12" ${dark}/><circle cx="130" cy="82" r="24" ${gold}/>`;
+}
+return `<svg viewBox="0 0 260 160" role="img" aria-label="${name} technical illustration" xmlns="http://www.w3.org/2000/svg"><title>${name} — educational technical illustration</title>${shape}<text x="130" y="156" text-anchor="middle" fill="#f3cd51" font-size="9" font-family="Arial">${code}</text></svg>`;
 }
 
-groups.forEach((group, index) => {
-  const section = document.createElement("section");
-  section.className = "category";
-  section.dataset.category = group.key;
-
-  const heading = document.createElement("h2");
-  heading.className = "category-title";
-  heading.textContent = (index + 1) + ". " + group.name;
-  section.appendChild(heading);
-
-  const grid = document.createElement("div");
-  grid.className = "sensor-grid";
-
-  group.items.forEach(item => {
-    const [code, name, fn, location, signs, test, tip, tags] = item;
-
-    const card = document.createElement("article");
-    card.className = "sensor-card";
-    card.dataset.tags = tags;
-
-    const img = document.createElement("img");
-    img.className = "sensor-photo";
-    img.loading = "lazy";
-    img.src = "https://images.unsplash.com/" + photos[group.key] + "?auto=format&fit=crop&w=900&q=85";
-    img.alt = "Illustrative automotive reference for " + name;
-
-    const caption = document.createElement("span");
-    caption.className = "photo-caption";
-    caption.textContent = "Illustrative automotive reference";
-
-    const content = document.createElement("div");
-    content.className = "sensor-content";
-
-    const badge = document.createElement("span");
-    badge.className = "sensor-code";
-    badge.textContent = code;
-
-    const title = document.createElement("h3");
-    title.textContent = name;
-
-    content.append(
-      badge,
-      title,
-      makeParagraph("Function", fn),
-      makeParagraph("Common location", location),
-      makeParagraph("Possible fault signs", signs),
-      makeParagraph("Diagnostic approach", test)
-    );
-
-    const tipParagraph = document.createElement("p");
-    tipParagraph.className = "tip";
-    tipParagraph.textContent = "Tip: " + tip;
-    content.appendChild(tipParagraph);
-
-    card.append(img, caption, content);
-    grid.appendChild(card);
-  });
-
-  section.appendChild(grid);
-  library.appendChild(section);
-});
-
-const searchInput = document.getElementById("sensorSearch");
-const filterButtons = document.querySelectorAll(".filter-btn");
-const resultCount = document.getElementById("resultCount");
-const emptyState = document.getElementById("emptyState");
-
-let activeFilter = "all";
-
-function filterSensors() {
-  const query = searchInput.value.toLowerCase().trim();
-  let count = 0;
-
-  document.querySelectorAll(".sensor-card").forEach(card => {
-    const category = card.closest(".category").dataset.category;
-    const imageAlt = card.querySelector("img").alt;
-    const text = (
-      card.innerText + " " + card.dataset.tags + " " + imageAlt
-    ).toLowerCase();
-
-    const categoryMatches =
-      activeFilter === "all" || category === activeFilter;
-
-    const searchMatches = !query || text.includes(query);
-    const show = categoryMatches && searchMatches;
-
-    card.style.display = show ? "flex" : "none";
-
-    if (show) count++;
-  });
-
-  document.querySelectorAll(".category").forEach(section => {
-    const hasVisibleCard = Array.from(
-      section.querySelectorAll(".sensor-card")
-    ).some(card => card.style.display !== "none");
-
-    section.style.display = hasVisibleCard ? "block" : "none";
-  });
-
-  resultCount.textContent =
-    count + (count === 1 ? " sensor found" : " sensors found");
-
-  emptyState.style.display = count ? "none" : "block";
+function paragraph(label,value){
+const p=document.createElement("p");
+const strong=document.createElement("strong");
+strong.textContent=label+": ";
+p.append(strong,document.createTextNode(value));
+return p;
 }
 
-searchInput.addEventListener("input", filterSensors);
+const library=document.getElementById("sensorLibrary");
 
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
+groups.forEach((group,index)=>{
+const section=document.createElement("section");
+section.className="category";
+section.dataset.category=group.key;
 
-    filterButtons.forEach(item => {
-      item.classList.toggle("active", item === button);
-    });
+const heading=document.createElement("h2");
+heading.className="category-title";
+heading.textContent=(index+1)+". "+group.name;
+section.appendChild(heading);
 
-    filterSensors();
-  });
+const grid=document.createElement("div");
+grid.className="sensor-grid";
+
+group.items.forEach(item=>{
+const [code,name,type,fn,location,signs,test,tip,tags]=item;
+const card=document.createElement("article");
+card.className="sensor-card";
+card.dataset.tags=tags;
+
+const art=document.createElement("div");
+art.className="sensor-art";
+art.innerHTML=illustration(type,code,name);
+const artLabel=document.createElement("span");
+artLabel.className="art-label";
+artLabel.textContent="Technical illustration • "+name;
+art.appendChild(artLabel);
+
+const content=document.createElement("div");
+content.className="sensor-content";
+
+const badge=document.createElement("span");
+badge.className="sensor-code";
+badge.textContent=code;
+
+const title=document.createElement("h3");
+title.textContent=name;
+
+content.append(badge,title,
+paragraph("Function",fn),
+paragraph("Common location",location),
+paragraph("Possible fault signs",signs),
+paragraph("Diagnostic approach",test));
+
+const tipText=document.createElement("p");
+tipText.className="tip";
+tipText.textContent="Tip: "+tip;
+content.appendChild(tipText);
+
+const askBox=document.createElement("div");
+askBox.className="ask-box";
+const ask=document.createElement("a");
+ask.className="ask-btn";
+ask.target="_blank";
+ask.rel="noopener";
+ask.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hello EmmyBlaQ AutoTech, I have a question about the "+name+" ("+code+"). Please help me understand this sensor and its diagnosis.");
+ask.textContent="Ask about this sensor on WhatsApp";
+askBox.appendChild(ask);
+content.appendChild(askBox);
+
+card.append(art,content);
+grid.appendChild(card);
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+section.appendChild(grid);
+library.appendChild(section);
+});
+
+const searchInput=document.getElementById("sensorSearch");
+const filterButtons=document.querySelectorAll(".filter-btn");
+const resultCount=document.getElementById("resultCount");
+const emptyState=document.getElementById("emptyState");
+let activeFilter="all";
+
+function filterSensors(){
+const query=searchInput.value.toLowerCase().trim();
+let count=0;
+document.querySelectorAll(".sensor-card").forEach(card=>{
+const category=card.closest(".category").dataset.category;
+const text=(card.innerText+" "+card.dataset.tags).toLowerCase();
+const show=(activeFilter==="all"||category===activeFilter)&&(!query||text.includes(query));
+card.style.display=show?"flex":"none";
+if(show)count++;
+});
+document.querySelectorAll(".category").forEach(section=>{
+const visible=[...section.querySelectorAll(".sensor-card")].some(card=>card.style.display!=="none");
+section.style.display=visible?"block":"none";
+});
+resultCount.textContent=count+(count===1?" sensor found":" sensors found");
+emptyState.style.display=count?"none":"block";
+}
+
+searchInput.addEventListener("input",filterSensors);
+filterButtons.forEach(button=>{
+button.addEventListener("click",()=>{
+activeFilter=button.dataset.filter;
+filterButtons.forEach(item=>item.classList.toggle("active",item===button));
+filterSensors();
+});
+});
+document.getElementById("year").textContent=new Date().getFullYear();
 filterSensors();
 </script>
 </body>
